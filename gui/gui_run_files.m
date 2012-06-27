@@ -469,7 +469,7 @@ if nargin>0
         InputFig;
         
         % if drivetrain type is custom let user pick the block diagram to use and components to load (12/14/99:tm)
-        if ~isfield(vinf,'run_without_gui')&strcmp(gui_current_str('drivetrain'),'custom')
+        if ~isfield(vinf,'run_without_gui')&&strcmp(gui_current_str('drivetrain'),'custom')
             loop=1;
             while loop
                 uiwait(warndlg('Please specify block diagram to be used in analysis.','Block Diagram Selection'));
