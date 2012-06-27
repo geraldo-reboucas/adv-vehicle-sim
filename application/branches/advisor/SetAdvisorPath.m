@@ -107,7 +107,7 @@ if isempty(temp)
 end
 
 % add any user-specified directories
-if exist('varargin')
+if exist('varargin', 'var')
     for i=1:length(varargin)
         try
             if isunix
