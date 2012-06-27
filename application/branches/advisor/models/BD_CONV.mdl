@@ -6,11 +6,11 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.113"
+    ComputedModelVersion    "1.114"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
-  SavedCharacterEncoding  "windows-1252"
+  SavedCharacterEncoding  "ISO-8859-1"
   SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -27,8 +27,8 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mokeefe"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Mar 23 09:49:53 2012"
-  RTWModifiedTimeStamp	  254396725
+  LastModifiedDate	  "Fri Apr 06 12:44:42 2012"
+  RTWModifiedTimeStamp	  255616262
   ModifiedComment	  "mokeefe -- Thu Apr 18 07:47:12 2002 -- Version 1.98\nsaving the model:\no \"without the model bro"
   "wser open\"\no with only top-level screen visible \no and with \"fit to view\" enabled"
   ModifiedHistory	  "mokeefe -- Thu Apr 18 07:47:12 2002 -- Version 1.98\nsaving the model:\no \"without the model bro"
@@ -67,7 +67,7 @@ Model {
   "Thu Feb 14 10:41:17 2002 -- Version 1.52\n\n\nmokeefe -- Thu Feb 14 10:24:42 2002 -- Version 1.51\n\n\nmokeefe -- Th"
   "u Feb 14 09:59:11 2002 -- Version 1.50\ntesting\n\n\nssprik -- Fri Feb 09 15:14:35 2001 -- Version 1.49\nchanged for"
   "egrounds to black colors\n\n"
-  ModelVersionFormat	  "1.%<AutoIncrement:113>"
+  ModelVersionFormat	  "1.%<AutoIncrement:114>"
   ConfigurationManager	  "RCS"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -803,7 +803,7 @@ Model {
   }
   System {
     Name		    "BD_CONV"
-    Location		    [175, 135, 1193, 452]
+    Location		    [175, 136, 1193, 453]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    146
@@ -863,7 +863,7 @@ Model {
       Ports		      [0, 1]
       Position		      [385, 13, 445, 67]
       BackgroundColor	      "yellow"
-      LibraryVersion	      "1.474"
+      LibraryVersion	      "1.480"
       LinkData {
 	BlockName		"config traction control"
 	DialogParameters {
@@ -942,7 +942,7 @@ Model {
 	Block {
 	  BlockType		  Reference
 	  Name			  "off"
-	  SID			  "8::2"
+	  SID			  "8::6"
 	  Tag			  "Altia_off"
 	  Ports			  []
 	  Position		  [100, 40, 140, 80]
@@ -991,7 +991,7 @@ Model {
       MaskIconUnits	      "autoscale"
       System {
 	Name			"Mechanical Accessory\nLoads <acc>"
-	Location		[188, 200, 863, 885]
+	Location		[188, 244, 863, 929]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	146
@@ -1164,11 +1164,11 @@ Model {
 	  SID			  "27"
 	  Ports			  [3, 2]
 	  Position		  [200, 61, 250, 139]
-	  LibraryVersion	  "1.506"
+	  LibraryVersion	  "1.507"
 	  LinkData {
 	    BlockName		    "backward model/mechanical accessories (Nm)"
 	    DialogParameters {
-	      BlockChoice	      "Mechanical Accessories: Const Mech Var Elect"
+	      BlockChoice	      "Mechanical Accessories: Speed Dependant and Variable Electrical"
 	    }
 	  }
 	  SourceBlock		  "lib_accessory/Mechanical Accessory\nLoads v2 <acc>"
@@ -1451,7 +1451,7 @@ Model {
       Ports		      [0, 1]
       Position		      [15, 66, 50, 134]
       BackgroundColor	      "yellow"
-      LibraryVersion	      "1.18"
+      LibraryVersion	      "1.21"
       SourceBlock	      "lib_drive_cycle/drive cycle\n<cyc>"
       SourceType	      ""
       ShowPortLabels	      "none"
@@ -1511,7 +1511,7 @@ Model {
       Ports		      [1, 3]
       Position		      [625, 95, 695, 145]
       BackgroundColor	      "yellow"
-      LibraryVersion	      "3.0447"
+      LibraryVersion	      "3.0448"
       LinkData {
 	BlockName		"fuel use and EO emis Configurable Subsystem"
 	DialogParameters {
