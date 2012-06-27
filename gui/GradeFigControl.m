@@ -57,7 +57,7 @@ case 'load'
    
    if isempty(findobj('tag','grade_test_fig'))
       % open gui
-      GradeFig
+      gradefig
    end
    set(findobj('tag','grade_test_fig'),'windowstyle','modal')
    
