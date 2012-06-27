@@ -1,4 +1,4 @@
-function fig = GradeFig()
+function fig = gradefig()
 % This is the machine-generated representation of a Handle Graphics object
 % and its children.  Note that handle values may change when these objects
 % are re-created. This may cause problems with any callbacks written to
@@ -14,7 +14,7 @@ function fig = GradeFig()
 % are incompatible with the M-file/MAT-file format, and should be saved as
 % FIG-files.
 
-load GradeFig
+load gradefig
 
 h0 = figure('Color',[0.623529411764706 0.796078431372549 1], ...
 	'Colormap',mat0, ...
