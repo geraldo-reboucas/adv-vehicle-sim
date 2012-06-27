@@ -18,10 +18,9 @@ function varargout = advisor(varargin)
 %							advisor@nrel.gov
 %
 % Last Modified by GUIDE v2.0 21-Mar-2002 15:12:42
+global vinf
 
 if nargin == 0  % LAUNCH GUI
-
-    global vinf
 	%-----------------------------------------------------------
     %if ADVISOR is running then don't start another one, just
     %bring the current ADVISOR figure to the top
