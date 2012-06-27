@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>Heavy Vehicle Tire Rolling Resistance Information (ADVISOR)</title>
+</head>
+<body>
+<h1>Heavy Vehicle Tire Rolling Resistance Information</h1>
+<h2>Introduction</h2>
+<p>Michelin has provided NREL with the following data for low, high, and
+mid-range rolling resistance numbers for heavy vehicle tires. The data is taken
+by testing on a curved surface per SAE J2452. The flat surface numbers are derived via <a href="http://www.sae.org/servlets/productDetail?PROD_TYP=STD&PROD_CD=J2452_199906">SAE
+J2452</a> Eq. 22 (<a href="#ref_2">Ref 2</a>). Rolling resistance coefficients are dimensionless but are
+reported here as kg/T (kilograms of rolling resistance per metric ton of axle
+load). Therefore, to arrive at the
+dimensionless coefficient, divide by 1000.</p>
+<p>Users should note that a new light duty tire rolling resistance model has been added
+with the help of Michelin [click for documentation]. This model takes into account such things as tire
+pressure, vehicle speed, etc. However, for heavy vehicles, industry has claimed
+that rolling resistance varies linearly with heavy vehicle load and varies only a slightly with speed.
+Therefore, the existing model of ADVISOR 3.2 and earlier is sufficient for heavy
+vehicles. The main benefit to be gained is the additional rolling resistance
+data provided by Michelin (this document).</p>
+<p>The data presented here are given with a tractor trailer in mind. The loading
+has not been explicitly defined for these data but it is assumed the vehicle is
+fully loaded (total weight is 86000 lbs. [39040 kg]). Tires are reported by tire
+size and tread design (e.g., steering tires, drive tires, or trailer tires).&nbsp;</p>
+<p> Tire
+weights are mentioned for the 275/80 R22.5 XDA2 and 445/50 R22.5 X One XDA tires
+in a recent SAE Paper (<a href="#ref_1">Ref 1</a>). The breakdown is:</p>
+<div align="center">
+  <center>
+  <table border="1" width="100%">
+    <tr>
+      <th width="50%">Wheel and Tire</th>
+      <th width="50%">Weight (lb. [kg])</th>
+    </tr>
+    <tr>
+      <td width="50%" valign="middle" align="center">(2)-- Accuride
+        (al)22.5&quot; x 8.25&quot; P/N 28548ANP,&nbsp;
+        <p>275/80 R22.5 XDA2</td>
+      <td width="50%" valign="middle" align="center">352&nbsp; [160]</td>
+    </tr>
+    <tr>
+      <td width="50%" valign="middle" align="center">(1)--Accuride
+        (al)22.5&quot; x 14&quot; P/N 29660AOP,&nbsp;
+        <p>445/50 R22.5 X One XDA</td>
+      <td width="50%" valign="middle" align="center">240&nbsp; [109]</td>
+    </tr>
+  </table>
+  </center>
+</div>
+<h2>Data</h2>
+<div align="center">
+  <center>
+  <table border="1" width="100%">
+    <tr>
+      <th width="20%" valign="middle" align="center">Tire Size</th>
+      <th width="20%" valign="middle" align="center">Tread Design</th>
+      <th width="20%" valign="middle" align="center">Curved Surface<sup>**</sup>
+        <p>rolling resistance value</p>
+        <p>[kg/T]</th>
+      <th width="20%" valign="middle" align="center">Flat Surface
+        <p>rolling resistance value</p>
+        <p>[kg/T]</th>
+      <th width="20%" valign="middle" align="center">rolling radius*
+        <p>[m]</p>
+      </th>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">315/80R22.5 (low RR)</td>
+      <td width="20%" valign="middle" align="center">Steer Tires</td>
+      <td width="20%" valign="middle" align="center">4.92</td>
+      <td width="20%" valign="middle" align="center">4.47</td>
+      <td width="20%" valign="middle" align="center">&nbsp;all position 0.524</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">315/80R22.5 (medium RR)</td>
+      <td width="20%" valign="middle" align="center">Steer Tires</td>
+      <td width="20%" valign="middle" align="center">5.89</td>
+      <td width="20%" valign="middle" align="center">5.35</td>
+      <td width="20%" valign="middle" align="center">&nbsp;all position 0.524</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">315/80R22.5 (high RR)</td>
+      <td width="20%" valign="middle" align="center">Steer Tires</td>
+      <td width="20%" valign="middle" align="center">6.89</td>
+      <td width="20%" valign="middle" align="center">6.26</td>
+      <td width="20%" valign="middle" align="center">&nbsp;all position 0.524</td>
+    </tr>
+    <tr>
+      <td width="100%" valign="middle" align="center" colspan="5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">275/80R22.5 (low RR)</td>
+      <td width="20%" valign="middle" align="center">Steer Tires</td>
+      <td width="20%" valign="middle" align="center">5.20</td>
+      <td width="20%" valign="middle" align="center">4.72</td>
+      <td width="20%" valign="middle" align="center">&nbsp;all position 0.494</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">275/80R22.5 (medium RR)</td>
+      <td width="20%" valign="middle" align="center">Steer Tires</td>
+      <td width="20%" valign="middle" align="center">6.35</td>
+      <td width="20%" valign="middle" align="center">5.77</td>
+      <td width="20%" valign="middle" align="center">&nbsp;all position 0.494</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">275/80R22.5 (high RR)</td>
+      <td width="20%" valign="middle" align="center">Steer Tires</td>
+      <td width="20%" valign="middle" align="center">6.80</td>
+      <td width="20%" valign="middle" align="center">6.18</td>
+      <td width="20%" valign="middle" align="center">&nbsp;all position 0.494</td>
+    </tr>
+    <tr>
+      <td width="100%" valign="middle" align="center" colspan="5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">275/80R22.5 (low RR)</td>
+      <td width="20%" valign="middle" align="center">Drive Tires</td>
+      <td width="20%" valign="middle" align="center">5.81</td>
+      <td width="20%" valign="middle" align="center">5.28</td>
+      <td width="20%" valign="middle" align="center">0.501</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">275/80R22.5 (medium RR)</td>
+      <td width="20%" valign="middle" align="center">Drive Tires</td>
+      <td width="20%" valign="middle" align="center">7.15</td>
+      <td width="20%" valign="middle" align="center">6.50</td>
+      <td width="20%" valign="middle" align="center">&nbsp;0.501</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">275/80R22.5 (high RR)</td>
+      <td width="20%" valign="middle" align="center">Drive Tires</td>
+      <td width="20%" valign="middle" align="center">8.19</td>
+      <td width="20%" valign="middle" align="center">7.44</td>
+      <td width="20%" valign="middle" align="center">&nbsp;0.501</td>
+    </tr>
+    <tr>
+      <td width="100%" valign="middle" align="center" colspan="5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">275/80R22.5 (low RR)</td>
+      <td width="20%" valign="middle" align="center">Trailer Tires</td>
+      <td width="20%" valign="middle" align="center">4.62</td>
+      <td width="20%" valign="middle" align="center">4.19</td>
+      <td width="20%" valign="middle" align="center">&nbsp;0.489</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">275/80R22.5 (medium RR)</td>
+      <td width="20%" valign="middle" align="center">Trailer Tires</td>
+      <td width="20%" valign="middle" align="center">5.31</td>
+      <td width="20%" valign="middle" align="center">4.82</td>
+      <td width="20%" valign="middle" align="center">&nbsp;0.489</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">275/80R22.5 (high RR)</td>
+      <td width="20%" valign="middle" align="center">Trailer Tires</td>
+      <td width="20%" valign="middle" align="center">6.37</td>
+      <td width="20%" valign="middle" align="center">5.79</td>
+      <td width="20%" valign="middle" align="center">&nbsp;0.489</td>
+    </tr>
+    <tr>
+      <td width="100%" valign="middle" align="center" colspan="5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">445/50R22.5</td>
+      <td width="20%" valign="middle" align="center">Super Single Drive</td>
+      <td width="20%" valign="middle" align="center">5.00</td>
+      <td width="20%" valign="middle" align="center">4.54</td>
+      <td width="20%" valign="middle" align="center">&nbsp;0.495</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="middle" align="center">445/50R22.5</td>
+      <td width="20%" valign="middle" align="center">Super Single Trailer</td>
+      <td width="20%" valign="middle" align="center">3.77</td>
+      <td width="20%" valign="middle" align="center">3.43</td>
+      <td width="20%" valign="middle" align="center">&nbsp;0.487</td>
+    </tr>
+  </table>
+  </center>
+</div>
+<p>* Note: rolling radius determined from revolutions per mile data available
+from Michelin website at <a href="http://www.michelintruck.com/">http://www.michelintruck.com/</a>
+Steering tires are not explicitly called out. Therefore, the value for &quot;all
+position&quot; tires is used for the steering tire.</p>
+<p>** Measured on a roadwheel with a diameter of 2.706 m</p>
+<h2>Usage within ADVISOR</h2>
+<p>ADVISOR requires a single rolling resistance and wheel rolling radius
+value to be specified. The wheel rolling radius for the drive wheel is used (wh_radius).
+The variable wh_1st_rrc is created via averaging with weight fractions over the
+respective tire/wheel/axle types (wh_2nd_rrc is assumed to be zero as speed
+dependence is considered negligible for heavy vehicles). </p>
+<p align="center">wh_1st_rrc = (rrc0_steer*wt_frac_steer)+(rrc0_drive*wt_frac_drive)+(rrc0_trailer*wt_frac_trailer)</p>
+<p align="left">Where wt_frac_steer is the weight fraction over all of the
+steering tires, wt_frac_drive is the weight fraction over all of the drive
+tires, and wt_frac_trailer is the weight fraction over all of the trailer tires.
+All the weight fractions should sum to one. The rrc0_* constants are then the
+rolling resistance coefficients for the given tires taken from the data table
+above.</p>
+<p align="left">The above model is implemented in pre-processing in the wh_*.m
+file for wheel and axle initialization.</p>
+<h2>References and Further Reading</h2>
+<dl>
+  <dt><a name="ref_1">reference 1:</a></dt>
+  <dd>M. Markstaller and A. Pearson and I. Janajreh. &quot;On Vehicle Testing of
+    Michelin New Wide Base Tire.&quot; SAE 2000-01-3432. Society of Automotive
+    Engineers. 2000.</dd>
+  <dt><a name="ref_2">reference 2:</a></dt>
+  <dd>SAE Specification J2452. &quot;Stepwise Coastdown Methodology for
+    Measuring Tire Rolling Resistance.&quot; Society of Automotive Engineers.
+    June 1999.</dd>
+  <dt><a name="ref_3">reference 3:</a></dt>
+  <dd>D. Hall and J. Moreland. &quot;Fundamentals of Rolling Resistance.&quot;
+    Michelin Americas Research Corporation. ACS Rubber Division <i>Rubber Reviews</i>.
+    2001.</dd>
+</dl>
+
+<p>
+<hr>
+<center>
+<p><a href="advisor_doc.htm">Return to ADVISOR Documentation</a></center>
+
+<p>
+<hr>
+<center>
+<p>Last revised: [04-April-2002] mpo
+<br>Created: [03-April-2002] mpo</center>
+</body>
+</html>

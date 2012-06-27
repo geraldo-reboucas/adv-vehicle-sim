@@ -1,0 +1,42 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Valerie Hovland">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (WinNT; I) [Netscape]">
+   <title>Clutch</title>
+</head>
+<body>
+
+<h3>
+Clutch</h3>
+<i><a href="clutch.gif">Clutch block diagram</a> – visible by right-clicking
+the ‘Clutch’ and selecting ‘Look Under Mask’</i>
+<p><b><u>Role of subsystem in vehicle</u></b>
+<br>The ‘clutch’ block generally transmits torque and speed requests from
+the ‘gearbox’ or, in the case of the pre-transmission parallel hybrid,
+the torque coupler, to the ‘ICE fuel converter.’ It also generally transmits
+actual torque and speed from the ‘ICE fuel converter’ back to the ‘gearbox’
+or ‘torque coupler.’ This block is useful wherever the vehicle control
+needs to interrupt torque transmission from one component to another.
+<p><b><u>Description of modeling approach</u></b>
+<br>The clutch has three states: disengaged, slipping, and fully engaged.
+<p>When disengaged, the clutch requests and transmits no torque. It requests
+the input speed be the same as the requested output speed (‘request’ data
+path), and passes the requested output speed as the output speed limit
+(‘actual’ data path).
+<p>When slipping, it requests that the output torque be the same as the
+input torque, and passes the actual input torque as the actual output torque.
+It requests that the input speed be the predefined, constant slip speed,
+and passes the requested output speed as the speed limit.
+<p>When engaged, it passes torque and speed unchanged on both the ‘request’
+and ‘actual’ data paths.
+<p><b><u>Variables used in subsystem</u></b>
+<blockquote><a href="advisor_appendices.htm#Output Clutch">See Appendix
+A.3: Output Variables</a></blockquote>
+
+<hr SIZE=5 NOSHADE WIDTH="100%">
+<center><a href="advisor_ch3.htm">Back to Chapter 3</a></center>
+
+</body>
+</html>

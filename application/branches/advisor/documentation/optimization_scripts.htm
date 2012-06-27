@@ -1,0 +1,206 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Optimization Templates</TITLE>
+<META NAME="Template" CONTENT="C:\Program Files\Microsoft Office\Office\html.dot">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<P><!doctype html public "-//w3c//dtd html 4.0 transitional//en"></P>
+<H1 ALIGN="CENTER">Optimization Templates</H1>
+<P ALIGN="CENTER">Optimization has become an extremely important part of the vehicle design process.&nbsp; As a result, template files and example problems providing links to four optimization suites have been included in ADVISOR v3.2.&nbsp; The template files included were developed in support of the publication of two technical papers.&nbsp; At the time of our public release of ADVISOR v3.2 these papers were not yet published.&nbsp; When published they will be included in our <A HREF="http://www.ctts.nrel.gov/analysis/reading_room.html">Reading Room</A>.&nbsp; The first, <I>Optimization Techniques for Hybrid Vehicle Analysis Using ADVISOR</I> (ASME IMECE Nov. 2001) discusses the tools and the test of these tools on a 2 dimensional sample problem called a 3 Hump CamelBack surface.&nbsp; The second paper,<I> Optimizing Energy Management Strategy and Degree of Hybridization for a Hydrogen Fuel Cell SUV</I> (EVS-18 Oct 2001) explored the details of the vehicle design and the effects of drive cycle demands on the optimal configuration. </P>
+<P>CAUTION:&nbsp; Before attempting to use the adv_no_gui functionality or the optimization tutorials the user must have a good working knowledge of ADVISOR.&nbsp; A basic understanding of optimization methods is useful and experience with the tools in question will be extremely beneficial.&nbsp; If you need assistance please contact us at <A HREF="mailto:advisor@nrel.gov">advisor@nrel.gov</A>. </P>
+<H3>Interfacing between ADVISOR and Optimization tools</H3>
+<P>The ability to use ADVISOR in a "GUI-free" or batch mode was introduced and documented with the release of ADVISOR v3.1.&nbsp; This mode was specifically developed to make it easy to use ADVISOR as an automated function or response-generating tool to be connected to optimization routines.&nbsp; As currently configured, this functionality provides the user with nearly all of the functionality available from the GUI, and in some instances even more functionality. </P>
+<P>The general approach for linking the optimization tools to ADVISOR includes three primary files and five basic steps.&nbsp; The files include a main function routine for configuring the workspace and performing post processing operations, a function for generating the objective response value, and a function for generating the constraint response values.&nbsp; Each of the optimization software tools explored requires minor variations to this implementation process but use the same general approach. As a result, it requires minimal effort to apply multiple algorithms to the solution of the same problem. </P>
+<P>The basic optimization process using ADVISOR can be summarized as follows, </P>
+<P>1. Initialize the MATLAB workspace <BR>
+2. Modify the design variable values in the workspace with input from optimizer <BR>
+3. Run simulation to generate objective responses <BR>
+4. Run simulation to generate constraint responses <BR>
+5. Process results with optimization tool and return to step 2 until convergence criteria met </P>
+<P>Each of the first four operations are achieved using the unique options as input to the <A HREF="advisor_ch2.htm#2.3">adv_no_gui</A> function as defined in the ADVISOR documentation. </P>
+<H3>Optimization tools</H3>
+<H4>MATLAB Optimization Toolbox</H4>
+<P>The MATLAB Optimization Toolbox is an optional component of MATLAB developed and supported by <A HREF="http://www.mathworks.com/">The MathWorks, Inc.</A>. This Toolbox includes a variety of algorithms applicable to specific problem types. For our vehicle analysis problems the most applicable algorithm in this toolbox is the FMINCON function.&nbsp; It is designed for use with non-linear constrained and bounded optimization.&nbsp; It calculates a gradient based on the responses it receives using sequential quadratic programming (SQP) numerical methods.&nbsp; We have not been involved in any development related to this toolbox but have focused the development of other tools to take a similar format such that all of the tools could be applied to common problems in using a similar I/O format. </P>
+<H4>VisualDOC</H4>
+<P>VisualDOC 2.0 is a commercial optimization package distributed by <A HREF="http://www.vrand.com/">Vanderplaats R&amp;D</A>. We have worked with Vanderplaats R&amp;D to integrate a limited version of VisualDOC into ADVISOR for public use.&nbsp; It has been applied to both component sizing and control strategy optimization.&nbsp; Communication between ADVISOR and VisualDOC was originally accomplished via ASCII text files.&nbsp; There was significant overhead and inflexibility associated with this approach, thus we have supported the development of an application programming interface (API) for interacting with the VisualDOC functional modules directly from MATLAB.&nbsp; This approach greatly enhances the seamless integration of the tools and provides significant flexibility in what problems can be solved. </P>
+<P>VisualDOC offers both Direct Gradient-based Optimization (DGO) and Response Surface Approximations (RSA) routines.&nbsp; By default the DGO routine uses SQP numerical methods to calculate the gradients to determine the search direction for optimal values.&nbsp; RSA performs a Design of Experiments (DOE) and builds a second-order approximation based on the responses from these data points.&nbsp; Based on the surface, the routine can make an estimate of the optimum design point, evaluate the function at this point, update the approximation based on the actual value, and iterate on the design point until a stop condition is encountered.&nbsp; This routine is especially useful for problems with noisy responses, such as a function that has an internal convergence tolerance and thus has some free play within the system. </P>
+<H4>DIRECT</H4>
+<P>DIRECT is an algorithm developed by Donald R. Jones. In basic terms, this algorithm divides a design space into smaller and smaller sub-sections based both on the objective function in a specific area and the characteristic dimension associated with each sub-space [8]. This ensures that it searches the entire space in sufficient granularity to find good areas to explore in more detail.&nbsp;&nbsp; One very useful feature of this routine is its restart functionality.&nbsp; This allows the user to stop the optimizer after a specified number of function evaluations or design iterations, review the results, and continue the analysis.&nbsp; Since its original introduction, it has been upgraded to include constrained optimization and integer functionality.&nbsp; It has also been ported to various platforms and programming languages including MATLAB and a version is included in <A HREF="http://www.tomlab.net/">TOMLAB 3.0</A>. </P>
+<H4>iSIGHT</H4>
+<P>ISIGHT is an optimization software package developed and distributed by <A HREF="http://www.engineous.com/">Engineous Software, Inc</A>.&nbsp; It offers a wide variety of algorithms and solution methods to choose from.&nbsp; Two key features of this tool are 1) its flexibility in defining linkages between multiple programs, and 2) the ability to combine multiple solution methods in series or parallel to solve a specific problem.&nbsp; It also provides response surface visualization tools that allow the user to explore the impacts of design parameters manually based on design-of-experiments based approximation.&nbsp; In recent work, the Genetic Algorithms and the Sequential Quadratic Programming with Approximations methods have been explored.&nbsp; Based on previous experience, the hybrid vehicle design space is highly non-linear and can have discontinuous regions.&nbsp; Therefore, it is believed that these two methods would be effective routines. </P>
+<H3>Tutorials</H3>
+<P>Tutorial files have been created that solve 5 different problems.&nbsp; Of these problems, two are simple mathematical functions that test the implementation and three are ADVISOR related problems.&nbsp; The following table summarizes the five problems, <BR>
+&nbsp; </P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 WIDTH=624>
+<TR><TD VALIGN="MIDDLE">
+<P><B><FONT SIZE=4>Directory Name</B></FONT></TD>
+<TD VALIGN="MIDDLE">
+<B><FONT SIZE=4><P>Description</B></FONT></TD>
+<TD VALIGN="MIDDLE">
+<B><FONT SIZE=4><P>Objective</B></FONT></TD>
+<TD VALIGN="MIDDLE">
+<B><FONT SIZE=4><P>Constraints</B></FONT></TD>
+<TD VALIGN="MIDDLE">
+<B><FONT SIZE=4><P>Design Variables</B></FONT></TD>
+</TR>
+<TR><TD VALIGN="MIDDLE">
+<P>3humpcamelback</TD>
+<TD VALIGN="MIDDLE">
+<P>2D multi-modal mathematical surface</TD>
+<TD VALIGN="MIDDLE">
+<P>minimize f(x,y)</TD>
+<TD VALIGN="MIDDLE">
+<P>none</TD>
+<TD VALIGN="MIDDLE">
+<P>x and y</TD>
+</TR>
+<TR><TD VALIGN="MIDDLE">
+<P>box</TD>
+<TD VALIGN="MIDDLE">
+<P>Cardboard box optimization</TD>
+<TD VALIGN="MIDDLE">
+<P>minimize surface area</TD>
+<TD VALIGN="MIDDLE">
+<P>volume = 2.0</TD>
+<TD VALIGN="MIDDLE">
+<P>width, height, length</TD>
+</TR>
+<TR><TD VALIGN="MIDDLE">
+<P>sizing</TD>
+<TD VALIGN="MIDDLE">
+<P>ADVISOR component size optimization (similar to Autosize)&nbsp;</TD>
+<TD VALIGN="MIDDLE">
+<P>maximize fuel economy on TEST_CITY_HWY</TD>
+<TD VALIGN="MIDDLE">
+<B><P>Acceleration</B>&nbsp; </P>
+
+<UL>
+<LI>0-96.5 km/h &lt;= 11.2 s </LI>
+<LI>64-96.5 km/h &lt;= 4.4 s </LI>
+<LI>0-137 km/h &lt;= 20.0 s </LI></UL>
+
+<B><P>Gradeability</B> </P>
+
+<UL>
+<LI>@ 88.5 km/h for 20 min. at Curb Weight + 5 passengers and cargo (408 kg) = 6.5 % </LI></UL>
+
+<B><P>Drive Cycle</B>&nbsp; </P>
+
+<UL>
+<LI>Difference between drive cycle requested speed and vehicle achieved speed at every second during the drive cycle &lt;= 3.2 km/h </LI></UL>
+
+<B><P>SOC Balancing&nbsp;</B> </P>
+
+<UL>
+<LI>Difference between final and initial battery state of charge&nbsp; &lt;= 0.5 % </UL>
+</TD>
+<TD VALIGN="MIDDLE">
+<P>fc_pwr_scale <BR>
+mc_trq_scale <BR>
+ess_module_num <BR>
+ess_cap_scale</TD>
+</TR>
+<TR><TD VALIGN="MIDDLE">
+<P>control</TD>
+<TD VALIGN="MIDDLE">
+<P>Vehicle control strategy optimization in ADVISOR&nbsp;</TD>
+<TD VALIGN="MIDDLE">
+<P>maximize fuel economy on TEST_CITY_HWY</TD>
+<TD VALIGN="MIDDLE">
+<B><P>Acceleration</B>&nbsp; </P>
+
+<UL>
+<LI>0-96.5 km/h &lt;= 11.2 s </LI>
+<LI>64-96.5 km/h &lt;= 4.4 s </LI>
+<LI>0-137 km/h &lt;= 20.0 s </LI></UL>
+
+<B><P>Gradeability</B> </P>
+
+<UL>
+<LI>@ 88.5 km/h for 20 min. at Curb Weight + 5 passengers and cargo (408 kg) = 6.5 % </LI></UL>
+
+<B><P>Drive Cycle</B>&nbsp; </P>
+
+<UL>
+<LI>Difference between drive cycle requested speed and vehicle achieved speed at every second during the drive cycle &lt;= 3.2 km/h </LI></UL>
+
+<B><P>SOC Balancing&nbsp;</B> </P><DIR>
+
+<P>Difference between final and initial battery state of charge&nbsp; &lt;= 0.5 %</DIR>
+</TD>
+<TD VALIGN="MIDDLE">
+<P>cs_min_pwr <BR>
+cs_max_pwr <BR>
+cs_charge_pwr <BR>
+cs_min_off_time</TD>
+</TR>
+<TR><TD VALIGN="MIDDLE">
+<P>sizing_plus_control</TD>
+<TD VALIGN="MIDDLE">
+<P>Simultaineous optimization of component sizes and vehicle energy management strategy in ADVISOR</TD>
+<TD VALIGN="MIDDLE">
+<P>maximize fuel economy on TEST_CITY_HWY</TD>
+<TD VALIGN="MIDDLE">
+<B><P>Acceleration</B>&nbsp; </P>
+
+<UL>
+<LI>0-96.5 km/h &lt;= 11.2 s </LI>
+<LI>64-96.5 km/h &lt;= 4.4 s </LI>
+<LI>0-137 km/h &lt;= 20.0 s </LI></UL>
+
+<B><P>Gradeability</B> </P>
+
+<UL>
+<LI>@ 88.5 km/h for 20 min. at Curb Weight + 5 passengers and cargo (408 kg) = 6.5 % </LI></UL>
+
+<B><P>Drive Cycle</B>&nbsp; </P>
+
+<UL>
+<LI>Difference between drive cycle requested speed and vehicle achieved speed at every second during the drive cycle &lt;= 3.2 km/h </LI></UL>
+
+<B><P>SOC Balancing&nbsp;</B> </P><DIR>
+
+<P>Difference between final and initial battery state of charge&nbsp; &lt;= 0.5 %</DIR>
+</TD>
+<TD VALIGN="MIDDLE">
+<P>fc_pwr_scale <BR>
+mc_trq_scale <BR>
+ess_module_num <BR>
+ess_cap_scale <BR>
+cs_min_pwr <BR>
+cs_max_pwr <BR>
+cs_charge_pwr <BR>
+cs_min_off_time <BR>
+&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<P ALIGN="CENTER">All the optimization tools use common objective and constraint functions but have separate main control files and support files. The common files are located in the directory with the name of the problem while the main control and support files specific to a tool are located in the tools subdirectory. If you decide to change or create the main script file you will also need to change/create the associated objective and constraint function files.&nbsp; Before attempting to use the template files, ensure that you have started ADVISOR and selected the save path option the first time it starts. It is also important that your directory path names do not include spaces. <BR>
+In general, the two simple mathematical examples will finish in a matter of seconds while the ADVISOR problems will likely execute over a period of 1 to several hours.&nbsp; For the ADVISOR focused problems, a saved vehicle file is normally generated at the end of the optimization process that can then be used within the ADVISOR GUI to allow more detailed analysis of the vehicle operation during the entire drive cycle. </P>
+<B><P>Using MATLAB Optimization Toolbox</B> <BR>
+To use the template files for the Matlab Optimization toolbox you must have purchased the optional toolbox from The Mathworks.&nbsp; The MATLAB routine uses only a single main control file.&nbsp; In this file (optim_*_matlab.m) the optimization problem is defined and the optimizer parameters are set.&nbsp; For more information on the optimizer parameters or the available solution methods please refer to the toolbox documentation.&nbsp; FMINCON is applicable to many types of optimization problems. </P>
+<P>At the command line type the name of the main control file (i.e. optim_box_matlab).&nbsp; This will start the optimization process. Depending on the optimizer settings you have chosen you may or may not receive periodic feedback.&nbsp; When complete you may analyze the results in the workspace. </P>
+<B><P>Using VisualDOC</B> <BR>
+To use VisualDOC you will need to purchase a license for VisualDOC 2.0 from Vanderplaats R&amp;D.&nbsp; Once you have installed the basic software, you must add the custom application program interface (API) files to the installation.&nbsp; Simply double-click on the VisualDOC20_API.zip file in the main optimization directory and extract the files to the /VisualDOC20/bin directory.&nbsp; You may have to restart the computer for the files to be accessible. </P>
+<P>The API provides the user with the ability to build up problems and access the inputs and results during the intermediate steps of the optimization process.&nbsp; For API command reference please refer to the document VisualDOC20_API.doc in the main optimization directory. </P>
+<P>Once the software has been installed the user can then start the optimization process from Matlab by typing the name of the main optimization script file (i.e. optim_box_visualdoc.m).&nbsp; Within this file the user can modify the problem definition (remember to also modify the objective and constraint functions!) and optimizer control parameters.&nbsp; For gradient-based tools these parameters are extremely important to ensure realtively quick convergence. </P>
+<P>Results can then be accessed from the Matlab workspace or by opening the associated database file *.db using the VisualDOC GUI. </P>
+<B><P>Using DIRECT</B> <BR>
+A publicly distributed version of DIRECT in the form of gclsolve.m has been include with ADVISOR v3.2.&nbsp; A commercial version of DIRECT is also available in TOMLAB v3.0.&nbsp; The TOMLAB website provides good background information on history and methods used in this routine.&nbsp; Because it is non-gradient based it is quite effective in finding the near optimal solution on the vehicle analysis problems solved using ADVISOR.&nbsp; However, it will require a significant amount of processing power and time to resolve the solution to a close tolerance. </P>
+<P>The tutorials with DIRECT have two special features that the user should be aware of.&nbsp; First since DIRECT does not have a stop convergence tolerance for the design variables or responses, the user must predefine how long they would like the routine to iterate.&nbsp; Within the main control file you can either define the maximum number of function evaluations to be performed or the maximum number of iterations to be performed.&nbsp; If the maximum number of function evaluations is exceeded first, it will complete the current design iteration before exiting. </P>
+<P>An alternative approach using an external stop flag has also been implemented. At the end of each design iteration DIRECT will look for a file called stop.m in the current Matlab path.&nbsp; If found, it will exit. If not it will continue.&nbsp; This is an extremely useful feature when you know about how long you have for processing.&nbsp; For example, you can start the problem before you leave the office in the morning.&nbsp; When you arrive the next day, find the file, stop_hide.m, in the optimization directory and rename it to stop.m.&nbsp; The routine will not stop immediately since it needs to complete the current design iteration. </P>
+<P>DIRECT also offers the user the ability to continue an optimization process that has been stopped.&nbsp; By changing the value of cont_bool from 0 to 1 the routine will import the previous results and continue from where it left off.&nbsp; Remember to reset the name of the stop.m file back to stop_hide.m. </P>
+<P>We have also created a plotting routine for use with DIRECT and other optimization scripts that provide intermediate results.&nbsp; By setting the PriLev parameter to 2 in the main control file, normalized plots of the design variables, constraints, and objective will be created at the end of each design iteration and at the conclusion of the analysis.&nbsp; These are useful for evaluating the progress made and choosing whether to stop the routine or to let it continue to process on the problem. </P>
+<B><P>Using iSIGHT</B> <BR>
+To use iSIGHT you will need to purchase a license for iSIGHT from Engineous Software.&nbsp; At this time the connection with iSIGHT is slightly different from that of the other tools mentioned above in that the initiation occurs from within iSIGHT rather than from within Matlab.&nbsp; By double-clicking on the *.desc file in the problem directory of choice launches iSIGHT and allows you the run and analyse the results from within the iSIGHT GUI.&nbsp; Users will need a working knowledge of iSIGHT to effectively use these example files. </P>
+<P>VERY IMPORTANT:&nbsp; To use the included files you MUST update embedded path information in two locations.&nbsp; First in the *.desc file (editable in Notepad) approximately half way through the text file there is a line that points to the location of your Matlab installation.&nbsp; Update this path to point to your installation.&nbsp; Second, in the indata.m file of the problem of interest you must update the path at the end of the file to point to the specific indata.m file.&nbsp; These are important steps that are necessary so that iSIGHT knows where to look for specific files.&nbsp; Both of these modifications can also be completed from the iSIGHT GUI. </P>
+<P>To run an analysis double-click on the *.desc file of interest and then select Execute from within iSIGHT.&nbsp; Intermediate and Post-Processing results can be reviewed using the iSIGHT Solution Monitor. </P>
+<P><HR></P>
+<P ALIGN="CENTER"><A HREF="advisor_doc.htm">ADVISOR Documentation</A> </P>
+<P><HR></P>
+<P ALIGN="CENTER">Last revised: [31-July-2001] tm </P></BODY>
+</HTML>

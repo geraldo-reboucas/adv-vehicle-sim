@@ -1,0 +1,76 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Valerie Hovland">
+   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+   <title>Traction Control</title>
+</head>
+<body>
+
+<h3>
+Traction control</h3>
+<i><a href="tract.gif">Traction Control block diagram</a></i>
+<p>
+<i><a href="tract_input_fig.gif">Traction Control Setup on Input Figure</a></i>
+</p>
+<p><b><u>Role of subsystem in vehicle</u></b>
+<br>The traction control block ensures that the tractive force and linear
+speed required at the tire patch are consistent with the traction limit
+of the tires. That is, no more force, either positive (accelerating) or
+negative, will be requested than can be provided by the tire without its
+‘peeling out’ or skidding. Also, no greater change in speed, either positive
+or negative, will be requested than can be caused by the limited force
+requirement.
+<p><b><u>Relationship to other component/subsystem models</u></b>
+<br>The traction control block interacts only with the ‘wheel and axle’
+block and other control blocks that operate on the ‘wheel and axle.’
+<p><b><u>Description of modeling approach</u></b>
+<br>The maximum attainable speed is computed by solving <font face="Symbol">S</font>F=ma
+for max. speed, by discretizing a in terms of speeds at the beginning and
+end of the time step, and accounting for the fact that the maximum force
+at the tire patch is a function of weight on the axle, which is turn a
+function of acceleration. The minimum speed is likewise computed, with
+a sign reversal or two. The maximum force is then computed by using the
+limited requested speed to compute the requested acceleration, going on
+to compute the weight on the front (drive) axle
+<p><b><u>Equations used in model</u></b>
+<p>(max. speed at end of time step) = [ max(<b>wh_slip_force_coeff) * veh_mass
+* veh_gravity * veh_front_wt_frac - veh_mass * veh_gravity * (</b><b>wh_1st_rrc</b>
++ sin(atan(<b>cyc_grade</b>))) - 1/2 *<b> veh_mass * veh_gravity * </b><b>wh_2nd_rrc</b>
+* (speed at beginning of time step) - 1/8 * <b>veh_air_density * veh_CD
+* veh_FA</b> * (speed at beginning of time step)^2 + max(<b>wh_slip_force_coeff)
+* veh_mass * veh_cg_height / veh_wheelbase</b> * (speed at beginning of
+time step) / (time step duration) + <b>veh_mass</b> * (speed at beginning
+of time step) / (time step duration) ]&nbsp; / [ 3/8 * <b>veh_air_density
+* veh_CD * veh_FA</b> * (speed at beginning of time step) + &frac12; *
+<b>veh_mass
+* veh_gravity * wh_2nd_rrc + veh_mass</b> / (time step duration) + max(<b>wh_slip_force_coeff)
+* veh_mass * veh_cg_height / veh_wheelbase</b> ]
+<p>(speed at beginning of time step) = (speed at end of previous time step)
+<p>The (min. speed at end of time step) is computed using an equation similar
+to the above, with some sign changes, and is applicable in braking situations.
+<p>(maximum force) = max(<b>wh_slip_force_coeff) * [ veh_mass * veh_gravity
+* veh_front_wt_frac - veh_mass * veh_cg_height / veh_wheelbase</b> * 2
+* ( (requested average vehicle speed) – (speed at beginning of time step)
+) / (time step duration) ]
+<p>In braking situations, the maximum force computed above is negative
+and is the most negative value that the tractive force can take.
+<p><b><u>Variables used in subsystem</u></b>
+<blockquote><a href="advisor_appendices.htm#Appendix A.2 Input">See Appendix
+A.2: Input Variables</a>
+  <p>Beginning with the ADVISOR 2003 model there is now the availability to run
+  front, rear or both axles for traction.&nbsp; The new variables in the wheel
+  data files are in the code as follows:</p>
+  <p>% front or rear or both axles driving?<br>
+  wh_front_active_bool=1; % 0==> inactive; 1==> active<br>
+  wh_rear_active_bool=0; % 0==> inactive; 1==> active<br>
+  </p>
+  <p>&nbsp;</p>
+</blockquote>
+
+<hr SIZE=5 NOSHADE WIDTH="100%">
+<center><a href="advisor_ch3.htm">Back to Chapter 3</a></center>
+
+</body>
+</html>

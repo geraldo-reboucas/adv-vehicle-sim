@@ -1,0 +1,179 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Sam Sprik">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (WinNT; I) [Netscape]">
+   <title>exhaust</title>
+</head>
+<body>
+<b><font size=+1>Exhaust System</font></b>
+<p><i><a href="ex.gif">Exhaust System Block Diagrams</a></i>
+<p><i><a href="emis_ornl.htm">Diesel Oxydation Catalyst Model Information</a></i>
+<p><b><u>Role of subsystem in vehicle</u></b>
+<br>The exhaust system model simulates a fuel converter exhaust aftertreatment
+system for the vehicle. In the case of an internal combustion engine, it
+is composed of the exhaust manifold, downpipe, catalytic converter, and
+muffler.&nbsp; It can be incorporated into various vehicle configurations
+including, series, parallel, and conventional vehicles.&nbsp;&nbsp; The
+primary output of the exhaust system model is the tailpipe emissions (HC,
+CO, NOx, and PM) in g/s, as a function of time.&nbsp; Other outputs include
+the temperature of various exhaust system components and of the exhaust
+gas temperature into and out of each system component.
+<p><b><u>Description of modeling approach</u></b>
+<br>Catalyst conversion efficiencies as a function of temperature are stored
+in vectors.&nbsp; Additionally, there is a catalyst efficiency adjustment
+(decrease) made at high exhaust flow rates (face velocities) and an upper
+"breakthrough" limit in g/s for each emission component.&nbsp; The tailpipe
+emissions are then the product of the fuel converter out emissions and
+the total effective catalyst efficiency.&nbsp; Catalyst temperature is
+calculated using a lumped-capacitance approach.&nbsp; A mass and heat capacity
+are assigned not only to the major converter components (monolith, exterior
+shell, and remainder), but also to the manifold and downpipe.&nbsp; Heat
+transfer correlations are used to estimate the convective heat transfer
+coefficients from the hot exhaust gas to the components, as well as from
+the components to ambient.&nbsp; Radiative loss to the ambient is also
+included.&nbsp; Within the converter, the heat of catalysis is estimated
+based on the g/s of each emission component (HC, CO, NOx, and PM) being
+catalyzed.&nbsp; This heat adds to the rate of converter warmup.&nbsp;
+NOTE:&nbsp; An older approach to estimating the catalyst temperature as
+a simple exponential curve fit of typical warmup and cooldown versus time
+has been retained.&nbsp; This old approach can be compared to the current
+approach by comparing the variable ex_cat_temp_old with ex_cat_temp and
+emis_old with emis.
+<br>&nbsp;
+<p><b><u>Equations used in subsystem</u></b>
+<p>There are many equations encompased in the exhaust system modeling.&nbsp;
+Additional information on thermal modeling is provided in the section below.&nbsp;
+In general, the following types of equations are used:
+<p>&nbsp;&nbsp;&nbsp; (change in temperature with time)=(net heat flow)/[(mass)*(heat
+capacity)]
+<p>&nbsp;&nbsp;&nbsp; where:&nbsp; (net heat flow) can be:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+convective:&nbsp; (heat transfer coef)*(surface area)*(surface-to-fluid
+temperature difference)
+<br>&nbsp;conductive:&nbsp; (thermal conductance)*surface-to-surface temperature
+difference)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+or radiative:&nbsp; (emissivity)*(surface area)*(Steffan-Boltzman constant)*(Th4
+– Tc4)
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (catalyst efficiency) = (catalyst
+temperature efficiency) * (catalyst exhaust flow efficiency)
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (catalyst efficiency) = max(catalyst
+efficiency, "breakthrough" limit)
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (tailpipe emissions) = (engine
+out emissions) * [1 – (catalyst efficiency)]
+<br>&nbsp;
+<p><b><u>Exhaust aftertreatment thermal model</u></b>
+<center>
+<p><img SRC="ex_thermfig1.gif" height=551 width=968>
+<p><b>Figure 1. Top level of catalyst model</b></center>
+
+<p>The prediction of tailpipe emissions is based on the engine emissions
+multiplied by the catalyst conversion efficiency. The catalyst conversion
+efficiency is a function of catalyst temperature.&nbsp; ADVISOR has a detailed
+and accurate methodology for predicting catalytic converter temperature.
+<p>The top level of the exhaust system thermal model is shown in Figure
+1. The converter thermal model uses two outputs from the fuel converter
+as its inputs: the exhaust gas flow rate and engine-out temperature. The
+exhaust gas loses heat to the exhaust manifold and downpipe prior to reaching
+the catalytic converter (which in turn lose heat to the engine and ambient).
+The catalytic converter is modeled via a three-node lumped capacitance
+model including 1) monoliths, 2) inner steel shell, and 3) outer steel
+shell. Heat exchange from the gas to the converter nodes, between converter
+(and pipe) nodes, and from the converter to the ambient was modeled via
+appropriate advection, conduction, convection, and radiation thermal resistances,
+as shown in Figure 2 and Table 1.
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><img SRC="ex_thermfig2.gif" height=502 width=631>
+<p><b>Figure 2. Thermal network representing the catalyst and associated
+thermal elements</b>
+<br>&nbsp;
+<br>&nbsp;
+<p><b>Table 1. Modes of heat transfer and representative thermal resistances</b></center>
+
+<center><table BORDER CELLPADDING=7 WIDTH="564" >
+<tr>
+<td VALIGN=CENTER WIDTH="21%" HEIGHT="40">Mode</td>
+
+<td VALIGN=CENTER WIDTH="27%" HEIGHT="40">Resistance</td>
+
+<td VALIGN=CENTER WIDTH="52%" HEIGHT="40">Variable definitions</td>
+</tr>
+
+<tr>
+<td VALIGN=CENTER WIDTH="21%" HEIGHT="29">Advection</td>
+
+<td VALIGN=CENTER WIDTH="27%" HEIGHT="29"><img SRC="ex_thermeq1.gif" height=28 width=85></td>
+
+<td VALIGN=CENTER WIDTH="52%" HEIGHT="29"><img SRC="ex_thermeq2.gif" height=18 width=29>mass
+flow rate,&nbsp;<img SRC="ex_thermeq3.gif" height=25 width=32>heat capacity</td>
+</tr>
+
+<tr>
+<td VALIGN=CENTER WIDTH="21%" HEIGHT="96">Conduction</td>
+
+<td VALIGN=CENTER WIDTH="27%" HEIGHT="96"><img SRC="ex_thermeq4.gif" height=26 width=106></td>
+
+<td VALIGN=CENTER WIDTH="52%" HEIGHT="96"><img SRC="ex_thermeq5.gif" height=18 width=26>thermal
+conductivity,&nbsp;
+<p><img SRC="ex_thermeq6.gif" height=24 width=33>cross-sectional area,&nbsp;
+<p><img SRC="ex_thermeq7.gif" height=14 width=26>representative distance
+between nodes</td>
+</tr>
+
+<tr>
+<td VALIGN=CENTER WIDTH="21%" HEIGHT="67">Convection</td>
+
+<td VALIGN=CENTER WIDTH="27%" HEIGHT="67"><img SRC="ex_thermeq8.gif" height=25 width=84></td>
+
+<td VALIGN=CENTER WIDTH="52%" HEIGHT="67"><img SRC="ex_thermeq9.gif" height=18 width=26>convective
+heat transfer coefficient,&nbsp;
+<p><img SRC="ex_thermeq10.gif" height=24 width=33>surface area</td>
+</tr>
+
+<tr>
+<td VALIGN=CENTER WIDTH="21%" HEIGHT="66">Radiation</td>
+
+<td VALIGN=CENTER WIDTH="27%" HEIGHT="66"><img SRC="ex_thermeq11.gif" height=45 width=133></td>
+
+<td VALIGN=CENTER WIDTH="52%" HEIGHT="66"><img SRC="ex_thermeq12.gif" height=14 width=26>emissivity,&nbsp;
+<br><img SRC="ex_thermeq13.gif" height=14 width=29>Stefan-Boltzmann constant</td>
+</tr>
+</table></center>
+
+<p>A thermal network diagram is often used to show the flow of thermal
+energy (heat) through a system approximated with nodes. In such a network,
+heat flow is analogous to current, and temperature to voltage (Q=<font face="Symbol">D</font>
+T/R). Note that each lumped capacitance node (represented in Figure 3 with
+a circle around a dot) has a thermal mass associated with it, analogous
+to an electrical capacitance with a value of mass*heat capacity, as shown
+in Figure 2.
+<center>
+<p><img SRC="ex_thermfig3.gif" height=152 width=315>
+<br><b>Figure 3. Thermal capacitance at nodes in catalyst's network</b></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>Within the converter, the heat of catalysis, Q<sub>ct</sub>, is estimated
+based on the mass flow rate (g/s) of each emission component (HC, CO, and
+NOx) being catalyzed. This heat adds to the rate of converter warm-up.
+This detailed thermal model of the exhaust aftertreatment system also enables
+much more flexibility in investigating aftertreatment options. Recently,
+NREL and Benteler Automotive Corp. used this thermal model as part of ADVISOR
+to look at the emissions reduction capability of a vacuum-insulated catalytic
+converter.
+<br>
+<hr SIZE=5 NOSHADE WIDTH="100%">
+<center><a href="advisor_ch3.htm">Back to Chapter 3</a></center>
+<font size=-1>Last revised: 8/20/01:tm</font>
+</body>
+</html>

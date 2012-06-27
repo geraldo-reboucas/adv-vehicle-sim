@@ -1,0 +1,47 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="default_user">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (WinNT; U) [Netscape]">
+   <title>cargo_mass_vs_distance</title>
+</head>
+<body>
+
+<h1>
+Variable Cargo Mass Specification for Drive Cycle</h1>
+A new functionality has been added to the ADVISOR drive cycle--variable
+cargo mass versus distance traveled. A new variable called cyc_cargo_mass
+is defined in the cyc_*.m files. The variable is a two-column matrix specifying
+distance traveled since the start of the simulation (units of meters) in
+the first column and cargo mass corresponding to that distance in the second
+column (units of kg).
+<p>In the Simulink block diagrams, variable cargo mass is implemented with
+a repeating table (see lib_drive_cycle for details). The variable cargo
+mass has been implemented primarily for heavy vehicle applications (e.g.,
+loading/unloading of vehicle cargo/freight vs. distance, the loading/unloading
+of passengers on a transit bus, etc.).
+<p>Upon completion of the drive-cycle, the variable veh_cargo_mass_vs_time
+will be available (selectable from the GUI pull-down menu on the 'Results'
+screen). The variable 'veh_cargo_mass_vs_time' is an array of the cargo
+mass for each time step throughout the simulation (units of kg). The energy
+usage figure takes the variable cargo mass into account when determining
+values such as rolling resistance.
+<p>A drive cycle which takes advantage of the variable cargo mass functionality
+has been added to ADVISOR version 3.2: CYC_UKBUS_MASS_VAR1. This cycle
+uses actual data for a typical London bus trip. Variable passenger mass
+has been calculated with a head count assuming 75 kg per person. This cycle
+has been graciously provided by Newbus Technologies, UK.
+<p>Note: the original intention of the cyc_cargo_mass variable was to specify
+cargo vs. distance. Negative values of cargo mass can be specified, though
+the user must take care not to cancel out total vehicle weight.
+<p>
+<hr WIDTH="100%">
+<center><a href="advisor_doc.htm">Return to ADVISOR Documentation</a>
+<br>
+<hr WIDTH="100%"></center>
+Last revision: [12-July-2001] mpo
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Valerie Hovland">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (WinNT; I) [Netscape]">
+   <title>Torque Coupler</title>
+</head>
+<body>
+
+<h3>
+Torque coupler</h3>
+<i><a href="tc.gif">Torque coupler block diagram</a></i>
+<p><b><u>Role of subsystem in vehicle</u></b>
+<br>Physically, a torque coupler is a three-sprocket belt or chain drive
+whereby two torque sources combine their torques to provide to a drivetrain
+component such as the gearbox or final drive. The torque coupler block
+diagram processes a torque and speed request from the downstream drivetrain
+component and apportions requests of the two ‘feeder’ torque sources.
+<p><b><u>Description of modeling approach</u></b>
+<br>The effects of torque loss and a gear ratio between the second of the
+torque input devices and the output are modeled here. The torque loss is
+a constant whenever the torque coupler is spinning.
+<p>The torque coupler first requests the sum of necessary output torque
+and torque coupler loss from the first torque source. Using the actual/available
+torque of the first source, it requests the balance of the second torque
+source. The speeds of the two torque providers are in constant proportion
+to the torque coupler output speed: the first input speed equals the output
+speed, and the second input speed is greater by a factor tc_mc_to_fc_ratio.
+<p><b><u>Variables used in subsystem</u></b>
+<blockquote><a href="advisor_appendices.htm#Output Torque Coupler">See
+Appendix A.3: Output Variables</a></blockquote>
+
+<hr SIZE=5 NOSHADE WIDTH="100%">
+<center><a href="advisor_ch3.htm">Back to Chapter 3</a></center>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Valerie H. Johnson">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (WinNT; I) [Netscape]">
+   <title>ADVISOR Braking</title>
+</head>
+<body>
+
+<h3>
+Vehicle Braking</h3>
+Details on the block diagram for <a href="brake_cont_ach.htm">Brake control:
+achievable</a>.
+<br>Details on the block diagram for <a href="brake_cont_req.htm">Brake
+control: req’d</a>.
+<br>More on <a href="regen.htm">regenerative braking</a>, including an
+example.
+<p><b><u>Role of subsystem in vehicle</u></b>
+<br>Braking in ADVISOR is distributed between driveline braking (regen)
+and friction braking (normal).&nbsp; In the figure below, dl refers to
+the variable wh_fa_dl_brake_frac and faf refers to the variable wh_fa_fric_brake_frac.
+<p><img SRC="braking1.jpg" height=223 width=617>
+<p>The following example sets the driveline to receive 90% of the desired
+braking, and the front friction brakes to receive 6% of the total brake
+request.
+<br><img SRC="braking_ex.jpg" height=327 width=689>
+<p>
+<hr SIZE=5 NOSHADE WIDTH="100%">
+<center><a href="../ADVISOR3.0/documentation/advisor_ch3.htm">Back to Chapter
+3</a></center>
+Last Revised: 1/10/01:VHJ
+</body>
+</html>

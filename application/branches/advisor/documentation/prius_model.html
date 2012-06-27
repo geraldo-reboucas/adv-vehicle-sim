@@ -1,0 +1,107 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Sam Sprik">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (WinNT; I) [Netscape]">
+   <title>Prius Model in ADVISOR</title>
+</head>
+<body>
+
+<h1>
+Toyota Prius Model in ADVISOR (Japanese Prius '98)</h1>
+
+<h2>
+Powertrain Operation</h2>
+A planetary gear is used for transmitting power from/to the motor, engine,
+generator, and&nbsp; front wheels.&nbsp; The motor is attached to the ring
+gear, the engine is attached to the planetary carrier, and the generator
+is attached to the sun gear.&nbsp; The ring gear is coupled directly to
+the final drive.
+<br><img SRC="image9LP.JPG" height=266 width=400>
+<p>The speed of the motor is directly proportional to the linear speed
+of the vehicle through the radius of the front tires and the final drive
+ratio.&nbsp; The ring gear speed and the motor speed are identical.
+<p>The speed of the engine is controlled with the torque on the generator.&nbsp;
+Basically, the generator torque is adjusted so that the engine turns at
+the desired speed.
+<p>The Engine is limited from 0 to 4000 rpm.
+<br>The motor is limited from a small negative rpm for reverse and up to
+6000 rpm (~103 mph or 165 km/h).
+<br>The generator is limited to +/- 5500 rpm.
+<p>Nr=number of teeth on ring gear and Ns=number of teeth on sun gear.
+<br>Nr=78 &amp; Ns=30 for the Japanese version of the Prius.
+<br>The 4 planet gears each have 23 teeth.
+<br>fd_ratio=3.93 for Prius
+<br>effective_wheel_radius = 0.287 m
+<p>Engine speed:
+<blockquote>engine_spd = [ Nr / (Nr + Ns) ] * motor_spd + [ Ns / (Nr +
+Ns) ] * generator_spd
+<br>&nbsp;&nbsp;&nbsp; = 7.2222*motor_spd + 0.2778 * generator_spd</blockquote>
+Motor speed:
+<blockquote>motor_spd(rpm) = veh_spd(m/s) / effective_wheel_radius(m) *
+fd_ratio * (60 s/min) / (2*pi (rad/rev))
+<br>&nbsp;&nbsp;&nbsp; =veh_spd(m/s) * 130.762
+<br>&nbsp;&nbsp;&nbsp; =veh_spd(mph) * 58.4663
+<br>&nbsp;&nbsp;&nbsp; =veh_spd(km/h) * 36.3228
+<p>motor_spd = (1 + Ns/Nr) * engine_spd - ( Ns/Nr) * generator_spd
+<br>&nbsp;&nbsp;&nbsp; =1.3846 * engine_spd - 0.3846 * generator_spd</blockquote>
+Generator speed:
+<blockquote>generator_spd= (1 + Nr/Ns) * engine_spd - ( Nr/Ns) * motor_spd
+<br>&nbsp;&nbsp;&nbsp; = 3.6 * engine_spd - 2.6 * motor_spd</blockquote>
+Vehicle speed:
+<blockquote>veh_spd (m/s) = motor_spd(rpm)*effective_wheel_radius(m) /fd_ratio
+/ (60 s/min) * (2*pi (rad/rev))
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = motor_spd(rpm) / 130.762
+<br>veh_spd(mph) = motor_spd(rpm) / 58.4663
+<br>veh_spd(km/h) = motor_spd(rpm) / 36.3228</blockquote>
+
+<p><br>Torque relations:
+<blockquote>Nr*(Tc-Ic*wc') + (Nr + Ns)*(Tr-Ir*wr') = 0
+<br>Ns*(Tc-Ic*wc') + (Nr + Ns)*(Ts-Is*ws') = 0
+<p>rearranged:
+<br>Tc = Ic*wc' - (Nr + Ns) / Nr * (Tr - Ir*wr')
+<br>Tc = Ic*wc' - (Nr + Ns) / Ns * (Ts - Is*ws')
+<p>Ts = Is*ws' - Ns / (Nr + Ns) *(Tc - Ic*wc')
+<br>Tr = Ir*wr' - Nr / (Nr + Ns) * (Tc - Ic*wc')
+<br>&nbsp;</blockquote>
+Control Strategy
+<blockquote>The Basics.:
+<br>For a given vehicle speed, and a desired output power (determined by
+drive cycle, or driver inputs)
+<ul>
+<li>
+determine desired operating point of the engine (based on max efficiency
+curve)</li>
+
+<li>
+determine generator speed (which is controlled by generator torque) to
+have engine at the desired operating point</li>
+
+<li>
+determine motor torque (power or regen) to provide necessary power to the
+wheels (or recapture energy from wheels)</li>
+
+<li>
+batteries provide additional power when needed or take back extra charge
+provided by generator or motor in regen.</li>
+</ul>
+Hybrid control strategy is contained inside the coordinated controller
+block which is inside the vehicle control block</blockquote>
+
+<blockquote>&nbsp;&nbsp;&nbsp; Control Inputs:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vehicle speed --> through
+final drive and wheel radius this gives us ring (or motor) speed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vehicle power request-->
+this is the power needed to propel or decelerate the vehicle, based on
+drive cycle which is similar to driver request.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Battery state of charge
+(SOC)-->this will guide in deciding whether to charge or discharge the
+batteries.
+<br>&nbsp;
+<br>&nbsp;</blockquote>
+
+<blockquote>&nbsp;</blockquote>
+
+</body>
+</html>
