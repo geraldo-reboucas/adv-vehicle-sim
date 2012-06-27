@@ -764,8 +764,8 @@ catch
 end
 % --------------------------------------------------------------------
 function varargout = road_grade_checkbox_Callback(h, eventdata, handles, varargin)
-try
-    global vinf
+global vinf
+try   
     h=findobj('userdata','road_grade');
     if get(findobj('tag','road_grade_checkbox'),'value')==1
         set(h,'visible','on')
