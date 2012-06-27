@@ -226,8 +226,8 @@ vinf.optionlist.name=list_def;
 
 
 % --------------------------------------------------------------------
-function varargout = Help_button_Callback(h, eventdata, handles, varargin)
-web(['file:\\\' which('advisor_doc.htm')],'-browser');
+function varargout = Help_button_Callback(~, ~, ~, varargin)
+web(which('advisor_doc.htm'), '-browser');
 
 
 % --------------------------------------------------------------------
