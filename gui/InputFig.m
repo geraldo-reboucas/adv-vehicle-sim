@@ -3,14 +3,12 @@ function varargout = InputFig(varargin)
 %    FIG = InputFig launch InputFig GUI.
 %    InputFig('callback_name', ...) invoke the named callback.
 
-% Last Modified by GUIDE v2.0 18-Sep-2003 11:46:51
+% Last Modified by GUIDE v2.5 04-May-2012 12:29:55
 
 if nargin == 0  % LAUNCH GUI
     
     fig = openfig(mfilename,'reuse');
-    
-    % Use system color scheme for figure:
-    %set(fig,'Color',get(0,'defaultUicontrolBackgroundColor'));
+        %set(fig,'Color',get(0,'defaultUicontrolBackgroundColor'));
     
     % Generate a structure of handles to pass to callbacks, and store it. 
     handles = guihandles(fig);
@@ -753,7 +751,7 @@ gui_edit_var('modify','wh_rear_active_bool','1')
 
 % --------------------------------------------------------------------
 function varargout = four_wheel_drive_help_Callback(h, eventdata, handles, varargin)
-web(['file:\\\' which('traction_control.htm')],'-browser');
+web(['file:///' which('traction_control.htm')],'-browser');
 
 % 3/20/00 ss: added case 'units'
 % 7/11/00 ss: added the functionality for the new popupmenu for selecting vehicles.
