@@ -16,106 +16,108 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mokeefe"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Mar 23 14:57:12 2012"
-  RTWModifiedTimeStamp	  254415428
-  ModifiedComment	  "mokeefe -- Fri Mar 23 14:57:12 2012 -- Version 1.477\n"
-  ModifiedHistory	  "mokeefe -- Fri Mar 23 14:57:12 2012 -- Version 1.477\n\n\nmokeefe -- Fri Mar 23 14:56:40 2012 -- "
-  "Version 1.476\nUpdated <vc> conv cvt/engine control/key_on mask initialization from @1 to variable name.\n\nmokeefe "
-  "-- Fri Mar 23 14:35:59 2012 -- Version 1.475\nUpdated mask variable from @1 to variable name.\n\nmokeefe -- Fri Mar "
-  "23 09:48:31 2012 -- Version 1.474\nFixed MaskInitiation string of block 'engine control/key_on' which used mask vari"
-  "ables by reference (@1) vs by variable name.\n\nssprik -- Fri Oct 10 08:40:34 2003 -- Version 1.473\nadded goto tag "
-  "for F_rear_brake_req\n\nssprik -- Thu Oct 09 15:11:40 2003 -- Version 1.472\nadded F_rear_brake_req   goto \n\ntmark"
-  "el -- Fri Mar 07 09:53:07 2003 -- Version 1.471\n\nadded logic to allow user to keep the engine on during a drive cy"
-  "cle unless the key if off or the engine has been manually disabled\n\ntmarkel -- Fri Mar 07 09:43:58 2003 -- Version"
-  " 1.470\n\nadded an override bool to keep engine on at all times\n\n\ntmarkel -- Mon Mar 03 14:14:43 2003 -- Version "
-  "1.469\n\nupdated traction control block in all vehicle control blocks to 2 axle version\n\ntmarkel -- Mon Mar 03 14:"
-  "07:59 2003 -- Version 1.468\n\nadded output from blocks for rear params from traction blocks in all vehicle control "
-  "blocks\n\ntemp solution - added grounds as inputs to the brake controller for rear drivetrain output to eliminate wa"
-  "rnings\n\n\n\n\ntmarkel -- Mon Mar 03 12:40:46 2003 -- Version 1.467\n\n\ntmarkel -- Mon Mar 03 12:37:51 2003 -- Ver"
-  "sion 1.466\nremoved extra traction control model from conv.\n\ntmarkel -- Mon Mar 03 12:29:10 2003 -- Version 1.465\n"
-  "\nupdated traction control config subsystem to be two axle model\n\ntmarkel -- Mon Feb 24 16:12:37 2003 -- Version 1"
-  ".464\nupdated j2452 model for 2 axles\n\nabrooker -- Thu Feb 20 14:21:28 2003 -- Version 1.463\n\n\nmokeefe -- Wed F"
-  "eb 19 08:45:17 2003 -- Version 1.462\n\n\nmokeefe -- Wed Feb 19 08:43:58 2003 -- Version 1.461\n\n\ntmarkel -- Fri F"
-  "eb 14 10:10:01 2003 -- Version 1.460\n\n\ntmarkel -- Fri Feb 14 10:08:23 2003 -- Version 1.459\n\n\ntmarkel -- Thu F"
-  "eb 13 12:55:41 2003 -- Version 1.458\n\n\ntmarkel -- Thu Feb 13 12:32:44 2003 -- Version 1.457\n\n\ntmarkel -- Wed F"
-  "eb 12 15:47:27 2003 -- Version 1.456\nfixed one more broken link\n\ntmarkel -- Wed Feb 12 15:29:50 2003 -- Version 1"
-  ".455\nupdated conv controller to include front/rear traction model\n\n\ntmarkel -- Wed Feb 12 15:07:56 2003 -- Versi"
-  "on 1.454\nfixed broken link to lib_controls_2axle\n\ntmarkel -- Wed Feb 12 14:32:44 2003 -- Version 1.453\nfixed bad"
-  " link errors\n\ntmarkel -- Wed Feb 12 09:39:27 2003 -- Version 1.452\n\nAdded the traction control blocks for a fron"
-  "t/rear traction system to the subsystem box\n\n\nbjeanner -- Thu Dec 26 09:42:29 2002 -- Version 1.451\nadd three ne"
-  "w parameters: allowing calcultion of equivallent ESS function with mean efficiency; plus plotting results parameter\n"
-  "\n\nbjeanner -- Thu Dec 12 14:52:52 2002 -- Version 1.450\n\n\nbjeanner -- Tue Dec 10 14:49:05 2002 -- Version 1.449"
-  "\n\n\nbjeanner -- Tue Dec 10 13:14:31 2002 -- Version 1.448\n\n\nbjeanner -- Tue Dec 10 11:50:56 2002 -- Version 1.4"
-  "47\n\n\nbjeanner -- Tue Dec 10 11:41:01 2002 -- Version 1.446\n\n\nbjeanner -- Tue Dec 10 11:30:40 2002 -- Version 1"
-  ".445\n\n\nbjeanner -- Tue Dec 10 11:29:40 2002 -- Version 1.444\n\n\nbjeanner -- Tue Dec 10 11:10:40 2002 -- Version"
-  " 1.443\n\n\nbjeanner -- Tue Dec 10 10:31:25 2002 -- Version 1.442\n\n\nbjeanner -- Tue Dec 10 10:30:04 2002 -- Versi"
-  "on 1.441\n\n\nbjeanner -- Tue Dec 10 10:29:36 2002 -- Version 1.440\n\n\nbjeanner -- Tue Dec 10 10:23:30 2002 -- Ver"
-  "sion 1.439\n\n\nbjeanner -- Tue Dec 10 09:20:40 2002 -- Version 1.438\n\n\nbjeanner -- Tue Dec 10 09:16:26 2002 -- V"
-  "ersion 1.437\nAdd the template for the configurable subsystem for the BD_FUELCELL control strategy.\nAdd the fuel ce"
-  "ll adaptive control strategy\n\n\nmokeefe -- Tue Aug 13 07:36:17 2002 -- Version 1.436\nMaking the model look \"pret"
-  "ty\"\n\nmokeefe -- Tue Aug 13 07:35:11 2002 -- Version 1.435\nchanged <vc> conv cvt/cvt control to use \"acc_mech_pw"
-  "r_est\" instead of \"acc_mech_trq_est\" as had been used previously (the required datum is the power and not the tor"
-  "que!)\n\nssprik -- Tue Apr 30 11:21:35 2002 -- Version 1.434\nadded user contributed par bal engine on  block\n\nmok"
-  "eefe -- Tue Apr 23 09:06:10 2002 -- Version 1.433\nchanged Insight electric assist control strategy <cs> DIRECT SPLI"
-  "T/Hard Acceleration to prevent a divide by zero warning. Also added logic to prevent a torque request above the maxi"
-  "mum achievable motor torque.\n\nmokeefe -- Tue Apr 23 09:03:51 2002 -- Version 1.432\nchanged Insight electric assis"
-  "t control strategy <cs> DIRECT SPLIT/Hard Acceleration to prevent a divide by zero warning. Also added logic to prev"
-  "ent a torque request above the maximum achievable motor torque.\n\nmokeefe -- Tue Apr 23 08:50:58 2002 -- Version 1."
-  "431\n\n\nssprik -- Thu Apr 18 14:34:50 2002 -- Version 1.430\n\n\nssprik -- Thu Apr 18 14:32:52 2002 -- Version 1.42"
-  "9\n\n\nssprik -- Thu Apr 18 14:06:57 2002 -- Version 1.428\n\n\nssprik -- Thu Apr 18 13:56:10 2002 -- Version 1.427\n"
-  "\n\nssprik -- Thu Apr 18 13:46:32 2002 -- Version 1.426\n\n\nkkelly -- Thu Apr 18 10:17:40 2002 -- Version 1.425\n\n"
-  "\nmokeefe -- Thu Apr 18 08:23:32 2002 -- Version 1.424\nsaving the model:\no \"without the model browser open\"\no w"
-  "ith only top-level screen visible \no with \"fit to view\" enabled\no with \"status bar\" off and \"toolbar\" off\no"
-  " with \"prompt to update model history with each save\" on\n\nkkelly -- Wed Mar 27 14:57:12 2002 -- Version 1.423\n\n"
-  "\nkkelly -- Wed Mar 27 14:57:12 2002 -- Version 1.423\n\n\nkkelly -- Wed Mar 27 14:50:41 2002 -- Version 1.422\n\n\n"
-  "kkelly -- Wed Mar 27 14:50:24 2002 -- Version 1.421\n\n\nkkelly -- Wed Mar 27 14:26:31 2002 -- Version 1.420\n\n\nkk"
-  "elly -- Wed Mar 27 14:26:16 2002 -- Version 1.419\n\n\nkkelly -- Wed Mar 27 14:25:54 2002 -- Version 1.418\n\n\nkkel"
-  "ly -- Wed Mar 27 14:20:49 2002 -- Version 1.417\n\n\nkkelly -- Wed Mar 27 14:18:25 2002 -- Version 1.416\n\n\nkkelly"
-  " -- Wed Mar 27 14:17:14 2002 -- Version 1.415\n\n\nkkelly -- Wed Mar 27 14:09:18 2002 -- Version 1.414\n\n\nkkelly -"
-  "- Wed Mar 27 14:07:10 2002 -- Version 1.413\n\n\nkkelly -- Wed Mar 27 14:04:42 2002 -- Version 1.412\n\n\nkkelly -- "
-  "Wed Mar 27 12:39:55 2002 -- Version 1.411\n\n\nkkelly -- Wed Mar 27 12:39:35 2002 -- Version 1.410\n\n\nkkelly -- We"
-  "d Mar 27 12:31:18 2002 -- Version 1.409\n\n\nkkelly -- Wed Mar 27 12:12:25 2002 -- Version 1.408\n\n\nkkelly -- Wed "
-  "Mar 27 12:03:57 2002 -- Version 1.407\n\n\nkkelly -- Wed Mar 27 12:03:11 2002 -- Version 1.406\nAdded logic to incre"
-  "ase torque request for very hard acceleration\n\nkkelly -- Wed Mar 27 11:51:32 2002 -- Version 1.405\nAdded logic to"
-  " allow EM in 1st gear when torque request is high\n\nkkelly -- Wed Mar 27 11:48:18 2002 -- Version 1.404\nAdded logi"
-  "c to allow EM at low speed with high torque request \n\nkkelly -- Wed Mar 27 11:36:20 2002 -- Version 1.403\nAdded z"
-  "ero-torque request logic\n\nkkelly -- Wed Mar 27 11:09:35 2002 -- Version 1.402\n\n\nkkelly -- Wed Mar 27 11:07:39 2"
-  "002 -- Version 1.401\n\n\nkkelly -- Wed Mar 27 10:43:33 2002 -- Version 1.400\n\n\nmokeefe -- Fri Mar 08 08:11:28 20"
-  "02 -- Version 1.399\ntook all separate auxiliary load calculations out of the <vc> libraries. These will now use the"
-  " lib_accessory goto tags (acc_mech_trq_est, acc_mech_pwr_est, acc_elec_pwr_est)\n\nmokeefe -- Mon Jul 02 10:08:55 20"
-  "01 -- Version 1.184\n\n\nmokeefe -- Mon Jul 02 10:08:07 2001 -- Version 1.183\n\n\nmokeefe -- Mon Jul 02 10:06:51 20"
-  "01 -- Version 1.182\n\n\nmokeefe -- Mon Jul 02 10:05:17 2001 -- Version 1.181\n\n\nmokeefe -- Mon Jul 02 10:04:17 20"
-  "01 -- Version 1.180\n\n\nmokeefe -- Fri Jun 29 13:59:18 2001 -- Version 1.179\n\nall <vc> blocks updated for use wit"
-  "h variable cargo mass functionality (cargo mass by distance)--also, all <vc> top-level blocks have been \"cleaned up"
-  "\" to look neat and organized. A sub-model library has been made and is the preferred way to do future development.\n"
-  "\nmokeefe -- Fri Jun 29 13:56:37 2001 -- Version 1.178\n\n<vc> prius\n\nmokeefe -- Fri Jun 29 13:46:29 2001 -- Versi"
-  "on 1.177\n\n\nmokeefe -- Fri Jun 29 13:40:43 2001 -- Version 1.176\n\n\nmokeefe -- Fri Jun 29 13:39:38 2001 -- Versi"
-  "on 1.175\n\n<vc> series (\"\" \"\")\n\n\nmokeefe -- Fri Jun 29 13:34:00 2001 -- Version 1.174\n\n<vc> par Adaptive ("
-  "\"\" \"\")\n\nmokeefe -- Fri Jun 29 13:23:41 2001 -- Version 1.173\n\ninsight (ibid.)\n\n\nmokeefe -- Fri Jun 29 13:"
-  "15:22 2001 -- Version 1.172\n\n<vc> par balanced--> veh_mass to veh_mass+veh_cargo_mass\n\n\nmokeefe -- Fri Jun 29 1"
-  "3:05:39 2001 -- Version 1.171\n\n\nmokeefe -- Fri Jun 29 12:10:12 2001 -- Version 1.170\n\nfinished veh_mass mods fo"
-  "r the <vc> par cvt...\n\n\nmokeefe -- Fri Jun 29 12:09:18 2001 -- Version 1.169\n\n\nmokeefe -- Fri Jun 29 11:56:20 "
-  "2001 -- Version 1.168\n\n\nmokeefe -- Fri Jun 29 11:44:30 2001 -- Version 1.167\n\n\nmokeefe -- Fri Jun 29 11:33:07 "
-  "2001 -- Version 1.166\n\n\nmokeefe -- Fri Jun 29 11:21:54 2001 -- Version 1.165\n\n\nmokeefe -- Fri Jun 29 11:15:04 "
-  "2001 -- Version 1.164\n\n\nmokeefe -- Fri Jun 29 11:13:02 2001 -- Version 1.163\n\n\nmokeefe -- Fri Jun 29 11:06:47 "
-  "2001 -- Version 1.162\n\n\nmokeefe -- Fri Jun 29 11:04:27 2001 -- Version 1.161\n\n\nmokeefe -- Fri Jun 29 10:40:33 "
-  "2001 -- Version 1.160\n\n\nmokeefe -- Fri Jun 29 10:35:18 2001 -- Version 1.159\n\n\nmokeefe -- Fri Jun 29 10:29:06 "
-  "2001 -- Version 1.158\n\n\nmokeefe -- Fri Jun 29 10:26:50 2001 -- Version 1.157\n\n\nmokeefe -- Fri Jun 29 10:18:10 "
-  "2001 -- Version 1.156\n\nmade traction control, front and rear brake controller, and braking strategy into \"sub-lib"
-  "raries\" for vehicle control\n\nmokeefe -- Fri Jun 29 10:17:11 2001 -- Version 1.155\n\n\nmokeefe -- Fri Jun 29 10:1"
-  "5:46 2001 -- Version 1.154\n\n\nmokeefe -- Fri Jun 29 10:09:48 2001 -- Version 1.153\n\n\nmokeefe -- Fri Jun 29 09:5"
-  "8:42 2001 -- Version 1.152\n\n\nmokeefe -- Fri Jun 29 09:57:37 2001 -- Version 1.151\n\ncreating sub-components for "
-  "vehicle control model (traction control)\n\nmokeefe -- Fri Jun 29 09:21:23 2001 -- Version 1.150\n\n\nmokeefe -- Fri"
-  " Jun 29 09:19:46 2001 -- Version 1.149\n\n\nmokeefe -- Fri Jun 29 09:09:49 2001 -- Version 1.148\n\n\nmokeefe -- Fri"
-  " Jun 29 08:32:46 2001 -- Version 1.147\n\n\nmokeefe -- Fri Jun 29 08:29:03 2001 -- Version 1.146\n\nreplacing veh_ma"
-  "ss with veh_mass plus veh_cargo_mass in <vc> conv auto Saber Custom\n\n\nmokeefe -- Thu Jun 28 17:08:40 2001 -- Vers"
-  "ion 1.145\n\n\nmokeefe -- Thu Jun 28 17:07:02 2001 -- Version 1.144\n\n\nmokeefe -- Thu Jun 28 17:06:28 2001 -- Vers"
-  "ion 1.143\n\nchanges to the CVT controls to subsitute veh_mass + veh_cargo_mass for veh_mass\n\n\nmokeefe -- Thu Jun"
-  " 28 16:55:42 2001 -- Version 1.142\n\n\nmokeefe -- Thu Jun 28 16:32:01 2001 -- Version 1.141\n\nchanging veh_mass to"
-  " veh_mass plus veh_cargo_mass\n\n\nmokeefe -- Thu Jun 28 16:21:30 2001 -- Version 1.140\n\nreplacing veh_mass with v"
-  "eh_mass + (cargo mass vs time)\n\nmokeefe -- Thu Jun 28 14:12:51 2001 -- Version 1.139\n\nreplaced all 'veh_mass' re"
-  "ferences with a veh_mass plus a FROM block (originating from drive cycle) that gives variable cargo mass by time\n\n"
-  ModelVersionFormat	  "1.%<AutoIncrement:477>"
+  LastModifiedDate	  "Fri Mar 23 15:20:48 2012"
+  RTWModifiedTimeStamp	  254416862
+  ModifiedComment	  "mokeefe -- Fri Mar 23 15:20:48 2012 -- Version 1.478\nupdated maks variable from @1 to variable n"
+  "ame."
+  ModifiedHistory	  "mokeefe -- Fri Mar 23 15:20:48 2012 -- Version 1.478\nupdated maks variable from @1 to variable n"
+  "ame.\n\nmokeefe -- Fri Mar 23 14:57:12 2012 -- Version 1.477\n\n\nmokeefe -- Fri Mar 23 14:56:40 2012 -- Version 1.4"
+  "76\nUpdated <vc> conv cvt/engine control/key_on mask initialization from @1 to variable name.\n\nmokeefe -- Fri Mar "
+  "23 14:35:59 2012 -- Version 1.475\nUpdated mask variable from @1 to variable name.\n\nmokeefe -- Fri Mar 23 09:48:31"
+  " 2012 -- Version 1.474\nFixed MaskInitiation string of block 'engine control/key_on' which used mask variables by re"
+  "ference (@1) vs by variable name.\n\nssprik -- Fri Oct 10 08:40:34 2003 -- Version 1.473\nadded goto tag for F_rear_"
+  "brake_req\n\nssprik -- Thu Oct 09 15:11:40 2003 -- Version 1.472\nadded F_rear_brake_req   goto \n\ntmarkel -- Fri M"
+  "ar 07 09:53:07 2003 -- Version 1.471\n\nadded logic to allow user to keep the engine on during a drive cycle unless "
+  "the key if off or the engine has been manually disabled\n\ntmarkel -- Fri Mar 07 09:43:58 2003 -- Version 1.470\n\na"
+  "dded an override bool to keep engine on at all times\n\n\ntmarkel -- Mon Mar 03 14:14:43 2003 -- Version 1.469\n\nup"
+  "dated traction control block in all vehicle control blocks to 2 axle version\n\ntmarkel -- Mon Mar 03 14:07:59 2003 "
+  "-- Version 1.468\n\nadded output from blocks for rear params from traction blocks in all vehicle control blocks\n\nt"
+  "emp solution - added grounds as inputs to the brake controller for rear drivetrain output to eliminate warnings\n\n\n"
+  "\n\ntmarkel -- Mon Mar 03 12:40:46 2003 -- Version 1.467\n\n\ntmarkel -- Mon Mar 03 12:37:51 2003 -- Version 1.466\n"
+  "removed extra traction control model from conv.\n\ntmarkel -- Mon Mar 03 12:29:10 2003 -- Version 1.465\n\nupdated t"
+  "raction control config subsystem to be two axle model\n\ntmarkel -- Mon Feb 24 16:12:37 2003 -- Version 1.464\nupdat"
+  "ed j2452 model for 2 axles\n\nabrooker -- Thu Feb 20 14:21:28 2003 -- Version 1.463\n\n\nmokeefe -- Wed Feb 19 08:45"
+  ":17 2003 -- Version 1.462\n\n\nmokeefe -- Wed Feb 19 08:43:58 2003 -- Version 1.461\n\n\ntmarkel -- Fri Feb 14 10:10"
+  ":01 2003 -- Version 1.460\n\n\ntmarkel -- Fri Feb 14 10:08:23 2003 -- Version 1.459\n\n\ntmarkel -- Thu Feb 13 12:55"
+  ":41 2003 -- Version 1.458\n\n\ntmarkel -- Thu Feb 13 12:32:44 2003 -- Version 1.457\n\n\ntmarkel -- Wed Feb 12 15:47"
+  ":27 2003 -- Version 1.456\nfixed one more broken link\n\ntmarkel -- Wed Feb 12 15:29:50 2003 -- Version 1.455\nupdat"
+  "ed conv controller to include front/rear traction model\n\n\ntmarkel -- Wed Feb 12 15:07:56 2003 -- Version 1.454\nf"
+  "ixed broken link to lib_controls_2axle\n\ntmarkel -- Wed Feb 12 14:32:44 2003 -- Version 1.453\nfixed bad link error"
+  "s\n\ntmarkel -- Wed Feb 12 09:39:27 2003 -- Version 1.452\n\nAdded the traction control blocks for a front/rear trac"
+  "tion system to the subsystem box\n\n\nbjeanner -- Thu Dec 26 09:42:29 2002 -- Version 1.451\nadd three new parameter"
+  "s: allowing calcultion of equivallent ESS function with mean efficiency; plus plotting results parameter\n\n\nbjeann"
+  "er -- Thu Dec 12 14:52:52 2002 -- Version 1.450\n\n\nbjeanner -- Tue Dec 10 14:49:05 2002 -- Version 1.449\n\n\nbjea"
+  "nner -- Tue Dec 10 13:14:31 2002 -- Version 1.448\n\n\nbjeanner -- Tue Dec 10 11:50:56 2002 -- Version 1.447\n\n\nbj"
+  "eanner -- Tue Dec 10 11:41:01 2002 -- Version 1.446\n\n\nbjeanner -- Tue Dec 10 11:30:40 2002 -- Version 1.445\n\n\n"
+  "bjeanner -- Tue Dec 10 11:29:40 2002 -- Version 1.444\n\n\nbjeanner -- Tue Dec 10 11:10:40 2002 -- Version 1.443\n\n"
+  "\nbjeanner -- Tue Dec 10 10:31:25 2002 -- Version 1.442\n\n\nbjeanner -- Tue Dec 10 10:30:04 2002 -- Version 1.441\n"
+  "\n\nbjeanner -- Tue Dec 10 10:29:36 2002 -- Version 1.440\n\n\nbjeanner -- Tue Dec 10 10:23:30 2002 -- Version 1.439"
+  "\n\n\nbjeanner -- Tue Dec 10 09:20:40 2002 -- Version 1.438\n\n\nbjeanner -- Tue Dec 10 09:16:26 2002 -- Version 1.4"
+  "37\nAdd the template for the configurable subsystem for the BD_FUELCELL control strategy.\nAdd the fuel cell adaptiv"
+  "e control strategy\n\n\nmokeefe -- Tue Aug 13 07:36:17 2002 -- Version 1.436\nMaking the model look \"pretty\"\n\nmo"
+  "keefe -- Tue Aug 13 07:35:11 2002 -- Version 1.435\nchanged <vc> conv cvt/cvt control to use \"acc_mech_pwr_est\" in"
+  "stead of \"acc_mech_trq_est\" as had been used previously (the required datum is the power and not the torque!)\n\ns"
+  "sprik -- Tue Apr 30 11:21:35 2002 -- Version 1.434\nadded user contributed par bal engine on  block\n\nmokeefe -- Tu"
+  "e Apr 23 09:06:10 2002 -- Version 1.433\nchanged Insight electric assist control strategy <cs> DIRECT SPLIT/Hard Acc"
+  "eleration to prevent a divide by zero warning. Also added logic to prevent a torque request above the maximum achiev"
+  "able motor torque.\n\nmokeefe -- Tue Apr 23 09:03:51 2002 -- Version 1.432\nchanged Insight electric assist control "
+  "strategy <cs> DIRECT SPLIT/Hard Acceleration to prevent a divide by zero warning. Also added logic to prevent a torq"
+  "ue request above the maximum achievable motor torque.\n\nmokeefe -- Tue Apr 23 08:50:58 2002 -- Version 1.431\n\n\ns"
+  "sprik -- Thu Apr 18 14:34:50 2002 -- Version 1.430\n\n\nssprik -- Thu Apr 18 14:32:52 2002 -- Version 1.429\n\n\nssp"
+  "rik -- Thu Apr 18 14:06:57 2002 -- Version 1.428\n\n\nssprik -- Thu Apr 18 13:56:10 2002 -- Version 1.427\n\n\nsspri"
+  "k -- Thu Apr 18 13:46:32 2002 -- Version 1.426\n\n\nkkelly -- Thu Apr 18 10:17:40 2002 -- Version 1.425\n\n\nmokeefe"
+  " -- Thu Apr 18 08:23:32 2002 -- Version 1.424\nsaving the model:\no \"without the model browser open\"\no with only "
+  "top-level screen visible \no with \"fit to view\" enabled\no with \"status bar\" off and \"toolbar\" off\no with \"p"
+  "rompt to update model history with each save\" on\n\nkkelly -- Wed Mar 27 14:57:12 2002 -- Version 1.423\n\n\nkkelly"
+  " -- Wed Mar 27 14:57:12 2002 -- Version 1.423\n\n\nkkelly -- Wed Mar 27 14:50:41 2002 -- Version 1.422\n\n\nkkelly -"
+  "- Wed Mar 27 14:50:24 2002 -- Version 1.421\n\n\nkkelly -- Wed Mar 27 14:26:31 2002 -- Version 1.420\n\n\nkkelly -- "
+  "Wed Mar 27 14:26:16 2002 -- Version 1.419\n\n\nkkelly -- Wed Mar 27 14:25:54 2002 -- Version 1.418\n\n\nkkelly -- We"
+  "d Mar 27 14:20:49 2002 -- Version 1.417\n\n\nkkelly -- Wed Mar 27 14:18:25 2002 -- Version 1.416\n\n\nkkelly -- Wed "
+  "Mar 27 14:17:14 2002 -- Version 1.415\n\n\nkkelly -- Wed Mar 27 14:09:18 2002 -- Version 1.414\n\n\nkkelly -- Wed Ma"
+  "r 27 14:07:10 2002 -- Version 1.413\n\n\nkkelly -- Wed Mar 27 14:04:42 2002 -- Version 1.412\n\n\nkkelly -- Wed Mar "
+  "27 12:39:55 2002 -- Version 1.411\n\n\nkkelly -- Wed Mar 27 12:39:35 2002 -- Version 1.410\n\n\nkkelly -- Wed Mar 27"
+  " 12:31:18 2002 -- Version 1.409\n\n\nkkelly -- Wed Mar 27 12:12:25 2002 -- Version 1.408\n\n\nkkelly -- Wed Mar 27 1"
+  "2:03:57 2002 -- Version 1.407\n\n\nkkelly -- Wed Mar 27 12:03:11 2002 -- Version 1.406\nAdded logic to increase torq"
+  "ue request for very hard acceleration\n\nkkelly -- Wed Mar 27 11:51:32 2002 -- Version 1.405\nAdded logic to allow E"
+  "M in 1st gear when torque request is high\n\nkkelly -- Wed Mar 27 11:48:18 2002 -- Version 1.404\nAdded logic to all"
+  "ow EM at low speed with high torque request \n\nkkelly -- Wed Mar 27 11:36:20 2002 -- Version 1.403\nAdded zero-torq"
+  "ue request logic\n\nkkelly -- Wed Mar 27 11:09:35 2002 -- Version 1.402\n\n\nkkelly -- Wed Mar 27 11:07:39 2002 -- V"
+  "ersion 1.401\n\n\nkkelly -- Wed Mar 27 10:43:33 2002 -- Version 1.400\n\n\nmokeefe -- Fri Mar 08 08:11:28 2002 -- Ve"
+  "rsion 1.399\ntook all separate auxiliary load calculations out of the <vc> libraries. These will now use the lib_acc"
+  "essory goto tags (acc_mech_trq_est, acc_mech_pwr_est, acc_elec_pwr_est)\n\nmokeefe -- Mon Jul 02 10:08:55 2001 -- Ve"
+  "rsion 1.184\n\n\nmokeefe -- Mon Jul 02 10:08:07 2001 -- Version 1.183\n\n\nmokeefe -- Mon Jul 02 10:06:51 2001 -- Ve"
+  "rsion 1.182\n\n\nmokeefe -- Mon Jul 02 10:05:17 2001 -- Version 1.181\n\n\nmokeefe -- Mon Jul 02 10:04:17 2001 -- Ve"
+  "rsion 1.180\n\n\nmokeefe -- Fri Jun 29 13:59:18 2001 -- Version 1.179\n\nall <vc> blocks updated for use with variab"
+  "le cargo mass functionality (cargo mass by distance)--also, all <vc> top-level blocks have been \"cleaned up\" to lo"
+  "ok neat and organized. A sub-model library has been made and is the preferred way to do future development.\n\nmokee"
+  "fe -- Fri Jun 29 13:56:37 2001 -- Version 1.178\n\n<vc> prius\n\nmokeefe -- Fri Jun 29 13:46:29 2001 -- Version 1.17"
+  "7\n\n\nmokeefe -- Fri Jun 29 13:40:43 2001 -- Version 1.176\n\n\nmokeefe -- Fri Jun 29 13:39:38 2001 -- Version 1.17"
+  "5\n\n<vc> series (\"\" \"\")\n\n\nmokeefe -- Fri Jun 29 13:34:00 2001 -- Version 1.174\n\n<vc> par Adaptive (\"\" \""
+  "\")\n\nmokeefe -- Fri Jun 29 13:23:41 2001 -- Version 1.173\n\ninsight (ibid.)\n\n\nmokeefe -- Fri Jun 29 13:15:22 2"
+  "001 -- Version 1.172\n\n<vc> par balanced--> veh_mass to veh_mass+veh_cargo_mass\n\n\nmokeefe -- Fri Jun 29 13:05:39"
+  " 2001 -- Version 1.171\n\n\nmokeefe -- Fri Jun 29 12:10:12 2001 -- Version 1.170\n\nfinished veh_mass mods for the <"
+  "vc> par cvt...\n\n\nmokeefe -- Fri Jun 29 12:09:18 2001 -- Version 1.169\n\n\nmokeefe -- Fri Jun 29 11:56:20 2001 --"
+  " Version 1.168\n\n\nmokeefe -- Fri Jun 29 11:44:30 2001 -- Version 1.167\n\n\nmokeefe -- Fri Jun 29 11:33:07 2001 --"
+  " Version 1.166\n\n\nmokeefe -- Fri Jun 29 11:21:54 2001 -- Version 1.165\n\n\nmokeefe -- Fri Jun 29 11:15:04 2001 --"
+  " Version 1.164\n\n\nmokeefe -- Fri Jun 29 11:13:02 2001 -- Version 1.163\n\n\nmokeefe -- Fri Jun 29 11:06:47 2001 --"
+  " Version 1.162\n\n\nmokeefe -- Fri Jun 29 11:04:27 2001 -- Version 1.161\n\n\nmokeefe -- Fri Jun 29 10:40:33 2001 --"
+  " Version 1.160\n\n\nmokeefe -- Fri Jun 29 10:35:18 2001 -- Version 1.159\n\n\nmokeefe -- Fri Jun 29 10:29:06 2001 --"
+  " Version 1.158\n\n\nmokeefe -- Fri Jun 29 10:26:50 2001 -- Version 1.157\n\n\nmokeefe -- Fri Jun 29 10:18:10 2001 --"
+  " Version 1.156\n\nmade traction control, front and rear brake controller, and braking strategy into \"sub-libraries\""
+  " for vehicle control\n\nmokeefe -- Fri Jun 29 10:17:11 2001 -- Version 1.155\n\n\nmokeefe -- Fri Jun 29 10:15:46 200"
+  "1 -- Version 1.154\n\n\nmokeefe -- Fri Jun 29 10:09:48 2001 -- Version 1.153\n\n\nmokeefe -- Fri Jun 29 09:58:42 200"
+  "1 -- Version 1.152\n\n\nmokeefe -- Fri Jun 29 09:57:37 2001 -- Version 1.151\n\ncreating sub-components for vehicle "
+  "control model (traction control)\n\nmokeefe -- Fri Jun 29 09:21:23 2001 -- Version 1.150\n\n\nmokeefe -- Fri Jun 29 "
+  "09:19:46 2001 -- Version 1.149\n\n\nmokeefe -- Fri Jun 29 09:09:49 2001 -- Version 1.148\n\n\nmokeefe -- Fri Jun 29 "
+  "08:32:46 2001 -- Version 1.147\n\n\nmokeefe -- Fri Jun 29 08:29:03 2001 -- Version 1.146\n\nreplacing veh_mass with "
+  "veh_mass plus veh_cargo_mass in <vc> conv auto Saber Custom\n\n\nmokeefe -- Thu Jun 28 17:08:40 2001 -- Version 1.14"
+  "5\n\n\nmokeefe -- Thu Jun 28 17:07:02 2001 -- Version 1.144\n\n\nmokeefe -- Thu Jun 28 17:06:28 2001 -- Version 1.14"
+  "3\n\nchanges to the CVT controls to subsitute veh_mass + veh_cargo_mass for veh_mass\n\n\nmokeefe -- Thu Jun 28 16:5"
+  "5:42 2001 -- Version 1.142\n\n\nmokeefe -- Thu Jun 28 16:32:01 2001 -- Version 1.141\n\nchanging veh_mass to veh_mas"
+  "s plus veh_cargo_mass\n\n\nmokeefe -- Thu Jun 28 16:21:30 2001 -- Version 1.140\n\nreplacing veh_mass with veh_mass "
+  "+ (cargo mass vs time)\n\nmokeefe -- Thu Jun 28 14:12:51 2001 -- Version 1.139\n\nreplaced all 'veh_mass' references"
+  " with a veh_mass plus a FROM block (originating from drive cycle) that gives variable cargo mass by time\n\n"
+  ModelVersionFormat	  "1.%<AutoIncrement:478>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1153,7 +1155,7 @@ Library {
   }
   System {
     Name		    "lib_controls"
-    Location		    [99, 298, 1112, 966]
+    Location		    [666, 277, 1679, 945]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -22609,7 +22611,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "6898"
+	    SIDHighWatermark	    "6907"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "time-average\nvehicle speed\n req'd (m/s)"
@@ -26532,8 +26534,8 @@ Library {
       MaskIconUnits	      "autoscale"
       System {
 	Name			"<vc> ev"
-	Location		[6, 74, 818, 742]
-	Open			off
+	Location		[685, 451, 1497, 1119]
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -26856,13 +26858,9 @@ Library {
 	  Ports			  [2, 2]
 	  Position		  [190, 42, 220, 93]
 	  NamePlacement		  "alternate"
+	  LibraryVersion	  "1.477"
 	  SourceBlock		  "lib_controls/SubSystem/braking strategy"
 	  SourceType		  "SubSystem"
-	  ShowPortLabels	  off
-	  TreatAsAtomicUnit	  off
-	  RTWSystemCode		  "Auto"
-	  RTWFcnNameOpts	  "Auto"
-	  RTWFileNameOpts	  "Auto"
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -26898,18 +26896,18 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "9"
+	    SIDHighWatermark	    "6898"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "time-average\nvehicle speed\n req'd (m/s)"
-	      SID		      "2132::1"
+	      SID		      "2132::706"
 	      Position		      [20, 40, 40, 60]
 	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Inport
 	      Name		      "vehicle speed at\nbeginning of time\n step (m/s)"
-	      SID		      "2132::2"
+	      SID		      "2132::707"
 	      Position		      [20, 80, 40, 100]
 	      Port		      "2"
 	      IconDisplay	      "Port number"
@@ -26917,37 +26915,33 @@ Library {
 	    Block {
 	      BlockType		      Inport
 	      Name		      "total tractive\nforce req'd\n(N)"
-	      SID		      "2132::3"
+	      SID		      "2132::708"
 	      Position		      [20, 120, 40, 140]
 	      Port		      "3"
 	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "traction control 2 axle"
-	      SID		      "2132::4"
+	      Name		      "traction control\n2 axle"
+	      SID		      "2132::709"
 	      Ports		      [3, 5]
 	      Position		      [100, 40, 140, 80]
 	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.477"
 	      SourceBlock	      "lib_controls/SubSystem/traction control 2 axle"
 	      SourceType	      "SubSystem"
-	      ShowPortLabels	      off
-	      TreatAsAtomicUnit	      off
-	      RTWSystemCode	      "Auto"
-	      RTWFcnNameOpts	      "Auto"
-	      RTWFileNameOpts	      "Auto"
 	    }
 	    Block {
 	      BlockType		      Outport
 	      Name		      "req'd force\n(N)"
-	      SID		      "2132::5"
+	      SID		      "2132::710"
 	      Position		      [200, 40, 220, 60]
 	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Outport
 	      Name		      "req'd speed\n(m/s)"
-	      SID		      "2132::6"
+	      SID		      "2132::711"
 	      Position		      [200, 80, 220, 100]
 	      Port		      "2"
 	      IconDisplay	      "Port number"
@@ -26955,7 +26949,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "weight on\nfront axle\n(N)"
-	      SID		      "2132::7"
+	      SID		      "2132::712"
 	      Position		      [200, 120, 220, 140]
 	      Port		      "3"
 	      IconDisplay	      "Port number"
@@ -26963,7 +26957,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "weight on\nrear axle\n(N)"
-	      SID		      "2132::8"
+	      SID		      "2132::713"
 	      Position		      [200, 160, 220, 180]
 	      Port		      "4"
 	      IconDisplay	      "Port number"
@@ -26971,7 +26965,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "front/total \ntraction ratio"
-	      SID		      "2132::9"
+	      SID		      "2132::714"
 	      Position		      [200, 200, 220, 220]
 	      Port		      "5"
 	      IconDisplay	      "Port number"
@@ -26979,56 +26973,48 @@ Library {
 	    Line {
 	      SrcBlock		      "time-average\nvehicle speed\n req'd (m/s)"
 	      SrcPort		      1
-	      Points		      [20, 0; 0, -5]
-	      DstBlock		      "traction control 2 axle"
+	      DstBlock		      "traction control\n2 axle"
 	      DstPort		      1
 	    }
 	    Line {
 	      SrcBlock		      "vehicle speed at\nbeginning of time\n step (m/s)"
 	      SrcPort		      1
-	      Points		      [20, 0; 0, -30]
-	      DstBlock		      "traction control 2 axle"
+	      DstBlock		      "traction control\n2 axle"
 	      DstPort		      2
 	    }
 	    Line {
 	      SrcBlock		      "total tractive\nforce req'd\n(N)"
 	      SrcPort		      1
-	      Points		      [40, 0]
-	      DstBlock		      "traction control 2 axle"
+	      DstBlock		      "traction control\n2 axle"
 	      DstPort		      3
 	    }
 	    Line {
-	      SrcBlock		      "traction control 2 axle"
+	      SrcBlock		      "traction control\n2 axle"
 	      SrcPort		      1
-	      Points		      [20, 0; 0, 10]
 	      DstBlock		      "req'd force\n(N)"
 	      DstPort		      1
 	    }
 	    Line {
-	      SrcBlock		      "traction control 2 axle"
+	      SrcBlock		      "traction control\n2 axle"
 	      SrcPort		      2
-	      Points		      [10, 0; 0, 40]
 	      DstBlock		      "req'd speed\n(m/s)"
 	      DstPort		      1
 	    }
 	    Line {
-	      SrcBlock		      "traction control 2 axle"
+	      SrcBlock		      "traction control\n2 axle"
 	      SrcPort		      3
-	      Points		      [35, 0; 0, 70]
 	      DstBlock		      "weight on\nfront axle\n(N)"
 	      DstPort		      1
 	    }
 	    Line {
-	      SrcBlock		      "traction control 2 axle"
+	      SrcBlock		      "traction control\n2 axle"
 	      SrcPort		      4
-	      Points		      [35, 0; 0, 100]
 	      DstBlock		      "weight on\nrear axle\n(N)"
 	      DstPort		      1
 	    }
 	    Line {
-	      SrcBlock		      "traction control 2 axle"
+	      SrcBlock		      "traction control\n2 axle"
 	      SrcPort		      5
-	      Points		      [0, 130]
 	      DstBlock		      "front/total \ntraction ratio"
 	      DstPort		      1
 	    }
@@ -27047,13 +27033,9 @@ Library {
 	  SID			  "2134"
 	  Ports			  [6, 2]
 	  Position		  [335, 301, 370, 429]
+	  LibraryVersion	  "1.477"
 	  SourceBlock		  "lib_controls/SubSystem/front and rear\nbrake controller\n(achievable)"
 	  SourceType		  "SubSystem"
-	  ShowPortLabels	  off
-	  TreatAsAtomicUnit	  off
-	  RTWSystemCode		  "Auto"
-	  RTWFcnNameOpts	  "Auto"
-	  RTWFileNameOpts	  "Auto"
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -29664,12 +29646,13 @@ Library {
 	  MaskHelp		  "Repeats cycle given in table. Time values should be monotonically increasing."
 	  MaskPromptString	  "Time values:|Output values:"
 	  MaskStyleString	  "edit,edit"
+	  MaskVariables		  "t=@1;y=@2;"
 	  MaskTunableValueString  "on,on"
 	  MaskCallbackString	  "|"
 	  MaskEnableString	  "on,on"
 	  MaskVisibilityString	  "on,on"
 	  MaskToolTipString	  "on,on"
-	  MaskInitialization	  "period = max(@1); t = @1; y = @2;"
+	  MaskInitialization	  "period = max(t);"
 	  MaskIconFrame		  on
 	  MaskIconOpaque	  on
 	  MaskIconRotate	  "none"
@@ -30263,13 +30246,9 @@ Library {
 	  SID			  "2317"
 	  Ports			  []
 	  Position		  [30, 15, 60, 65]
+	  LibraryVersion	  "1.477"
 	  SourceBlock		  "lib_controls/SubSystem/sim stop\nsubsystem"
 	  SourceType		  "SubSystem"
-	  ShowPortLabels	  on
-	  TreatAsAtomicUnit	  off
-	  RTWSystemCode		  "Auto"
-	  RTWFcnNameOpts	  "Auto"
-	  RTWFileNameOpts	  "Auto"
 	}
 	Line {
 	  SrcBlock		  "config traction control"
@@ -30927,7 +30906,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "27"
+	    SIDHighWatermark	    "36"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "time-average\nvehicle speed\n req'd (m/s)"
@@ -111736,7 +111715,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "284"
+	    SIDHighWatermark	    "377"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "time-average\nvehicle speed\n req'd (m/s)"
