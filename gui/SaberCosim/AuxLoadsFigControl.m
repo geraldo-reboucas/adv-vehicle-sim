@@ -86,7 +86,8 @@ if nargin>0
         
      case 'SaveLoadChoices'
         CurrentWorkingDir=cd;
-        LookInPath=strrep(vinf.tmppath,'tmp','data\accessory');
+        advisorTopDir = fileparts(which('advisor.m'));
+        LookInPath=fullfile(advisorTopDir, 'data', 'accessory');
         cd(LookInPath);
         [SaveFileName,SavePathName]=uiputfile('*_aux.mat','Save Auxiliary Load Scenario As');
         
@@ -109,7 +110,7 @@ if nargin>0
             cd(SavePathName);
             
             %   Set saved file name to "Load File" pulldown
-            AccFiles=dir([strrep(vinf.tmppath,'tmp\','data\accessory\*_aux.mat')]);
+            AccFiles=dir(fullfile(advisorTopDir,'data', 'accessory', '*_aux.mat'));
             for i=1:length(AccFiles)
                 AccFilesList{i}=AccFiles(i).name;
             end
