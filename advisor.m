@@ -17,7 +17,7 @@ function varargout = advisor(varargin)
 %   need help or have helpful suggestions for improvement please email:
 %							advisor@nrel.gov
 %
-% Last Modified by GUIDE v2.0 21-Mar-2002 15:12:42
+% Last Modified by GUIDE v2.5 06-Apr-2012 15:19:01
 global vinf
 
 if nargin == 0  % LAUNCH GUI
