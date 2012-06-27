@@ -1,4 +1,4 @@
-function varargout = Edit_Profiles(varargin)
+function varargout = edit_profiles(varargin)
 % EDIT_PROFILES Application M-file for Edit_Profiles.fig
 %    FIG = EDIT_PROFILES launch Edit_Profiles GUI.
 %    EDIT_PROFILES('callback_name', ...) invoke the named callback.
