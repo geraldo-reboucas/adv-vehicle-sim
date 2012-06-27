@@ -511,8 +511,7 @@ global saved_directory_temp
 cd(saved_directory_temp)
 clear global saved_directory_temp
 %-----------------------------------
-
-load([strrep(which('advisor.m'),'advisor.m','gui'),'\update_file_temp.mat'])
+load(fullfile(strrep(which('advisor.m'), 'advisor.m', 'gui'), 'update_file_temp.mat'))
 
 try
     if ~prototype_independent % if the prototype file was not stand-alone, chances are, datafile isn't either
