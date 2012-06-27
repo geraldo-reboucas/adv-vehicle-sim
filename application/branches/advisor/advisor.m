@@ -55,7 +55,7 @@ if nargin == 0  % LAUNCH GUI
     %add some sound if user's system can play sound
     try
         load list_optionlist.mat;  %loads list_optionlist and list_def
-        if findstr(lower(list_def),'truck')
+        if strfind(lower(list_def),'truck')
             [advisor_sound,fs]=wavread('truckwelcome.wav');
         else
             [advisor_sound,fs]=wavread('advisor.wav');
