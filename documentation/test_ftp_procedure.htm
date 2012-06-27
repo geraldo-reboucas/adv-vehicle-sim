@@ -1,0 +1,49 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Sam Sprik">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en]C-CCK-MCD   (Win98; I) [Netscape]">
+   <title>City Hwy Test Procedure</title>
+</head>
+<body>
+
+<center><b><font size=+2>TEST_FTP and TEST_FTP_HYBRID</font></b>
+<hr WIDTH="50%"></center>
+
+<p><b><font size=+1>Test Procedure Description</font></b>
+<br>The FTP and FTP_Hybrid test procedures in ADVISOR are provided to allow
+the user to simulate the Federal Test Procedure (FTP-75) drive cycle used
+by the Environmental Protection Agency (EPA) to certify the fuel economy
+and emissions performance of consumer vehicles. This test sets the initial
+conditions to represent a cold start and then simulates an FTP-75 cycle.&nbsp;
+An FTP-75 cycle is composed of one UDDS cycle followed by a 10 minute soak
+in which the key is turned off.&nbsp; This soak is then followed by the
+first 505s of an second UDDS cycle.&nbsp; For the FTP_Hybrid test procedure,
+the 10 minute soak is followed by a complete second UDDS cycle.&nbsp; The
+fuel economy and results of the drive cycle are then partitioned into "bags".&nbsp;
+The bag results are then weighted to provide the bag-weighted results.&nbsp;
+The results window displays both the individual bag results and the bag-weighted
+results.&nbsp; The bag-weighting equation is provided in the notes in the
+results figure.
+<center>
+<p><img SRC="ftp_results.jpg" height=500 width=666></center>
+
+<p>The FTP_hybrid test was introduced in ADVISOR v3.2 to account for the
+variability in operating charactericts associated with hybrids.&nbsp; When
+the FTP-75 test was first created, based on the performance of conventional
+vehicles, both the 4th bag and the 2nd bag were assumed to provide similar
+results.&nbsp; This assumption is valid for conventional and most parallel
+hybrid vehicles. However, for series hybrids and hybrids that use a significant
+portion of the energy storage system capacity, the assumption may not be
+valid.&nbsp; Due to SOC balancing requirements the vehicle operation can
+be significantly different when comparing a 3 bag test vs. a 4 bag test.
+<br>&nbsp;
+<p>
+<hr SIZE=5 NOSHADE WIDTH="100%">
+<center><a href="../documentation/advisor_ch3.htm#3.3">Return to Chapter
+3</a></center>
+<a href="../documentation/advisor_ch3.htm#3.3"></a>
+<p>last revised: 8/19/01(tm)
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="Template" content="C:\Program Files\Microsoft Office\Office\html.dot">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (WinNT; U) [Netscape]">
+   <title>realtime_interface</title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<center><a NAME="Interactive_sim"></a><b><font size=+1>Real-time Interactive
+Interface</font></b></center>
+
+<p><b>Overview</b>
+<br>As seen in Figure 1, the real-time interactive interface layout is
+divided into three sections.&nbsp; The top left section is <i>Simulation
+Controls</i>.&nbsp; The bottom left section is <i>Vehicle Controls and
+Display</i>.&nbsp; The right section is <i>Simulation Outputs</i>. The
+Real-time Interactive Interface supports drive cycle inputs and shows dynamic
+outputs at each time step of the simulation.&nbsp; These input and output
+additions offer several benefits.
+<br><img SRC="interactive1.jpg" VSPACE=10 height=474 width=626>
+<br><b><font size=-1>Figure 1. Real-time Interactive Interface</font></b>
+<br>&nbsp;
+<p><b><i>Simulation Controls</i></b>
+<br>The <i>Simulation Controls</i> section has interactive drive cycle
+inputs.&nbsp; Buttons similar to a tape player control the simulation speed.&nbsp;
+A slider adds miles per hour requested (mphr) to the drive cycle at the
+current time step of the simulation.&nbsp; A round red spot on the curved
+arrow is used to add or subtract grade to the drive cycle at the current
+time step of the simulation.&nbsp; The speed and grade are implemented
+into ADVISOR's drive_cycle block diagram as illustrated in Figure 2. Below
+the <i>Simulation Controls</i> is the <i>Vehicle Controls and Display</i>.
+<p><img SRC="interactive2.gif" VSPACE=10 height=591 width=815>
+<br><b><font size=-1>Figure 2. Block Diagram drive_cycle</font></b>
+<p><b><i>Vehicle Controls and Display</i></b>
+<br>The <i>Vehicle Controls and Display</i> section shows vehicle outputs.&nbsp;
+These outputs are similar to what are found in regular and advanced vehicles.&nbsp;
+They include engine rpm, vehicle miles per hour requested (white needle)
+and vehicle miles per hour achieved, fuel used, instant fuel economy and
+trip (cumulative) fuel economy, batter state of charge (%SOC), current
+gear, and acceleration (proportional to gas pedal displacement).&nbsp;
+To the right of <i>Vehicle Controls and Display</i> is <i>Simulation Outputs</i>.
+<p><b><i>Simulation Outputs</i></b>
+<br>The <i>Simulation Outputs</i> section displays vehicle graphics and
+technical information.&nbsp; The selection of technical outputs can be
+seen in Figure 2.&nbsp; They include the position of operation on the fuel
+converter efficiency map and motor efficiency map, the shaft output power
+from the engine, motor, and generator, and the road load components.&nbsp;
+The <i>Simulation Outputs</i> section offers some of the greatest benefits.
+<br><img SRC="interactive3.jpg" VSPACE=10 height=447 width=617>
+<br><b><font size=-1>Figure 3. Technical Output Plots</font></b>
+<br>&nbsp;
+<p><b>Benefits</b>
+<br>Several benefits are derived from the interactive input and the dynamic
+output capability offered by the interface.&nbsp; The interactive input
+allows for quickly testing vehicle behavior response to drive cycle inputs.&nbsp;
+For example, it can show how the fuel economy will respond to an increase
+or decrease in grade.&nbsp; The dynamic output capability goes beyond some
+of the static plot capabilities.&nbsp; It can trace the position of operation
+of the fuel converter or motor on efficiency maps.&nbsp; It can also help
+provide the "feel" of driving.&nbsp; For example, if the vehicle control
+strategy results in a vehicle shifting every second, it is a recognizable
+problem in the real-time environment.&nbsp; It is easy to imagine doing
+the shifting every time the interface shows it, and deciding that it shifts
+more frequently than most drivers would tolerate.&nbsp; Conversely, it
+would be difficult to decide how frequently is too frequently by looking
+at a static plot.&nbsp; These are some of the advantages that the real-time
+interactive interface brings to ADVISOR.
+<p><font size=-1>Last Revision: 01/16/01:ab</font>
+</body>
+</html>

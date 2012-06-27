@@ -1,0 +1,158 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Valerie Johnson">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (WinNT; U) [Netscape]">
+   <title>J1711 Test Procedure</title>
+</head>
+<body>
+
+<center><b><font size=+2>SAE J1711 Test Procedure</font></b>
+<hr WIDTH="50%"></center>
+
+<p><b><font size=+1>Setup, Classification, and Test Procedure Description</font></b>
+<br>The J1711 Test Procedure runs through a maximum of four types of tests,
+based on the type of hybrid vehicle.&nbsp; The four tests are:
+<blockquote>
+<ol>
+<li>
+Partial Charge Test – Hybrid Electric Vehicle (PCT-HEV)</li>
+
+<li>
+Full Charge Test - Hybrid Electric Vehicle (FCT-HEV)</li>
+
+<li>
+Partial Charge Test – Conventional Vehicle (PCT-CV)</li>
+
+<li>
+Full Charge Test - Electric Vehicle (FCT-EV)</li>
+</ol>
+</blockquote>
+The first test, PCT-HEV, is always run.&nbsp; The FCT-HEV test is only
+run if the vehicle is Off Vehicle Charge (OVC) capable.&nbsp; The PCT-CV
+test is only run if the vehicle has a “conventional only” mode.&nbsp; The
+FCT-EV test is only run if the vehicle is both OVC capable, and has a “electric
+only” mode.&nbsp; The available vehicle options are specified by the user
+in the J1711 setup screen, as shown below.&nbsp; The air conditioning load
+is an additional constant load added for only one of the drive cycles (SC03).
+<center>
+<p><img SRC="j17setup.jpg" height=420 width=358></center>
+
+<p>For each test, four cycles are run.&nbsp; They are:
+<blockquote>
+<ol>
+<li>
+UDDS – Urban Dynamometer Driving Schedule</li>
+
+<li>
+HWFET – Highway Fuel Economy Test</li>
+
+<li>
+US06 – US06 driving cycle (high speed operation, demanding accelerations)</li>
+
+<li>
+SC03 – SC03 driving cycle (additional air condition load, if present, used
+here)</li>
+</ol>
+</blockquote>
+If the "Iterate to find initial SOC" box was checked, the initial SOC will
+be adjusted until the ending SOC falls within a tolerance of +-.5%.
+<p><b><font size=+1>Weighting and Results</font></b>
+<br>The J1711 results screen is shown below:
+<center>
+<p><img SRC="j17results.gif" height=656 width=796></center>
+
+<p>If certain tests were not run, the corresponding buttons will be disabled.&nbsp;
+The large buttons, when clicked, will display the fuel economy and emissions
+for the various cycles in the yellow box.
+<p><b>Final</b>
+<br>The fuel economy in the "Final" section is the standard weighting of
+the UDDS and the HWFET final fuel economies.&nbsp; It is computed using
+the following equation:&nbsp;<img SRC="j17mpg.jpg" height=44 width=257>.
+<p>The emissions in the "Final" section are based on either 1) a weighting
+of the UDDS and US06 final emissions, or 2) a weighting of the UDDS, US06,
+and SC03 emissions (if the vehicle has air conditioning).&nbsp; More specifically,
+they are weighted as below:
+<ol>
+<li>
+<i>emis=0.72*UDDS_emis+0.28*US06_emis</i></li>
+
+<li>
+<i>emis=0.35*UDDS_emis+0.28*US06_emis+0.37*SC03_emis</i></li>
+</ol>
+<b>Final, Cycle level</b>
+<br>The fuel economy and emissions for the "Final, Cycle level" section
+are averages of the Partial Charge Test and Full Charge Test results, given
+that the FCT results exist.
+<p><b>PCT and FCT</b>
+<br>The fuel economy and emissions for the PCT and FCT sections are averages
+of their respective lower level tests, given that the tests were run.
+<p><b>SOC info.</b> for PCT-HEV gives five values:
+<blockquote>
+<ol>
+<li>
+init: Initial SOC at the beginning of the entire drive cycle.</li>
+
+<li>
+pause: SOC at the midpoint of the schedule.&nbsp; The PCT-HEV tests run
+two of the given cycles, one for warmup and the next to measure emissions.&nbsp;
+The charge sustaining portion of the entire cycle is taken to be the time
+from the midpoint to the end of the cycles.</li>
+
+<li>
+end: Final, or ending, SOC.</li>
+
+<li>
+min: Minimum SOC that the “end” SOC can take on, based on “init” for UDDS
+and “pause” for the rest of the cycles.&nbsp; The min/max SOC’s are calculated
+based on the following equation:&nbsp;<img SRC="minmaxSOC.jpg" height=44 width=368></li>
+
+<li>
+max: Maximum SOC that the “end” SOC can take on, based on “init” for UDDS
+and “pause” for the rest of the cycles.</li>
+</ol>
+</blockquote>
+If any of the ending SOC’s are <font color="#FF0000">red</font>, the test
+has failed.&nbsp; For the PCT-HEV test results to be valid, the vehicle
+must be charge sustaining, such that the “end” SOC must fall within the
+range of the “min” and “max” SOC’s.&nbsp; For the US06 and SC03 cycle,
+the test may still be valid if the SOC is out of the range, provided that
+the initial SOC was less that the initial SOC for the UDDS cycle.&nbsp;
+This exception is indicated by the color <font color="#FF6666">pink</font>.
+<p><b>Add’l info.</b> under FCT-EV and FCT-HEV gives three values:
+<blockquote>
+<ol>
+<li>
+kWh chg: kWh to recharge the batteries to full charge after going through
+the given cycle.</li>
+
+<li>
+ZEV rng: Range in miles that the vehicle ran as a Zero Emissions Vehicle.</li>
+
+<li>
+UF: Utility Factor, a table lookup of the utility of the vehicle (0-.99)
+as a function of the ZEV range.</li>
+</ol>
+</blockquote>
+<b>Utility Factors (UF)</b>
+<br>When vehicle propulsion is no longer possible after driving in EV mode,
+it is assumed that the driver will switch to either a CV or an HEV mode.&nbsp;
+Because of this limited utility, FCT-EV, UF results include both FCT-EV
+data and PCT data.&nbsp; The weighting placed on FCT data will equal the
+probability that a vehicle (based on national, in-use driving statistics)
+will be driven in one day a distance that is equal to or less than the
+total distance traveled during the FCT-EV test.&nbsp; This probability
+is what is called the Utility Factor because it indicates the limited utility
+of a particular operating mode.&nbsp; An operating mode with a very long
+range, for example, will have a very high utility, and, thus, a Utility
+Factor that approaches 1.0.
+<center>
+<p><img SRC="j17_uf.jpg" BORDER=0 height=320 width=394></center>
+
+<p>
+<hr SIZE=5 NOSHADE WIDTH="100%">
+<center><a href="advisor_ch3.htm#3.3">Return to Chapter 3</a></center>
+Last Revised: 7/21/00:AB
+</body>
+</html>

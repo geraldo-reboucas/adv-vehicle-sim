@@ -1,0 +1,2207 @@
+Model {
+  Name			  "BD_FUZZY_EMISSIONS"
+  Version		  4.1.1
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed May 31 09:08:08 2000"
+  UpdateHistory		  "UpdateHistoryWhenSave"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "ssprik"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Sep 24 14:56:58 2003"
+  ModifiedComment	  "ssprik -- Wed Sep 24 14:56:58 2003 -- Version 1.295"
+"\n"
+  ModifiedHistory	  "ssprik -- Wed Sep 24 14:56:58 2003 -- Version 1.295"
+"\n\n\nabrooker -- Tue May 14 11:44:18 2002 -- Version 1.294\n\n\nmokeefe -- T"
+"hu Apr 18 07:56:06 2002 -- Version 1.293\nsaving the model:\no \"without the "
+"model browser open\"\no with only top-level screen visible \no and with \"fit"
+" to view\" enabled\n\nmokeefe -- Thu Apr 18 07:46:20 2002 -- Version 1.292\ns"
+"aving the model:\no \"without the model browser open\"\no with only top-level"
+" screen visible \no and with \"fit to view\" enabled\n\n"
+  ModelVersionFormat	  "1.%<AutoIncrement:295>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "RTW"
+  StartTime		  "0.0"
+  StopTime		  "max(cyc_mph(:,1))"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode1"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-3"
+  Refine		  "1"
+  MaxStep		  "1"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "1"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "none"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_vc.tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  on
+  RTWExpressionDepthLimit 5
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "BD_FUZZY_EMISSIONS"
+    Location		    [2, 76, 1045, 455]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "118"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      "2 axle -->\n1 driveline\nconverter"
+      Ports		      [3, 3]
+      Position		      [255, 155, 280, 215]
+      SourceBlock	      "lib_wheel/2 axle -->\n1 driveline\nconverter"
+      SourceType	      "SubSystem"
+      ShowPortLabels	      off
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "<cs>"
+      Position		      [780, 112, 845, 128]
+      GotoTag		      "ex_cat_tmp"
+      TagVisibility	      "global"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "<sdo> par"
+      Ports		      []
+      Position		      [134, 67, 197, 111]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_outputs/<sdo> par"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "<vc> par"
+      Ports		      [0, 1]
+      Position		      [300, 39, 365, 91]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_controls/<vc> par"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Clock
+      Name		      "Clock"
+      Position		      [130, 15, 150, 35]
+      DisplayTime	      off
+      Decimation	      "10"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Fuzzy Logic\ncontrol strategy\nwith Emissions\n"
+"<cs>"
+      Ports		      [1, 1]
+      Position		      [475, 32, 525, 68]
+      ShowPortLabels	      off
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskDisplay	      "image(imread('bdi_fuzzy.jpg'))"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Fuzzy Logic\ncontrol strategy\nwith Emissions"
+"\n<cs>"
+	Location		[330, 514, 1212, 912]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "trq and spd req'd\ninto clutch\n(N*m, rad/s"
+")"
+	  Position		  [35, 160, 65, 180]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Block NOTES"
+	  Ports			  []
+	  Position		  [791, 283, 846, 325]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  MaskDisplay		  "disp('Block\\nNOTES')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Block NOTES"
+	    Location		    [441, 524, 976, 709]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Annotation {
+	      Position		      [269, 87]
+	      Text		      "The Fuzzy Control Block takes in the to"
+"rque and speed requested by the clutch (sink) and calculates \nthe torque spl"
+"it between the ICE and the Motor. The fuzzy logic algorithm sets a base (opti"
+"mal) \noperating point of the ICE and modifies the actual operating point abo"
+"ut the optimal, based on \nthe actual torque request and the battery State of"
+" Charge (SOC). Finally, a torque request is sent to the \nICE and the motor b"
+"uffers the remaining torque (positive or negative)."
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [100, 152, 135, 188]
+	  Outputs		  "2"
+	  BusSelectionMode	  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Fuzzy logic Code"
+	  Ports			  [2, 1]
+	  Position		  [420, 90, 490, 150]
+	  ShowPortLabels	  off
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "Fuzzy logic Code"
+	    Location		    [547, 521, 1127, 709]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Torque"
+	      Position		      [35, 63, 65, 77]
+	      Port		      "1"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SoC"
+	      Position		      [35, 103, 65, 117]
+	      Port		      "2"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Block NOTES"
+	      Ports		      []
+	      Position		      [495, 110, 551, 150]
+	      BackgroundColor	      "green"
+	      ShowName		      off
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      MaskDisplay	      "disp('Block\\nNOTES')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Block NOTES"
+		Location		[202, 191, 682, 359]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Annotation {
+		  Position		  [243, 53]
+		  Text			  "This block calls the Fuzzy Controll"
+"er through the Matlab-Function module. \nThe Fuzzy Control algorithm is writt"
+"en in MATLAB script. This makes it easy \nfor the user to edit the fuzzy algo"
+"rithm and make changes.\n\nFor more information on Matlab-functions, please r"
+"efer to the MATLAB help files."
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "MATLAB Fcn\nGPS\n"
+	      Position		      [295, 75, 355, 105]
+	      MATLABFcn		      "mfuzzy_emissions(u(1),u(2))"
+	      OutputDimensions	      "1"
+	      OutputSignalType	      "auto"
+	      Output1D		      on
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [2, 1]
+	      Position		      [185, 52, 225, 128]
+	      Inputs		      "2"
+	      DisplayOption	      "none"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "delta \nalpha"
+	      Position		      [405, 83, 435, 97]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "MATLAB Fcn\nGPS\n"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Torque"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "MATLAB Fcn\nGPS\n"
+	      SrcPort		      1
+	      DstBlock		      "delta \nalpha"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SoC"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Annotation {
+	      Position		      [316, 24]
+	      Text		      "FUZZY LOGIC CODE"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Input Scaling"
+	  Ports			  [1, 1]
+	  Position		  [255, 74, 330, 136]
+	  ShowPortLabels	  off
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "Input Scaling"
+	    Location		    [75, 419, 1228, 867]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Torque required"
+	      Position		      [45, 73, 75, 87]
+	      Port		      "1"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      " 2"
+	      Ports		      [2, 1]
+	      Position		      [890, 81, 905, 114]
+	      IconShape		      "rectangular"
+	      Inputs		      "++"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      " 3"
+	      Ports		      [2, 1]
+	      Position		      [715, 226, 730, 259]
+	      IconShape		      "rectangular"
+	      Inputs		      "+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      " 5"
+	      Ports		      [2, 1]
+	      Position		      [895, 246, 910, 279]
+	      IconShape		      "rectangular"
+	      Inputs		      "++"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      " 6"
+	      Ports		      [2, 1]
+	      Position		      [745, 116, 760, 149]
+	      IconShape		      "rectangular"
+	      Inputs		      "++"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      " 7"
+	      Ports		      [3, 1]
+	      Position		      [710, 333, 725, 367]
+	      IconShape		      "rectangular"
+	      Inputs		      "++-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Block NOTES"
+	      Ports		      []
+	      Position		      [945, 315, 1001, 355]
+	      BackgroundColor	      "green"
+	      ShowName		      off
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      MaskDisplay	      "disp('Block\\nNOTES')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Block NOTES"
+		Location		[441, 351, 1027, 840]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Annotation {
+		  Position		  [288, 123]
+		  Text			  "In this block, inputs to the Fuzzy "
+"Logic controller are computed. The Current torque demand on the ICE \nand the"
+" SoC are input as 2 scaled variables to the fuzzy controller. Both inputs are"
+" scaled from 1 to 11.\n\nFor SoC, a value of cs_lo_soc would correspond to 1 "
+"and a value of cs_hi_soc would correspond to 11, \nlinearly interpolating bet"
+"ween them.\n\nFor the ICE Torque, any torque demand less than the target ICE "
+"torque would scale from 1 to 6. Any torque \ndemand greater than the target I"
+"CE torque would scale from 6 to 11 (the 2 being piecewise linear).\n\n\n\n"
+		}
+		Annotation {
+		  Position		  [277, 29]
+		  Text			  "INPUT SCALING"
+		}
+		Annotation {
+		  Position		  [277, 214]
+		  Text			  "TARGET TORQUE COMPUTATION"
+		}
+		Annotation {
+		  Position		  [288, 312]
+		  Text			  "The target (optimal) torque for a p"
+"articular speed requested from the ICE is calculated using a weighted average"
+" of \nthe efficiency and emissions data for a particular speed in considerati"
+"on. \n\nThe calculation of the target torque involves calculating the minimum"
+" of a cost function. The competing quantities \nof the cost function include "
+"the emissions and fuel economy for all torques at that speed, weighed by thei"
+"r \nrespective weights. \n\nThe relative importance for the competing quantit"
+"ies (weights) are changed during the simulation, \nto reflect changes in driv"
+"ing conditions. For example, during a cold start, emissions are given higher "
+"priority. Also,\nif the electric motor has been reaching it's maximum assist "
+"capability in the wake of the torque request not being met,\nthen emissions a"
+"re sacrificed for higher torque from the ICE.\n"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant5"
+	      Position		      [695, 85, 720, 105]
+	      Value		      "5"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant6"
+	      Position		      [830, 95, 855, 115]
+	      Value		      "1"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant7"
+	      Position		      [715, 282, 735, 298]
+	      Value		      "5"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant8"
+	      Position		      [835, 260, 860, 280]
+	      Value		      "6"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant9"
+	      Position		      [615, 342, 670, 358]
+	      Value		      "10e4*eps"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "Current  \nEngine speed\nfrom <fc>\n(ra"
+"d/s)\n"
+	      Position		      [20, 288, 105, 312]
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "engine_rpm"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From <vc>"
+	      Position		      [70, 141, 140, 159]
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "fc_clt_tmp"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From<mc>/enforce torque limit"
+	      Position		      [75, 235, 175, 255]
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "mc_trq_limited"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [140, 173, 170, 197]
+	      Gain		      "vc_fc_warm_tmp_frac"
+	      Multiplication	      "Element-wise(K.*u)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto Output Scaling"
+	      Position		      [720, 191, 760, 209]
+	      GotoTag		      "FLC1"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "MATLAB Fcn\nTarget torque"
+	      Position		      [470, 165, 530, 195]
+	      MATLABFcn		      "fuzzy_target_compute_emissions(u(1),u(2"
+"),u(3))"
+	      OutputDimensions	      "1"
+	      OutputSignalType	      "auto"
+	      Output1D		      on
+	    }
+	    Block {
+	      BlockType		      Memory
+	      Name		      "Memory"
+	      Position		      [320, 230, 350, 260]
+	      X0		      "0"
+	      InheritSampleTime	      off
+	      RTWStateStorageClass    "Auto"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [3, 1]
+	      Position		      [415, 148, 445, 222]
+	      FontName		      "Arial"
+	      Inputs		      "3"
+	      DisplayOption	      "none"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product8"
+	      Ports		      [3, 1]
+	      Position		      [780, 74, 810, 106]
+	      Inputs		      "**/"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Relational\nOperator"
+	      Position		      [795, 157, 825, 188]
+	      Operator		      "<="
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Relational\nOperator5"
+	      Position		      [190, 144, 215, 171]
+	      ShowName		      off
+	      Operator		      "<"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation\n1-11 "
+	      Position		      [1025, 160, 1055, 190]
+	      UpperLimit	      "11"
+	      LowerLimit	      "1"
+	      LinearizeAsGain	      on
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch1"
+	      Position		      [970, 160, 1000, 190]
+	      Threshold		      "eps"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace4"
+	      Position		      [570, 244, 665, 266]
+	      VariableName	      "flc_opt_trq"
+	      MaxDataPoints	      "inf"
+	      Decimation	      "1"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace5"
+	      Position		      [570, 284, 665, 306]
+	      VariableName	      "flc_max_trq"
+	      MaxDataPoints	      "inf"
+	      Decimation	      "1"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Array"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "epsilon"
+	      Position		      [690, 122, 720, 138]
+	      Value		      "eps"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Lookup
+	      Name		      "max_torque lookup"
+	      Position		      [140, 334, 190, 376]
+	      InputValues	      "fc_map_spd*fc_spd_scale"
+	      OutputValues	      "fc_max_trq*fc_trq_scale"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "product"
+	      Ports		      [3, 1]
+	      Position		      [785, 239, 815, 271]
+	      Inputs		      "**/"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "thermostat\nsetting"
+	      Position		      [75, 177, 125, 193]
+	      Value		      "fc_tstat"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Torque"
+	      Position		      [1085, 168, 1115, 182]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Switch1"
+	      SrcPort		      1
+	      DstBlock		      "Saturation\n1-11 "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " 7"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      DstBlock		      "product"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      " 6"
+	      SrcPort		      1
+	      DstBlock		      "Product8"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "epsilon"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      DstBlock		      " 6"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant9"
+	      SrcPort		      1
+	      DstBlock		      " 7"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant5"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -5]
+	      DstBlock		      "Product8"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Saturation\n1-11 "
+	      SrcPort		      1
+	      DstBlock		      "Torque"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " 5"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      DstBlock		      "Switch1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "product"
+	      SrcPort		      1
+	      DstBlock		      " 5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant8"
+	      SrcPort		      1
+	      DstBlock		      " 5"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant7"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -35]
+	      DstBlock		      "product"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      " 3"
+	      SrcPort		      1
+	      DstBlock		      "product"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " 2"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      DstBlock		      "Switch1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant6"
+	      SrcPort		      1
+	      DstBlock		      " 2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Product8"
+	      SrcPort		      1
+	      DstBlock		      " 2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Relational\nOperator"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "MATLAB Fcn\nTarget torque"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		Points			[0, 75]
+		DstBlock		"To Workspace4"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[145, 0]
+		Branch {
+		  Points		  [0, 70]
+		  Branch {
+		    Points		    [0, 110]
+		    DstBlock		    " 7"
+		    DstPort		    3
+		  }
+		  Branch {
+		    DstBlock		    " 3"
+		    DstPort		    2
+		  }
+		}
+		Branch {
+		  Points		  [15, 0]
+		  Branch {
+		    Points		    [30, 0]
+		    Branch {
+		    DstBlock		    " 6"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    2
+		    }
+		  }
+		  Branch {
+		    Points		    [0, 20]
+		    DstBlock		    "Goto Output Scaling"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Line {
+	      Labels		      [1, 0]
+	      SrcBlock		      "Current  \nEngine speed\nfrom <fc>\n(ra"
+"d/s)\n"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"max_torque lookup"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[255, 0; 0, -90]
+		DstBlock		"Mux"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "MATLAB Fcn\nTarget torque"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "max_torque lookup"
+	      SrcPort		      1
+	      Points		      [360, 0]
+	      Branch {
+		Points			[140, 0]
+		DstBlock		" 7"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"To Workspace5"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Torque required"
+	      SrcPort		      1
+	      Points		      [505, 0]
+	      Branch {
+		Points			[0, 85]
+		Branch {
+		  Points		  [0, 70]
+		  DstBlock		  " 3"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		DstBlock		"Product8"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "From<mc>/enforce torque limit"
+	      SrcPort		      1
+	      DstBlock		      "Memory"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "thermostat\nsetting"
+	      SrcPort		      1
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "Relational\nOperator5"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "From <vc>"
+	      SrcPort		      1
+	      DstBlock		      "Relational\nOperator5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Relational\nOperator5"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Memory"
+	      SrcPort		      1
+	      Points		      [0, -60]
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Annotation {
+	      Position		      [216, 38]
+	      Text		      "INPUTS"
+	      FontName		      "Arial"
+	      FontSize		      14
+	      FontWeight	      "bold"
+	    }
+	    Annotation {
+	      Position		      [782, 37]
+	      Text		      "INPUT SCALING"
+	      FontName		      "Arial"
+	      FontSize		      14
+	      FontWeight	      "bold"
+	    }
+	    Annotation {
+	      Position		      [267, 149]
+	      Text		      "Engine COLD"
+	    }
+	    Annotation {
+	      Position		      [248, 226]
+	      Text		      "Motor Max \nTorque reached"
+	    }
+	    Annotation {
+	      Position		      [223, 291]
+	      Text		      "engine speed"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1]
+	  Position		  [755, 112, 790, 148]
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Output scaling"
+	  Ports			  [1, 1]
+	  Position		  [550, 88, 625, 152]
+	  ShowPortLabels	  off
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "Output scaling"
+	    Location		    [371, 520, 1073, 928]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "delta alpha\n"
+	      Position		      [40, 143, 70, 157]
+	      Port		      "1"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      " "
+	      Ports		      [2, 1]
+	      Position		      [240, 81, 255, 114]
+	      IconShape		      "rectangular"
+	      Inputs		      "+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      " 1"
+	      Ports		      [2, 1]
+	      Position		      [240, 201, 255, 234]
+	      IconShape		      "rectangular"
+	      Inputs		      "+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      " 2"
+	      Ports		      [2, 1]
+	      Position		      [455, 251, 470, 284]
+	      IconShape		      "rectangular"
+	      Inputs		      "++"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      " 3"
+	      Ports		      [2, 1]
+	      Position		      [240, 261, 255, 294]
+	      IconShape		      "rectangular"
+	      Inputs		      "+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Block NOTES"
+	      Ports		      []
+	      Position		      [586, 278, 641, 320]
+	      BackgroundColor	      "green"
+	      ShowName		      off
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      MaskDisplay	      "disp('Block\\nNOTES')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Block NOTES"
+		Location		[431, 284, 966, 469]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Annotation {
+		  Position		  [269, 92]
+		  Text			  "OUTPUT SCALING\nThis bock scales th"
+"e outputs of the controller to match the size of the components.\nThe scaling"
+" affects the way control signal is fed into the actuators. The scaling is don"
+"e based \non the membership functions of the Fuzzy Control block. \n\nHere:\n"
+" DELTA ALPHA is scaled from 1 to 11, 1 representing zero torque, 6 representi"
+"ng target Torque \nand 11 representing Max ICE torque. (the 2 regions being p"
+"iecewise linear).\n\n"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [190, 155, 215, 175]
+	      Value		      "6"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      Position		      [195, 95, 220, 115]
+	      Value		      "1"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant2"
+	      Position		      [340, 70, 365, 90]
+	      Value		      "5"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant3"
+	      Position		      [195, 215, 220, 235]
+	      Value		      "6"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant4"
+	      Position		      [340, 255, 365, 275]
+	      Value		      "5"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From Input \nscaling"
+	      Position		      [30, 40, 90, 70]
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "FLC1"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From5"
+	      Position		      [20, 255, 90, 285]
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "engine_rpm"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product4"
+	      Ports		      [2, 1]
+	      Position		      [295, 47, 325, 78]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product5"
+	      Ports		      [2, 1]
+	      Position		      [395, 57, 425, 88]
+	      Inputs		      "*/"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product6"
+	      Ports		      [2, 1]
+	      Position		      [295, 232, 325, 263]
+	      Inputs		      "2"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product7"
+	      Ports		      [2, 1]
+	      Position		      [395, 242, 425, 273]
+	      Inputs		      "*/"
+	      Multiplication	      "Element-wise(.*)"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Relational\nOperator"
+	      Position		      [245, 142, 275, 173]
+	      Operator		      "<="
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation 1-11"
+	      Position		      [135, 135, 165, 165]
+	      UpperLimit	      "11"
+	      LowerLimit	      "1"
+	      LinearizeAsGain	      on
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation4"
+	      Position		      [565, 145, 595, 175]
+	      UpperLimit	      "max(fc_max_trq*fc_trq_scale)"
+	      LowerLimit	      "0"
+	      LinearizeAsGain	      on
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch1"
+	      Position		      [505, 145, 535, 175]
+	      Threshold		      "eps"
+	    }
+	    Block {
+	      BlockType		      Lookup
+	      Name		      "max_torque lookup"
+	      Position		      [135, 257, 180, 283]
+	      InputValues	      "fc_map_spd*fc_spd_scale"
+	      OutputValues	      "fc_max_trq*fc_trq_scale"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ICE Torque\ncommand"
+	      Position		      [635, 153, 665, 167]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "max_torque lookup"
+	      SrcPort		      1
+	      DstBlock		      " 3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From5"
+	      SrcPort		      1
+	      DstBlock		      "max_torque lookup"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Saturation4"
+	      SrcPort		      1
+	      DstBlock		      "ICE Torque\ncommand"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch1"
+	      SrcPort		      1
+	      DstBlock		      "Saturation4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Product7"
+	      SrcPort		      1
+	      DstBlock		      " 2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " 2"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      DstBlock		      "Switch1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Relational\nOperator"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Product5"
+	      SrcPort		      1
+	      Points		      [60, 0]
+	      DstBlock		      "Switch1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant4"
+	      SrcPort		      1
+	      DstBlock		      "Product7"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Product6"
+	      SrcPort		      1
+	      DstBlock		      "Product7"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " 3"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      DstBlock		      "Product6"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      " 1"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      DstBlock		      "Product6"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant3"
+	      SrcPort		      1
+	      DstBlock		      " 1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "delta alpha\n"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		DstBlock		"Saturation 1-11"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 60]
+		DstBlock		" 1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "From Input \nscaling"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		Points			[0, 245]
+		Branch {
+		  Points		  [120, 0]
+		  DstBlock		  " 3"
+		  DstPort		  2
+		}
+		Branch {
+		  Points		  [0, 30; 335, 0]
+		  DstBlock		  " 2"
+		  DstPort		  2
+		}
+	      }
+	      Branch {
+		DstBlock		"Product4"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      DstBlock		      "Product5"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Product4"
+	      SrcPort		      1
+	      DstBlock		      "Product5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " "
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      DstBlock		      "Product4"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Saturation 1-11"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		Points			[0, -60]
+		DstBlock		" "
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Relational\nOperator"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      " "
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Relational\nOperator"
+	      DstPort		      2
+	    }
+	    Annotation {
+	      Position		      [274, 15]
+	      Text		      "OUTPUT SCALING"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "SoC "
+	  Ports			  [0, 1]
+	  Position		  [340, 174, 390, 216]
+	  ShowPortLabels	  off
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "SoC "
+	    Location		    [383, 84, 1066, 398]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Block NOTES"
+	      Ports		      []
+	      Position		      [505, 225, 561, 265]
+	      BackgroundColor	      "green"
+	      ShowName		      off
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      MaskDisplay	      "disp('Block\\nNOTES')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Block NOTES"
+		Location		[216, 177, 696, 345]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Annotation {
+		  Position		  [243, 63]
+		  Text			  "This block scales the battery SOC s"
+"o as to feed it into the Fuzzy controller.\n1 represents the lower limit of a"
+"llowable battery SOC while 11 represents the higher\nlimit of allowable batte"
+"ry SOC."
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [3, 1]
+	      Position		      [415, 106, 430, 194]
+	      ShowName		      off
+	      Inputs		      "3"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "SOC\nfrom <ess>"
+	      Position		      [150, 68, 210, 102]
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "SOC"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation\n1-11"
+	      Position		      [570, 135, 600, 165]
+	      UpperLimit	      "11"
+	      LowerLimit	      "1"
+	      LinearizeAsGain	      on
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "SoC scaling function\n1-11"
+	      Position		      [470, 135, 530, 165]
+	      Expr		      "10*(u(1)-u(2))/(u(2)-u(3))+11"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "default = 0.45"
+	      Position		      [140, 185, 215, 205]
+	      Value		      "cs_lo_soc"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "default = 0.55"
+	      Position		      [140, 140, 215, 160]
+	      Value		      "cs_hi_soc"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "SoC"
+	      Position		      [625, 143, 655, 157]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "SoC scaling function\n1-11"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SOC\nfrom <ess>"
+	      SrcPort		      1
+	      Points		      [185, 0]
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "default = 0.55"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "default = 0.45"
+	      SrcPort		      1
+	      Points		      [180, 0]
+	      DstBlock		      "Mux"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "SoC scaling function\n1-11"
+	      SrcPort		      1
+	      DstBlock		      "Saturation\n1-11"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Saturation\n1-11"
+	      SrcPort		      1
+	      DstBlock		      "SoC"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Position		      [365, 107]
+	      Text		      "soc"
+	    }
+	    Annotation {
+	      Position		      [376, 136]
+	      Text		      "cs_hi_soc"
+	    }
+	    Annotation {
+	      Position		      [368, 181]
+	      Text		      "cs_lo_soc"
+	    }
+	    Annotation {
+	      Position		      [290, 231]
+	      Text		      "BASE SOC LIMITS\nHigh= 0. 55\nLow  = 0."
+"45"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace4"
+	  Position		  [185, 245, 265, 265]
+	  VariableName		  "cs_trq_in_r"
+	  MaxDataPoints		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace5"
+	  Position		  [185, 290, 265, 310]
+	  VariableName		  "cs_spd_in_r"
+	  MaxDataPoints		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "trq and spd\nreq'd from\nengine\n(N*m, rad/"
+"s)"
+	  Position		  [825, 123, 855, 137]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Fuzzy logic Code"
+	  SrcPort		  1
+	  DstBlock		  "Output scaling"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Input Scaling"
+	  SrcPort		  1
+	  DstBlock		  "Fuzzy logic Code"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "trq and spd req'd\ninto clutch\n(N*m, rad/s"
+")"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [5, 0; 0, 120]
+	  Branch {
+	    DstBlock		    "To Workspace5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 40; 595, 0]
+	    DstBlock		    "Mux"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    DstBlock		    "To Workspace4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -55]
+	    DstBlock		    "Input Scaling"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "trq and spd\nreq'd from\nengine\n(N*m, rad/"
+"s)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SoC "
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Fuzzy logic Code"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Output scaling"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [434, 25]
+	  Text			  "FUZZY CONTROL BLOCK"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [448, 312]
+	  Text			  "Speed is directly fed through"
+	}
+      }
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto<sdo>"
+      Position		      [175, 18, 245, 32]
+      GotoTag		      "time"
+      TagVisibility	      "global"
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground"
+      Position		      [630, 175, 650, 195]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "HC, CO,\nNOx, PM (g/s)"
+      Position		      [710, 77, 760, 93]
+      FontName		      "Arial"
+      VariableName	      "emis"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Interactive Graphics"
+      Ports		      []
+      Position		      [782, 20, 847, 74]
+      AttributesFormatString  "%<BlockChoice>"
+      ShowPortLabels	      on
+      BlockChoice	      "off"
+      TemplateBlock	      "lib_interactive/Interactive Graphics"
+      MemberBlocks	      "off,on"
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Interactive Graphics"
+	Location		[148, 182, 646, 482]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Reference
+	  Name			  "off"
+	  Tag			  "Altia_off"
+	  Ports			  []
+	  Position		  [100, 40, 140, 80]
+	  Orientation		  "up"
+	  SourceBlock		  "lib_interactive/off"
+	  SourceType		  ""
+	}
+      }
+    }
+    Block {
+      BlockType		      Logic
+      Name		      "Logical\nOperator1"
+      Ports		      [2, 1]
+      Position		      [670, 45, 695, 65]
+      Orientation	      "left"
+      ShowName		      off
+      Operator		      "AND"
+      Inputs		      "2"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "NOTES"
+      Ports		      []
+      Position		      [20, 237, 70, 271]
+      BackgroundColor	      "green"
+      ShowName		      off
+      SourceBlock	      "lib_help/NOTES"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      Position		      [740, 140, 760, 160]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "clutch <cl>"
+      Ports		      [3, 2]
+      Position		      [400, 30, 445, 100]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_transmission/clutch <cl>"
+      SourceType	      "Clutch"
+      slip_spd		      "vc_launch_spd"
+      maxtrq		      "max(fc_max_trq)*fc_trq_scale"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "do ex calcs?"
+      Position		      [725, 19, 770, 31]
+      Orientation	      "left"
+      ShowName		      off
+      Value		      "ex_calc"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "do ex calcs?1"
+      Position		      [715, 59, 760, 71]
+      Orientation	      "left"
+      ShowName		      off
+      Value		      "fc_emis"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "drive cycle\n<cyc>"
+      Ports		      [0, 1]
+      Position		      [30, 121, 65, 189]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_drive_cycle/drive cycle\n<cyc>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "energy\nstorage <ess>"
+      Ports		      [1, 1]
+      Position		      [750, 163, 815, 207]
+      BackgroundColor	      "yellow"
+      AncestorBlock	      "lib_energy_storage/Subsystem/energy\nstorage <e"
+"ss>"
+      SourceBlock	      "lib_energy_storage/energy\nstorage <ess>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "exhaust sys\n<ex>"
+      Ports		      [1, 2, 1]
+      Position		      [640, 73, 690, 117]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_exhaust/exhaust sys\n<ex>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "final drive <fd>"
+      Ports		      [2, 2]
+      Position		      [315, 153, 360, 202]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_transmission/final drive <fd>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "fuel\nconverter\n <fc>"
+      Ports		      [1, 3]
+      Position		      [545, 25, 615, 75]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_fuel_converter/fuel\nconverter\n <fc>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "gearbox <gb>"
+      Ports		      [2, 2]
+      Position		      [390, 153, 455, 197]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_transmission/gearbox <gb>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "help"
+      Ports		      []
+      Position		      [30, 35, 77, 97]
+      BackgroundColor	      "yellow"
+      DropShadow	      on
+      ShowName		      off
+      SourceBlock	      "lib_help/help"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "motor/\ncontroller <mc> par"
+      Ports		      [2, 2]
+      Position		      [565, 170, 615, 210]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_electric_machine/motor//\ncontroller <mc> p"
+"ar"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "power\nbus <pb>"
+      Ports		      [3, 3]
+      Position		      [670, 163, 720, 207]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_power_bus/power\nbus <pb>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "torque\ncoupler <tc>"
+      Ports		      [3, 3]
+      Position		      [490, 156, 530, 204]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_transmission/torque\ncoupler <tc>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "total fuel used (gal)"
+      Position		      [645, 12, 695, 28]
+      FontName		      "Arial"
+      VariableName	      "gal"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "vehicle <veh>"
+      Ports		      [2, 1]
+      Position		      [95, 143, 150, 187]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_vehicle/vehicle <veh>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "wheel and axle \nfront/rear <wh>"
+      Ports		      [3, 3]
+      Position		      [175, 157, 225, 213]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_wheel/wheel and axle \nfront//rear <wh>"
+      SourceType	      ""
+    }
+    Line {
+      SrcBlock		      "wheel and axle \nfront/rear <wh>"
+      SrcPort		      3
+      Points		      [5, 0; 0, 60; -155, 0]
+      DstBlock		      "vehicle <veh>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "final drive <fd>"
+      SrcPort		      1
+      DstBlock		      "gearbox <gb>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "drive cycle\n<cyc>"
+      SrcPort		      1
+      DstBlock		      "vehicle <veh>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "clutch <cl>"
+      SrcPort		      1
+      DstBlock		      "Fuzzy Logic\ncontrol strategy\nwith Emissions\n"
+"<cs>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Fuzzy Logic\ncontrol strategy\nwith Emissions\n"
+"<cs>"
+      SrcPort		      1
+      DstBlock		      "fuel\nconverter\n <fc>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "fuel\nconverter\n <fc>"
+      SrcPort		      2
+      Points		      [5, 0]
+      DstBlock		      "exhaust sys\n<ex>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "do ex calcs?"
+      SrcPort		      1
+      DstBlock		      "Logical\nOperator1"
+      DstPort		      1
+    }
+    Line {
+      Labels		      [3, 0]
+      SrcBlock		      "fuel\nconverter\n <fc>"
+      SrcPort		      3
+      Points		      [0, 60; -235, 0]
+      DstBlock		      "clutch <cl>"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "fuel\nconverter\n <fc>"
+      SrcPort		      1
+      Points		      [0, -15]
+      DstBlock		      "total fuel used (gal)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "exhaust sys\n<ex>"
+      SrcPort		      1
+      DstBlock		      "HC, CO,\nNOx, PM (g/s)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Logical\nOperator1"
+      SrcPort		      1
+      DstBlock		      "exhaust sys\n<ex>"
+      DstPort		      enable
+    }
+    Line {
+      SrcBlock		      "do ex calcs?1"
+      SrcPort		      1
+      DstBlock		      "Logical\nOperator1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Clock"
+      SrcPort		      1
+      DstBlock		      "Goto<sdo>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "gearbox <gb>"
+      SrcPort		      2
+      Points		      [0, 75; -160, 0]
+      DstBlock		      "final drive <fd>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "torque\ncoupler <tc>"
+      SrcPort		      3
+      Points		      [0, 60; -160, 0]
+      DstBlock		      "gearbox <gb>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "torque\ncoupler <tc>"
+      SrcPort		      1
+      Points		      [0, -30; -160, 0; 0, -95]
+      DstBlock		      "clutch <cl>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "clutch <cl>"
+      SrcPort		      2
+      Points		      [15, 0; 0, 95]
+      DstBlock		      "torque\ncoupler <tc>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "gearbox <gb>"
+      SrcPort		      1
+      DstBlock		      "torque\ncoupler <tc>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "<vc> par"
+      SrcPort		      1
+      DstBlock		      "clutch <cl>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "motor/\ncontroller <mc> par"
+      SrcPort		      2
+      Points		      [0, 60; -145, 0]
+      DstBlock		      "torque\ncoupler <tc>"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "motor/\ncontroller <mc> par"
+      SrcPort		      1
+      Points		      [0, -10]
+      DstBlock		      "power\nbus <pb>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ground"
+      SrcPort		      1
+      DstBlock		      "power\nbus <pb>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "power\nbus <pb>"
+      SrcPort		      3
+      Points		      [5, 0; 0, 55; -180, 0]
+      DstBlock		      "motor/\ncontroller <mc> par"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "power\nbus <pb>"
+      SrcPort		      2
+      DstBlock		      "energy\nstorage <ess>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "power\nbus <pb>"
+      SrcPort		      1
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "energy\nstorage <ess>"
+      SrcPort		      1
+      Points		      [0, 75; -165, 0]
+      DstBlock		      "power\nbus <pb>"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "torque\ncoupler <tc>"
+      SrcPort		      2
+      DstBlock		      "motor/\ncontroller <mc> par"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "exhaust sys\n<ex>"
+      SrcPort		      2
+      Points		      [0, 15]
+      DstBlock		      "<cs>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "vehicle <veh>"
+      SrcPort		      1
+      DstBlock		      "wheel and axle \nfront/rear <wh>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "wheel and axle \nfront/rear <wh>"
+      SrcPort		      1
+      DstBlock		      "2 axle -->\n1 driveline\nconverter"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "wheel and axle \nfront/rear <wh>"
+      SrcPort		      2
+      DstBlock		      "2 axle -->\n1 driveline\nconverter"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "2 axle -->\n1 driveline\nconverter"
+      SrcPort		      1
+      DstBlock		      "final drive <fd>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "2 axle -->\n1 driveline\nconverter"
+      SrcPort		      2
+      Points		      [5, 0; 0, 70; -135, 0; 0, -70]
+      DstBlock		      "wheel and axle \nfront/rear <wh>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "2 axle -->\n1 driveline\nconverter"
+      SrcPort		      3
+      Points		      [0, 45; -125, 0]
+      DstBlock		      "wheel and axle \nfront/rear <wh>"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "final drive <fd>"
+      SrcPort		      2
+      Points		      [0, 40; -125, 0]
+      DstBlock		      "2 axle -->\n1 driveline\nconverter"
+      DstPort		      3
+    }
+  }
+}

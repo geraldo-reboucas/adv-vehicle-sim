@@ -1,0 +1,1070 @@
+Model {
+  Name			  "BD_CONV"
+  Version		  4.1.1
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  off
+  BrowserShowLibraryLinks on
+  BrowserLookUnderMasks	  on
+  Created		  "Tue May 30 16:58:18 2000"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "tmarkel"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Feb 14 11:04:48 2003"
+  ModifiedComment	  "mokeefe -- Thu Apr 18 07:47:12 2002 -- Version 1.98"
+"\nsaving the model:\no \"without the model browser open\"\no with only top-le"
+"vel screen visible \no and with \"fit to view\" enabled"
+  ModifiedHistory	  "mokeefe -- Thu Apr 18 07:47:12 2002 -- Version 1.98"
+"\nsaving the model:\no \"without the model browser open\"\no with only top-le"
+"vel screen visible \no and with \"fit to view\" enabled\n\nmokeefe -- Thu Apr"
+" 18 07:46:46 2002 -- Version 1.97\nsaving the model:\no \"without the model b"
+"rowser open\"\no with only top-level screen visible \no and with \"fit to vie"
+"w\" enabled\n\nmokeefe -- Thu Apr 18 07:37:24 2002 -- Version 1.96\nsaving th"
+"e model \n\"without the model browser open\"\nwith only top-level screen visi"
+"ble \nand with \"fit to view\" enabled\n\nabrooker -- Fri Apr 12 08:11:12 200"
+"2 -- Version 1.95\n\n\nabrooker -- Fri Apr 12 08:02:30 2002 -- Version 1.94\n"
+"\n\nabrooker -- Fri Apr 12 08:02:26 2002 -- Version 1.93\n\n\nabrooker -- Fri"
+" Apr 12 07:59:19 2002 -- Version 1.92\n\n\nabrooker -- Fri Apr 12 07:49:13 20"
+"02 -- Version 1.91\n\n\nmokeefe -- Fri Mar 29 15:46:36 2002 -- Version 1.90\n"
+"\n\nmokeefe -- Wed Mar 06 11:56:56 2002 -- Version 1.89\n\n\nmokeefe -- Wed M"
+"ar 06 11:56:30 2002 -- Version 1.88\nchanged the acc_on flag in mechanical ac"
+"cessory loads\n\nmokeefe -- Tue Mar 05 14:28:10 2002 -- Version 1.87\n\n\nmok"
+"eefe -- Mon Mar 04 14:59:21 2002 -- Version 1.86\nchanged engine_on to key_on"
+" in Mechanical Accessory Loads <acc>\n\nmokeefe -- Mon Mar 04 07:29:42 2002 -"
+"- Version 1.85\n\n\nmokeefe -- Mon Mar 04 07:29:35 2002 -- Version 1.84\n\n\n"
+"mokeefe -- Fri Mar 01 16:40:39 2002 -- Version 1.83\n\n\nmokeefe -- Fri Mar 0"
+"1 15:08:54 2002 -- Version 1.82\n\n\nmokeefe -- Fri Mar 01 12:12:36 2002 -- V"
+"ersion 1.81\n\n\nmokeefe -- Fri Mar 01 11:41:50 2002 -- Version 1.80\n\n\nmok"
+"eefe -- Fri Mar 01 11:21:25 2002 -- Version 1.79\n\n\nmokeefe -- Fri Mar 01 1"
+"0:51:16 2002 -- Version 1.78\n\n\nmokeefe -- Fri Mar 01 10:28:03 2002 -- Vers"
+"ion 1.77\n\n\nmokeefe -- Fri Mar 01 10:27:49 2002 -- Version 1.76\n\n\nmokeef"
+"e -- Fri Mar 01 10:27:36 2002 -- Version 1.75\n\n\nmokeefe -- Thu Feb 28 08:5"
+"4:13 2002 -- Version 1.74\n\n\nmokeefe -- Thu Feb 28 08:41:46 2002 -- Version"
+" 1.73\n\n\nmokeefe -- Thu Feb 28 08:40:29 2002 -- Version 1.72\n\n\nmokeefe -"
+"- Thu Feb 28 08:37:03 2002 -- Version 1.71\n\n\nmokeefe -- Thu Feb 28 08:29:1"
+"3 2002 -- Version 1.70\nchanging the mechanical auxiliary loads block to be m"
+"ore simplistic\n\nmokeefe -- Wed Feb 27 14:39:18 2002 -- Version 1.69\n\n\nmo"
+"keefe -- Wed Feb 27 14:38:57 2002 -- Version 1.68\n\n\nmokeefe -- Wed Feb 27 "
+"14:16:01 2002 -- Version 1.67\nchanging to Mechanical Accessory Loads v2 <acc"
+"> from lib_accessory\n\nmokeefe -- Wed Feb 27 14:14:56 2002 -- Version 1.66\n"
+"\n\nmokeefe -- Tue Feb 26 10:43:51 2002 -- Version 1.65\nchanging the way tha"
+"t the auxiliary loads are calculated and logged to workspace. Electrical load"
+"s run on a conventional powertrain are assumed to have a mechanical to electr"
+"ical efficiency penalty but are translated and added as mechanical loads\n\nm"
+"okeefe -- Tue Feb 26 10:36:09 2002 -- Version 1.64\n\n\nmokeefe -- Tue Feb 26"
+" 09:51:22 2002 -- Version 1.63\nchanged the condition for whether electrical "
+"loads are accounted in auxiliary loads block (Mechanical Accessory Loads <acc"
+">) to be not(ess_on)\n\nmokeefe -- Mon Feb 25 15:04:18 2002 -- Version 1.62\n"
+"\n\nmokeefe -- Mon Feb 25 14:59:54 2002 -- Version 1.61\n\n\nmokeefe -- Mon F"
+"eb 25 14:24:21 2002 -- Version 1.60\n\n\nmokeefe -- Fri Feb 15 11:53:40 2002 "
+"-- Version 1.59\nadded and tested  Mechanical Accessory Loads <acc> block\n\n"
+"mokeefe -- Thu Feb 14 17:56:13 2002 -- Version 1.58\n\n\nmokeefe -- Thu Feb 1"
+"4 17:21:52 2002 -- Version 1.57\n\n\nmokeefe -- Thu Feb 14 17:05:06 2002 -- V"
+"ersion 1.56\nupdated with Mechanical Accessory Loads <acc> block\n\nmokeefe -"
+"- Thu Feb 14 16:31:11 2002 -- Version 1.55\n\n\nmokeefe -- Thu Feb 14 16:04:0"
+"4 2002 -- Version 1.54\nadded Mechanical Auxiliary Loads (acc) block\n\nmokee"
+"fe -- Thu Feb 14 10:48:35 2002 -- Version 1.53\n\n\nmokeefe -- Thu Feb 14 10:"
+"41:17 2002 -- Version 1.52\n\n\nmokeefe -- Thu Feb 14 10:24:42 2002 -- Versio"
+"n 1.51\n\n\nmokeefe -- Thu Feb 14 09:59:11 2002 -- Version 1.50\ntesting\n\n"
+"\nssprik -- Fri Feb 09 15:14:35 2001 -- Version 1.49\nchanged foregrounds to "
+"black colors\n\n"
+  ModelVersionFormat	  "1.%<AutoIncrement:110>"
+  ConfigurationManager	  "RCS"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "max(cyc_mph(:,1))"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode1"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-3"
+  Refine		  "1"
+  MaxStep		  "1"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "1"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "none"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_vc.tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  on
+  RTWExpressionDepthLimit 5
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "BD_CONV"
+    Location		    [6, 137, 1024, 454]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    146
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "115"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      "2 axle -->\n1 driveline\nconverter"
+      Ports		      [3, 3]
+      Position		      [240, 100, 265, 160]
+      SourceBlock	      "lib_wheel/2 axle -->\n1 driveline\nconverter"
+      SourceType	      "SubSystem"
+      ShowPortLabels	      off
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "<cs>"
+      Position		      [815, 197, 880, 213]
+      GotoTag		      "ex_cat_tmp"
+      TagVisibility	      "global"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "<sdo> conv"
+      Ports		      []
+      Position		      [265, 17, 325, 61]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_outputs/<sdo> conv"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "<vc> conv"
+      Ports		      [0, 1]
+      Position		      [385, 13, 445, 67]
+      BackgroundColor	      "yellow"
+      LinkData {
+	BlockName		"config traction control"
+	DialogParameters {
+	  BlockChoice		  "traction control"
+	}
+      }
+      SourceBlock	      "lib_controls/<vc> conv"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Clock
+      Name		      "Clock"
+      Position		      [25, 15, 45, 35]
+      DisplayTime	      off
+      Decimation	      "10"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto<sdo>"
+      Position		      [75, 18, 145, 32]
+      GotoTag		      "time"
+      TagVisibility	      "global"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "HC, CO,\nNOx, PM (g/s)"
+      Position		      [810, 147, 860, 163]
+      FontName		      "Arial"
+      VariableName	      "emis"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Interactive Graphics"
+      Ports		      []
+      Position		      [577, 15, 642, 69]
+      AttributesFormatString  "%<BlockChoice>"
+      ShowPortLabels	      on
+      BlockChoice	      "off"
+      TemplateBlock	      "lib_interactive/Interactive Graphics"
+      MemberBlocks	      "off,on"
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Interactive Graphics"
+	Location		[148, 182, 646, 482]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Reference
+	  Name			  "off"
+	  Tag			  "Altia_off"
+	  Ports			  []
+	  Position		  [100, 40, 140, 80]
+	  Orientation		  "up"
+	  SourceBlock		  "lib_interactive/off"
+	  SourceType		  ""
+	}
+      }
+    }
+    Block {
+      BlockType		      Logic
+      Name		      "Logical\nOperator1"
+      Ports		      [2, 1]
+      Position		      [770, 110, 795, 130]
+      Orientation	      "left"
+      ShowName		      off
+      Operator		      "AND"
+      Inputs		      "2"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Mechanical Accessory\nLoads <acc>"
+      Ports		      [2, 2]
+      Position		      [550, 100, 600, 180]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskDisplay	      "image(imread('bdi_acc_pic.bmp'))"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Mechanical Accessory\nLoads <acc>"
+	Location		[188, 200, 863, 885]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	146
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [95, 233, 125, 247]
+	  ShowName		  off
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  Position		  [95, 348, 125, 362]
+	  ShowName		  off
+	  Port			  "2"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [80, 493, 110, 507]
+	  ShowName		  off
+	  Value			  "eps"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [165, 211, 170, 269]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "2"
+	  BusSelectionMode	  off
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux1"
+	  Ports			  [1, 2]
+	  Position		  [165, 326, 170, 384]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "2"
+	  BusSelectionMode	  off
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From"
+	  Position		  [75, 277, 155, 293]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "fc_spd_est"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From1"
+	  Position		  [70, 117, 150, 133]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "acc_on"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From2"
+	  Position		  [75, 392, 155, 408]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "fc_spd_est"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From3"
+	  Position		  [70, 67, 150, 83]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "signal_one"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From4"
+	  Position		  [70, 92, 150, 108]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "signal_two"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From5"
+	  Position		  [130, 452, 210, 468]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "engine_on"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From6"
+	  Position		  [80, 472, 160, 488]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "fc_spd_est"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto"
+	  Position		  [310, 244, 400, 266]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  GotoTag		  "signal_one"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [310, 359, 400, 381]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  GotoTag		  "signal_two"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto2"
+	  Position		  [285, 464, 375, 486]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  GotoTag		  "acc_on"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator"
+	  Ports			  [2, 1]
+	  Position		  [240, 445, 270, 505]
+	  ShowName		  off
+	  Operator		  "AND"
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Mechanical Accessory\nLoads v2 <acc>"
+	  Ports			  [3, 2]
+	  Position		  [200, 61, 250, 139]
+	  LinkData {
+	    BlockName		    "backward model/mechanical accessories (Nm"
+")"
+	    DialogParameters {
+	      BlockChoice	      "Mechanical Accessories: Const Mech Var "
+"Elect"
+	    }
+	    BlockName		    "estimated mechanical torque/mechanical ac"
+"cessories (Nm)"
+	    DialogParameters {
+	      BlockChoice	      "Mechanical Accessories: Const Mech Var "
+"Elect"
+	    }
+	  }
+	  SourceBlock		  "lib_accessory/Mechanical Accessory\nLoads v"
+"2 <acc>"
+	  SourceType		  ""
+	  load_on		  "not(ess_on)*1"
+	  acc_max_spd		  "inf"
+	  acc_min_spd		  "(vc_idle_spd*vc_idle_bool)+eps"
+	  ic_mech_trq		  "0"
+	  ic_mech_pwr		  "0"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [3, 1]
+	  Position		  [265, 206, 270, 304]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [3, 1]
+	  Position		  [265, 321, 270, 419]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Relational\nOperator"
+	  Position		  [200, 468, 220, 512]
+	  ShowName		  off
+	  Operator		  ">"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [320, 73, 350, 87]
+	  ShowName		  off
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out2"
+	  Position		  [320, 113, 350, 127]
+	  ShowName		  off
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "From3"
+	  SrcPort		  1
+	  DstBlock		  "Mechanical Accessory\nLoads v2 <acc>"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mechanical Accessory\nLoads v2 <acc>"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mechanical Accessory\nLoads v2 <acc>"
+	  SrcPort		  2
+	  DstBlock		  "Out2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From4"
+	  SrcPort		  1
+	  DstBlock		  "Mechanical Accessory\nLoads v2 <acc>"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From1"
+	  SrcPort		  1
+	  DstBlock		  "Mechanical Accessory\nLoads v2 <acc>"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Goto1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In2"
+	  SrcPort		  1
+	  DstBlock		  "Demux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux1"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux1"
+	  SrcPort		  2
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From2"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "From6"
+	  SrcPort		  1
+	  DstBlock		  "Relational\nOperator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Relational\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From5"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Relational\nOperator"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator"
+	  SrcPort		  1
+	  DstBlock		  "Goto2"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [43, 285]
+	  Text			  "from  <fc>"
+	}
+	Annotation {
+	  Position		  [43, 400]
+	  Text			  "from  <fc>"
+	}
+	Annotation {
+	  Position		  [218, 214]
+	  Text			  "torque req"
+	}
+	Annotation {
+	  Position		  [217, 244]
+	  Text			  "speed req"
+	}
+	Annotation {
+	  Position		  [216, 275]
+	  Text			  "aux spd req"
+	}
+	Annotation {
+	  Position		  [218, 332]
+	  Text			  "torque achieved"
+	}
+	Annotation {
+	  Position		  [215, 362]
+	  Text			  "speed achieved"
+	}
+	Annotation {
+	  Position		  [213, 392]
+	  Text			  "aux spd achieved"
+	}
+	Annotation {
+	  Position		  [103, 465]
+	  Text			  "from  <vc>"
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "NOTES"
+      Ports		      []
+      Position		      [20, 212, 70, 246]
+      BackgroundColor	      "green"
+      ShowName		      off
+      SourceBlock	      "lib_help/NOTES"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "clutch <cl>"
+      Ports		      [3, 2]
+      Position		      [465, 100, 510, 170]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_transmission/clutch <cl>"
+      SourceType	      "Clutch"
+      slip_spd		      "vc_launch_spd"
+      maxtrq		      "max(fc_max_trq)*fc_trq_scale"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "do ex calcs?"
+      Position		      [815, 109, 860, 121]
+      Orientation	      "left"
+      ShowName		      off
+      Value		      "ex_calc"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "do ex calcs?1"
+      Position		      [815, 124, 860, 136]
+      Orientation	      "left"
+      ShowName		      off
+      Value		      "fc_emis"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "drive cycle\n<cyc>"
+      Ports		      [0, 1]
+      Position		      [15, 66, 50, 134]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_drive_cycle/drive cycle\n<cyc>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "exhaust sys\n<ex>"
+      Ports		      [1, 2, 1]
+      Position		      [735, 143, 785, 187]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_exhaust/exhaust sys\n<ex>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "final drive <fd>"
+      Ports		      [2, 2]
+      Position		      [295, 98, 340, 147]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_transmission/final drive <fd>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "fuel\nconverter\n <fc>"
+      Ports		      [1, 3]
+      Position		      [625, 95, 695, 145]
+      BackgroundColor	      "yellow"
+      LinkData {
+	BlockName		"fuel use and EO emis Configurable Subsystem"
+	DialogParameters {
+	  BlockChoice		  "fuel use and EO emis"
+	}
+      }
+      SourceBlock	      "lib_fuel_converter/fuel\nconverter\n <fc>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "gearbox <gb>"
+      Ports		      [2, 2]
+      Position		      [370, 98, 435, 142]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_transmission/gearbox <gb>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "help"
+      Ports		      []
+      Position		      [490, 15, 537, 77]
+      BackgroundColor	      "yellow"
+      DropShadow	      on
+      ShowName		      off
+      SourceBlock	      "lib_help/help"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "total fuel used (gal)"
+      Position		      [725, 82, 775, 98]
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      VariableName	      "gal"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "vehicle <veh>"
+      Ports		      [2, 1]
+      Position		      [75, 88, 130, 132]
+      BackgroundColor	      "yellow"
+      LinkData {
+	BlockName		"config\nforce req'd to\novercome rolling resi"
+"stance"
+	DialogParameters {
+	  BlockChoice		  "force req'd to overcome rolling resistance "
+"(N)"
+	}
+	BlockName		"config\nvehicle speed"
+	DialogParameters {
+	  BlockChoice		  "vehicle speed (m/s)"
+	}
+	BlockName		"record achieved\nforce outputs/rolling resist"
+"ance force"
+	DialogParameters {
+	  BlockChoice		  "force req'd to overcome rolling resistance "
+"(N)"
+	}
+	BlockName		"rolling resistance force"
+	DialogParameters {
+	  BlockChoice		  "force req'd to overcome rolling resistance "
+"(N)"
+	}
+	BlockName		"vehicle speed"
+	DialogParameters {
+	  BlockChoice		  "vehicle speed (m/s)"
+	}
+      }
+      SourceBlock	      "lib_vehicle/vehicle <veh>"
+      SourceType	      ""
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "wheel and axle \nfront/rear <wh>"
+      Ports		      [3, 3]
+      Position		      [160, 102, 210, 158]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "lib_wheel/wheel and axle \nfront//rear <wh>"
+      SourceType	      ""
+    }
+    Line {
+      SrcBlock		      "Clock"
+      SrcPort		      1
+      DstBlock		      "Goto<sdo>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "final drive <fd>"
+      SrcPort		      1
+      DstBlock		      "gearbox <gb>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "gearbox <gb>"
+      SrcPort		      2
+      Points		      [0, 50; -160, 0]
+      DstBlock		      "final drive <fd>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "drive cycle\n<cyc>"
+      SrcPort		      1
+      DstBlock		      "vehicle <veh>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "vehicle <veh>"
+      SrcPort		      1
+      DstBlock		      "wheel and axle \nfront/rear <wh>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "gearbox <gb>"
+      SrcPort		      1
+      DstBlock		      "clutch <cl>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "clutch <cl>"
+      SrcPort		      2
+      Points		      [0, 40; -160, 0]
+      DstBlock		      "gearbox <gb>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "<vc> conv"
+      SrcPort		      1
+      DstBlock		      "clutch <cl>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "fuel\nconverter\n <fc>"
+      SrcPort		      2
+      Points		      [20, 0]
+      DstBlock		      "exhaust sys\n<ex>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "fuel\nconverter\n <fc>"
+      SrcPort		      1
+      Points		      [0, -15]
+      DstBlock		      "total fuel used (gal)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "exhaust sys\n<ex>"
+      SrcPort		      1
+      DstBlock		      "HC, CO,\nNOx, PM (g/s)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Logical\nOperator1"
+      SrcPort		      1
+      Points		      [-5, 0]
+      DstBlock		      "exhaust sys\n<ex>"
+      DstPort		      enable
+    }
+    Line {
+      SrcBlock		      "do ex calcs?"
+      SrcPort		      1
+      DstBlock		      "Logical\nOperator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "do ex calcs?1"
+      SrcPort		      1
+      DstBlock		      "Logical\nOperator1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "exhaust sys\n<ex>"
+      SrcPort		      2
+      Points		      [0, 30]
+      DstBlock		      "<cs>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "clutch <cl>"
+      SrcPort		      1
+      DstBlock		      "Mechanical Accessory\nLoads <acc>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mechanical Accessory\nLoads <acc>"
+      SrcPort		      1
+      DstBlock		      "fuel\nconverter\n <fc>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "fuel\nconverter\n <fc>"
+      SrcPort		      3
+      Points		      [10, 0; 0, 95; -190, 0; 0, -70]
+      DstBlock		      "Mechanical Accessory\nLoads <acc>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Mechanical Accessory\nLoads <acc>"
+      SrcPort		      2
+      Points		      [25, 0; 0, 60; -180, 0]
+      DstBlock		      "clutch <cl>"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "wheel and axle \nfront/rear <wh>"
+      SrcPort		      1
+      DstBlock		      "2 axle -->\n1 driveline\nconverter"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "wheel and axle \nfront/rear <wh>"
+      SrcPort		      2
+      DstBlock		      "2 axle -->\n1 driveline\nconverter"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "final drive <fd>"
+      SrcPort		      2
+      Points		      [5, 0; 0, 55; -125, 0]
+      DstBlock		      "2 axle -->\n1 driveline\nconverter"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "2 axle -->\n1 driveline\nconverter"
+      SrcPort		      1
+      DstBlock		      "final drive <fd>"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "2 axle -->\n1 driveline\nconverter"
+      SrcPort		      2
+      Points		      [5, 0; 0, 70; -135, 0; 0, -70]
+      DstBlock		      "wheel and axle \nfront/rear <wh>"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "2 axle -->\n1 driveline\nconverter"
+      SrcPort		      3
+      Points		      [0, 45; -125, 0]
+      DstBlock		      "wheel and axle \nfront/rear <wh>"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "wheel and axle \nfront/rear <wh>"
+      SrcPort		      3
+      Points		      [5, 0; 0, 55; -160, 0]
+      DstBlock		      "vehicle <veh>"
+      DstPort		      2
+    }
+  }
+}

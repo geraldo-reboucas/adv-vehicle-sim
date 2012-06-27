@@ -1,0 +1,488 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>The Control Strategy</title>
+</head>
+
+<body>
+
+<h2><a name="_Toc2592697">The Fuzzy Logic Emissions and Fuel Use Control
+Strategy</a></h2>
+<p class="MsoNormal">&nbsp;This control strategy was developed by Ohio State
+University under a subcontract with NREL.&nbsp; Information for this help file
+was taken from the final technical report entitled &quot;Development of Fuzzy
+Logic and Neural Network Control and Advanced Emissions Modeling for Parallel
+Hybrid Vehicle&quot; which provides additional detail on the model and is
+available in the <a href="http://www.ctts.nrel.gov/analysis/reading_room.html">ADVISOR
+reading room</a>.&nbsp; The fuzzy emissions control strategy involves
+calculating the torque produced by the IC Engine based on various parameters
+such as road-load and battery SOC. This includes the calculation of an optimal
+torque based on contending IC Engine parameters such as fuel use and emissions,
+and deciding the actual torque output by later modifying the optimal torque
+based on road load and battery SOC. The control strategy is made scalable, and
+can be used with any parallel HEV model in ADVISOR. The controller programs are
+created using MATLAB script files, and can be modified by the user. The
+following <span style="mso-field-code:&quot;REF _Ref536568354 \\h&quot;">Figure
+1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330036003500360038003300350034000000</w:data>
+</xml><![endif]-->
+</span> indicates the position of the Fuzzy Logic Controller in the Simulink
+block in ADVISOR.</p>
+<p class="Body" style="margin-bottom:0in;margin-bottom:.0001pt">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="Body" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center;page-break-after:avoid"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:6in;
+ height:210.75pt'>
+ <v:imagedata src="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image001.png"
+  o:title="bd1"/>
+</v:shape><![endif]-->
+<img src="fuzzye21.jpg" v:shapes="_x0000_i1025" width="576" height="281"></p>
+<p class="MsoCaption" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="mso-bookmark:
+_Toc2571100"> Figure 1. Base block diagram with fuzzy controller</span></p>
+<p class="Body" style="margin-bottom:0in;margin-bottom:.0001pt">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="Body" style="margin-bottom:0in;margin-bottom:.0001pt">The structure of
+the Fuzzy Controller is shown below in <span style="mso-field-code:&quot;REF _Ref536568364 \\h&quot;">Figure
+2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330036003500360038003300360034000000</w:data>
+</xml><![endif]-->
+</span>.</p>
+<p class="Body" style="margin-bottom:0in;margin-bottom:.0001pt">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="Body" style="margin-bottom:0in;margin-bottom:.0001pt;page-break-after:
+avoid" align="center"><!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75"
+ style='width:431.25pt;height:3in'>
+ <v:imagedata src="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image003.png"
+  o:title="bd2"/>
+</v:shape><![endif]-->
+<img src="fuzzye22.jpg" v:shapes="_x0000_i1026" width="575" height="288"></p>
+<p class="MsoCaption" align="center"><a name="_Toc2571101"><span style="mso-bookmark:_Ref536568364">Figure
+</span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc2571101'><span style='mso-bookmark:_Ref536568364'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc2571101'><span
+style='mso-bookmark:_Ref536568364'><span style="mso-spacerun: yes"> </span>SEQ
+Figure \* ARABIC <span style='mso-element:field-separator'></span></span></span><![endif]-->
+<span style="mso-bookmark: _Ref536568364">2</span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2571101'><span style='mso-bookmark:_Ref536568364'></span></span><span
+style='mso-element:field-end'></span><![endif]-->
+<span style="mso-bookmark:
+_Toc2571101">: </span><span style="font-weight: normal; mso-bookmark: _Toc2571101">Fuzzy
+Controller block components</span><span style="font-weight:normal"><o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<h3><a name="_Toc2592698">Optimal Torque Computation</a></h3>
+<p class="MsoNormal">&nbsp;The data for an IC Engine in ADVISOR is in the form
+of a 2-dimensional map, indexed by torque and speed. Information regarding fuel
+economy (g/s) and emissions such as CO, HC and NO<sub>X</sub> (g/s) is available
+for various speeds and torques. Shown below as a sample are the fuel use and
+emissions data for a 1.9L Turbo Diesel Engine available in ADVISOR.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="page-break-after:avoid" align="center"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:423pt;height:324.75pt'>
+ <v:imagedata src="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image005.png"
+  o:title="emissions_4x2" croptop="1820f" cropbottom="3641f" cropleft=".0625"
+  cropright="2731f"/>
+</v:shape><![endif]-->
+<img src="fuzzye23.jpg" alt="MATLAB Handle Graphics" v:shapes="_x0000_i1027" width="564" height="433"></p>
+<p class="MsoCaption" align="center"><a name="_Toc2571102"><span style="mso-bookmark:_Ref1484900">Figure
+</span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc2571102'><span style='mso-bookmark:_Ref1484900'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc2571102'><span
+style='mso-bookmark:_Ref1484900'><span style="mso-spacerun: yes"> </span>SEQ
+Figure \* ARABIC <span style='mso-element:field-separator'></span></span></span><![endif]-->
+3<span style="mso-bookmark:
+_Toc2571102">: IC Engine emissions – a general trend</span></p>
+<p class="MsoHeader" style="tab-stops:.5in">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal">As seen in the above figure, we can determine the
+parameters at all torques for any given speed, up to the maximum torque point.</p>
+<p class="MsoNormal">&nbsp;The process of finding an optimal point is shown in <span style="mso-field-code:&quot;REF _Ref536568404 \\h&quot;">Figure
+4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330036003500360038003400300034000000</w:data>
+</xml><![endif]-->
+</span> below.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="page-break-after:avoid" align="center"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:6in;height:73.5pt'>
+ <v:imagedata src="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image007.png"
+  o:title="opt_trq1"/>
+</v:shape><![endif]-->
+<img src="fuzzye24.jpg" v:shapes="_x0000_i1028" width="576" height="98"></p>
+<p class="MsoCaption" align="center"><a name="_Toc2571103"><span style="mso-bookmark:_Ref536568404">Figure
+</span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc2571103'><span style='mso-bookmark:_Ref536568404'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc2571103'><span
+style='mso-bookmark:_Ref536568404'><span style="mso-spacerun: yes"> </span>SEQ
+Figure \* ARABIC <span style='mso-element:field-separator'></span></span></span><![endif]-->
+<span style="mso-bookmark: _Ref536568404">4</span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2571103'><span style='mso-bookmark:_Ref536568404'></span></span><span
+style='mso-element:field-end'></span><![endif]-->
+<span style="mso-bookmark:
+_Toc2571103">: Finding an optimal IC Engine operating point</span></p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="text-align:justify">The four competing parameters in
+the determination of an optimum are fuel efficiency, NO<sub>X</sub>, CO and HC
+emissions. At any particular point in time, the simulation determines a speed of
+rotation for the IC Engine (based on the powertrain configuration and the
+current gear ratio). This is the speed at which the “instantaneous”
+optimization is performed. For the current speed, all possible torques that the
+IC Engine can provide are considered. The four competing parameters for all
+torques at the current speed are taken from the data maps.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoCaption" style="text-indent:.5in"><span style="mso-text-raise:-6.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:280.5pt;height:24.75pt'
+ o:ole="">
+ <v:imagedata src="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image009.wmz"
+  o:althref="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image010.pcz"
+  o:title=""/>
+</v:shape><![endif]-->
+<img src="fuzzye25.gif" v:shapes="_x0000_i1029" width="374" height="33"></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1029"
+  DrawAspect="Content" ObjectID="_1081670708">
+ </o:OLEObject>
+</xml><![endif]-->
+<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(<!--[if supportFields]><span
+style='mso-element:field-begin'></span> SEQ Equation \* ARABIC <span
+style='mso-element:field-separator'></span><![endif]-->
+1<!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->
+)</p>
+<p class="MsoNormal"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="MsoNormal">where <span style="mso-tab-count:1">&nbsp; </span>J <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>= <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>cost function<br>
+<span style="mso-spacerun: yes">&nbsp;</span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-text-raise:-6.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1030"
+ type="#_x0000_t75" style='width:12pt;height:15.75pt' o:ole="">
+ <v:imagedata src="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image012.wmz"
+  o:althref="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image013.pcz"
+  o:title=""/>
+</v:shape><![endif]-->
+<img src="fuzzye26.gif" v:shapes="_x0000_i1030" width="16" height="21"></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1030"
+  DrawAspect="Content" ObjectID="_1081670709">
+ </o:OLEObject>
+</xml><![endif]-->
+<span style="mso-spacerun: yes">&nbsp;</span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>= <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>weights, i=1,2,3,4<br>
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-text-raise:
+-5.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1031" type="#_x0000_t75"
+ style='width:8.25pt;height:16.5pt' o:ole="">
+ <v:imagedata src="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image015.wmz"
+  o:althref="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image016.pcz"
+  o:title=""/>
+</v:shape><![endif]-->
+<img src="fuzzye27.gif" v:shapes="_x0000_i1031" width="11" height="22"></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1031"
+  DrawAspect="Content" ObjectID="_1081670710">
+ </o:OLEObject>
+</xml><![endif]-->
+<span style="mso-spacerun: yes">&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>= <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Normalized efficiency<br>
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-text-raise:
+-5.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1032" type="#_x0000_t75"
+ style='width:24.75pt;height:16.5pt' o:ole="">
+ <v:imagedata src="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image018.wmz"
+  o:althref="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image019.pcz"
+  o:title=""/>
+</v:shape><![endif]-->
+<img src="fuzzye28.gif" v:shapes="_x0000_i1032" width="33" height="22"></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1032"
+  DrawAspect="Content" ObjectID="_1081670711">
+ </o:OLEObject>
+</xml><![endif]-->
+<span style="mso-spacerun: yes">&nbsp;</span><span style="mso-tab-count:1">&nbsp;&nbsp;
+</span>= <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Normalized NO<sub>X</sub> emissions</p>
+<p class="MsoNormal"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1033"
+ type="#_x0000_t75" style='width:17.25pt;height:15pt' o:ole="">
+ <v:imagedata src="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image021.wmz"
+  o:althref="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image022.pcz"
+  o:title=""/>
+</v:shape><![endif]-->
+<img src="fuzzye29.gif" v:shapes="_x0000_i1033" width="23" height="20"></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1033"
+  DrawAspect="Content" ObjectID="_1081670712">
+ </o:OLEObject>
+</xml><![endif]-->
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>=<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Normalized CO emissions</p>
+<p class="MsoNormal"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1034"
+ type="#_x0000_t75" style='width:18pt;height:15pt' o:ole="">
+ <v:imagedata src="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image024.wmz"
+  o:althref="../../../../../../../../DOCUME~1/kkelly/LOCALS~1/Temp/msoclip1/01/clip_image025.pcz"
+  o:title=""/>
+</v:shape><![endif]-->
+<img src="fuzzye30.gif" v:shapes="_x0000_i1034" width="24" height="20"></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1034"
+  DrawAspect="Content" ObjectID="_1081670713">
+ </o:OLEObject>
+</xml><![endif]-->
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>=<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Normalized HC emissions</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="Body" style="margin-bottom:0in;margin-bottom:.0001pt">Here, the values
+are normalized with respect to the maximum for that particular speed. Relative
+weights are assigned to each parameter based on their importance. This is one
+large degree of freedom, and the weights must be selected for each IC engine
+based on their individual data maps. For our example in the report, we use the
+following default weights.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<table border="1" cellspacing="0" cellpadding="0" style="margin-left:113.4pt;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+  <tr>
+    <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+  background:#B3B3B3;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:normal">Parameter<o:p>
+      </o:p>
+      </b></p>
+    </td>
+    <td width="108" valign="top" style="width:81.0pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;background:#B3B3B3;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:normal">Weight<o:p>
+      </o:p>
+      </b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoHeader" align="center" style="text-align:center;tab-stops:.5in">Efficiency</p>
+    </td>
+    <td width="108" valign="top" style="width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center" style="text-align:center">0.7</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center" style="text-align:center">NO<sub>X</sub></p>
+    </td>
+    <td width="108" valign="top" style="width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoHeader" align="center" style="text-align:center;tab-stops:.5in">0.3</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center" style="text-align:center">CO</p>
+    </td>
+    <td width="108" valign="top" style="width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center" style="text-align:center">0.1</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="132" valign="top" style="width:99.0pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center" style="text-align:center">HC</p>
+    </td>
+    <td width="108" valign="top" style="width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center" style="text-align:center">0.1</p>
+    </td>
+  </tr>
+</table>
+<p class="MsoCaption"><a name="_Toc2571128"><span style="mso-bookmark:_Ref536568598">Table
+</span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc2571128'><span style='mso-bookmark:_Ref536568598'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc2571128'><span
+style='mso-bookmark:_Ref536568598'><span style="mso-spacerun: yes"> </span>SEQ
+Table \* ARABIC <span style='mso-element:field-separator'></span></span></span><![endif]-->
+<span style="mso-bookmark: _Ref536568598">1</span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2571128'><span style='mso-bookmark:_Ref536568598'></span></span><span
+style='mso-element:field-end'></span><![endif]-->
+<span style="mso-bookmark:
+_Toc2571128">: Default weights in the control strategy</span></p>
+<p class="MsoNormal">&nbsp;The above weights provide an optimum based heavily on
+efficiency and NO<sub>X</sub>, while CO and HC are also considered. These
+weights can be varied during the operation of the vehicle, based on certain
+vehicle parameters.</p>
+<h3 style="text-align:justify"></h3>
+<h3 style="text-align:justify">&nbsp;<a name="_Toc2592715">Implementation in ADVISOR</a></h3>
+<p class="MsoNormal">The Fuzzy Emissions control strategy contains the following
+files and variables.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt">
+  <tr>
+    <td width="245" valign="top" style="width:183.8pt;border:solid windowtext .5pt;
+  background:#B3B3B3;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:normal">File
+      name<o:p>
+      </o:p>
+      </b></p>
+    </td>
+    <td width="345" valign="top" style="width:259.0pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;background:#B3B3B3;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:normal">Function<o:p>
+      </o:p>
+      </b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="245" valign="top" style="width:183.8pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">fuzzy_emissions_in.m</p>
+    </td>
+    <td width="345" valign="top" style="width:259.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Input file in ADVISOR 3.2 which contains the
+      emissions control strategy vehicle configuration to be loaded with the
+      GUI.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="245" valign="top" style="width:183.8pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">bd_fuzzy_emissions.mdl</p>
+    </td>
+    <td width="345" valign="top" style="width:259.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">The main block diagram that is used when the new
+      fuzzy logic controller (ptc_fuzzy_emissions.m) is selected from the GUI
+      interface</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="245" valign="top" style="width:183.8pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">fuzzy_target_compute_emissions.m</p>
+    </td>
+    <td width="345" valign="top" style="width:259.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Calculate the optimal torque for a given IC Engine
+      speed, based on a set of weights. Also varies the weights based on vehicle
+      parameters.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="245" valign="top" style="width:183.8pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">ptc_fuzzy_emissions.m</p>
+    </td>
+    <td width="345" valign="top" style="width:259.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">This file contains the powertrain control variables,
+      including the battery SOC limits. When selected, uses the file
+      bd_fuzzy_emissions.mdl to simulate the vehicle.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="245" valign="top" style="width:183.8pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">mfuzzy_emissions.m</p>
+    </td>
+    <td width="345" valign="top" style="width:259.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">The main Fuzzy Logic Controller which takes in the
+      optimal torque and SOC as inputs and gives the actual torque as the
+      output. This is used to shift the calculated optimal torque point based on
+      the driver’s request and the Battery SOC. Care is taken to control the
+      deviation to a minimum, since a large correction from optimal destroys the
+      purpose of optimization. The rule-base can be modified by the user if
+      desired.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="245" valign="top" style="width:183.8pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Block_diagram_name.m</p>
+    </td>
+    <td width="345" valign="top" style="width:259.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Modifications are made to this file so as to enable
+      the respective fuzzy logic Simulink blocks to be used, when the fuzzy
+      powertrain controller is selected.</p>
+    </td>
+  </tr>
+</table>
+<p class="MsoCaption"><a name="_Toc2571136">Table </a><!--[if supportFields]><span
+style='mso-bookmark:_Toc2571136'></span><span style='mso-element:field-begin'></span><span
+style='mso-bookmark:_Toc2571136'><span style="mso-spacerun: yes"> </span>SEQ
+Table \* ARABIC <span style='mso-element:field-separator'></span></span><![endif]-->
+<span style="mso-bookmark: _Toc2571136">2</span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2571136'></span><span style='mso-element:field-end'></span><![endif]-->
+<span style="mso-bookmark:_Toc2571136">: Files added in ADVISOR 3.2 –
+Emissions control</span></p>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Help on Grade Test</TITLE>
+<META NAME="Template" CONTENT="C:\Program Files\Microsoft Office\Office\html.dot">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<P><!doctype html public "-//w3c//dtd html 4.0 transitional//en"></P>
+<H2 ALIGN="CENTER">Help on Grade Test</H2>
+<H3>Overview</H3>
+<P>The grade test routine in ADVISOR will determine the maximum grade on which the vehicle can sustain the specified constant speed. The test routine can be accessed both from the GUI and the Matlab command window. </P>
+<H3>From the GUI...</H3>
+<P>A grade test can be performed via the Simulation Setup window. The user can specify the parameters for the test in the Grade Test Advanced Options window which is opened by selecting <B><I>Grade Options</B></I>.&nbsp; The test can be run with a drive cycle by selecting the <B><I>Gradeability Test</B></I> in the <B>Additional Tests</B> box, or without a drive cycle by selecting <B><I>Test Procedure</B></I> and then <B><I>TEST_GRADE</B></I> from the pull down menu.  The Grade Options window is also accessible from the Autosize Setup window.</P>
+<P><BR>
+<IMG SRC="Grade_Test_fig1.jpg" WIDTH=411 HEIGHT=676></P>
+<P>&nbsp;</P>
+<P>The basic parameters of grade, speed, duration, and gear number allow the user to override the default settings.  By default, the routine will find the maximum grade sustainable at 55 mph for 10s.  The gear ratio will be determined by the routine to provide maximize power output.  If the user checks the gear number option the routine will use the specified gear number.  If the grade is specified, the routine will only test that grade point and will return an [] if unsuccessful and the grade setting if successful.</P>
+<P>The Enable systems section allows the user to evaluate the vehicle grade performance with various systems disabled.  By default the energy storage system is disabled for the grade test.  This option allows us to use a  much shorter cycle to determine gradeability based on engine performance alone.  This is may not represent reality and thus the ability to enable all systems and to specify an initial and a minimum SOC for the battery pack has been provided.</P>
+<P>The Mass Parameters allow the user to impact the mass of the vehicle for the grade test only.  This set of radiobuttons allows you to override the mass with a fixed amount (i.e. gross vehicle weight) or to add incremental mass to the current mass.  This last option is especially useful if for example you want include all passengers and luggage in the grade performance assessment while running an autosize where the vehicle mass is changing at each iteration.</P>
+<P>Finally, the solutions section allows you to control the solution path and time required to conclude.  If the upper and lower grade bounds are specified they will be used to help find the initial bounds at which to start the bisection routine.  The initial step size is used with a golden section method to move from the lower bound to find the upper bound.  The grade and speed tolerances are used to tell the routine when a solution is sufficiently close to our desired outcome.  The maximum # of iterations is used to limit the amount of time spent resolving a single solution point. Lastly, if display status is checked and set to one the intermediate iterations of the grade test routine will be displayed in the command window.</P>
+<P><BR>
+When run from the simulation setup screen the results are reported in the Results window. </P>
+<H3>From the Matlab command window...</H3>
+<P>Running a grade test from the command window provides the user several options. The grade test routine is a function and requires the following format, </P>
+<P>[grade, gear_ratio]=grade_test_advanced(param1,value1,…param_n,value_n)</P>
+<P>Inputs to the grade test function must be specified in parameter name, parameter value pairs. All input parameters are optional.&nbsp; <BR>
+</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=774>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P><B>Parameter</B></TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<B><P>Description</B></TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>grade</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(%), grade the vehicle will try to achieve  [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>duration</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(s), duration over which the vehicle must maintain speed and grade [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>speed</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(mph), the speed the vehicle is to achieve at the specified grade [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>ess_init_soc</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(--), initial state of charge of the ess</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>ess_min_soc</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>--), user specified minimum SOC of the ESS [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>gear_num</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(--), user specified gear ratio in which test is to be performed [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>disp_status&#9;&#9;</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(boolean), 1==&gt;0 display status in command window, 0==&gt; do not display status [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>grade_lb</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(%), grade lower bound for search [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>grade_ub</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(%), grade upper bound for search [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>grade_init_step</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P> (%), grade initial step size [optional]&#9;&#9;&#9;</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>speed_tol</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(mph), convergence tolerance on speed [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>max_iter&#9;</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(--), maximum number of interations [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>grade_tol&#9;</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(%), convergence tolerance on grade [optional]</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>override_mass&#9;</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(kg), override vehicle mass to be used for the accel test only</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>add_mass&#9;&#9;</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(kg), additional mass to be added to current vehicle mass for accel test only</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P>disable_systems&#9;</TD>
+<TD WIDTH="75%" VALIGN="TOP">
+<P>(--), flag to disable power systems 1==&gt; disable ess, 2 ==&gt; disable fc</TD>
+</TR>
+</TABLE>
+
+<BLOCKQUOTE>&nbsp;</BLOCKQUOTE>
+<P>If when calling the grade test, the user specifies both the speed and grade, the grade test routine will only evaluate that point. If the vehicle is able to maintain the specified speed and grade it will return the grade otherwise it will return and empty set. If only the speed is specified by the user when calling the grade test it will find the maximum sustainable grade at this speed for the vehicle and return that grade. If no arguments are provided it will use the default speed of 55 mph and proceed as if only the speed was provided by the user.  The function also returns the gear ratio used during the analysis.</P>
+<H3>How it works</H3>
+<P>The vehicle is simulated at the specified constant speed for the specified duration. Initially, the vehicle is assumed to be traveling at the goal speed. If at the end of the cycle the vehicle is within a specified tolerance of the speed goal it is said to be able to maintain this grade and speed indefinitely. The grade is then adjusted until the maximum sustainable grade is determined unless the user has specified both the grade and speed as input arguments. </P>
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><HR ALIGN="LEFT" SIZE=4><A HREF="advisor_ch3.htm#3.3">Back to Chapter 3</A></P>
+<P>Last Revised: 2/9/01:tm<BR>
+&nbsp; </P></BODY>
+</HTML>
