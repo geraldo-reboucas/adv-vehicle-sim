@@ -215,10 +215,8 @@ if nargin>0
         end
         
         %Path to save misc. files under
-        filepath=which('advisor.m');
-        filepath=strrep(filepath,'advisor.m','');   %strip name to just get path
-        filepath=[filepath 'tmp\'];   %strip name to just get path
-        vinf.tmppath=filepath;
+        pathstr = fileparts(which('advisor.m'));
+        vinf.tmppath=fullfile(pathstr, 'tmp');
         
         % tm:1/3/00 added a defaults for use with j1711
         assignin('base','enable_speed_scope',0); 
