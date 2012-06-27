@@ -7,7 +7,7 @@ function varargout = edit_profiles(varargin)
 
 if nargin == 0  % LAUNCH GUI
 
-    fig = openfig(mfilename,'new'); %'reuse' wasn't working when SOC figure was up 
+    fig = openfig('Edit_Profiles','new'); %'reuse' wasn't working when SOC figure was up 
 	%fig = openfig(mfilename,'reuse');
 	%set(fig,'Color',get(0,'defaultUicontrolBackgroundColor'));
 
