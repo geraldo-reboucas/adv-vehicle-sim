@@ -30,7 +30,7 @@ disp(['Data loaded: CYC_CLEVELAND - ',cyc_description])
 % SPEED AND KEY POSITION vs. time
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % load variable 'cyc_mph', 2 column matrix with time in the first column
-load CYC_CLEVELAND.mat
+load cyc_cleveland.mat
 % keep key in 'on' position throughout cycle ('1' in the 2nd column => 'on')
 vc_key_on=[cyc_mph(:,1) ones(size(cyc_mph,1),1)];
 
