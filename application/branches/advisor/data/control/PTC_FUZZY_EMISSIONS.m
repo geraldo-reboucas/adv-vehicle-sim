@@ -14,7 +14,7 @@
 % Revision history at end of file.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-if ~exist('update_cs_flag')
+if ~exist('update_cs_flag', 'var')
    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FILE ID INFO
