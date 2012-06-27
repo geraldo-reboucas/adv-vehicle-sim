@@ -18,8 +18,7 @@ function path_added=SetAdvisorPath(varargin)
 if isunix
     adv_dir=fileparts(which('advisor'));
     p=path;
-else
-    dir2add=lower(dir2add);
+else   
     adv_dir=lower(fileparts(which('advisor')));
     p=lower(path);
 end
@@ -89,6 +88,9 @@ dir2add={...
     fullfile(adv_dir, 'optimization', 'examples', 'sizing_plus_control', 'matlab');...
     fullfile(adv_dir, 'tmp');...
     fullfile(adv_dir, 'saved_vehicles')};
+if ~isunix
+    dir2add=lower(dir2add);
+end
 
 % checking and adding paths as necessary.
 path_added=0;
