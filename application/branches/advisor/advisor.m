@@ -128,8 +128,8 @@ if nargin == 0  % LAUNCH GUI
     waitbar(1)
     close(hwait); 	%close the waitbar  
     
-    adv_dir=strrep(which('advisor'),'\advisor.m','');
-    imagedata = imread([adv_dir '\gui_graphics\Splash_Screen_car.jpg']);
+    adv_dir=fileparts(which('advisor'));
+    imagedata = imread(fullfile(adv_dir, 'gui_graphics', 'Splash_Screen_car.jpg'));
     h=image(imagedata);
     set(h,'ButtonDownFcn','advisor(''play_movie'')');
     
