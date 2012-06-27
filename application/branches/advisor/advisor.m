@@ -259,7 +259,7 @@ if path_added==1
     
     switch ButtonName,
     case 'Yes', 
-        result=path2rc; %path2rc saves the current path to pathdef.m (Both are MATLAB files-- not ADVISOR files)
+        result=savepath; %savepath saves the current path to pathdef.m (Both are MATLAB files-- not ADVISOR files)
         if result==0
             disp('ADVISOR Directories were successfully added to the Matlab Path.  See Path browser for path information.');
         else
