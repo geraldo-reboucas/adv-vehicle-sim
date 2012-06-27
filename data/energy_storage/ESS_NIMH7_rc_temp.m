@@ -64,7 +64,7 @@
 % FILE ID INFO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ess_description='6.5 Ah Prismatic Panasonic NiMH battery'; 
-ess_version=2003; % version of ADVISOR for which the file was generated
+ess_version=2002; % version of ADVISOR for which the file was generated
 ess_proprietary=0; % 0=> non-proprietary, 1=> proprietary, do not distribute
 ess_validation=2; % 0=> no validation, 1=> data agrees with source data, 
 % 2=> data matches source data and data collection methods have been verified
@@ -150,3 +150,56 @@ ess_mass_scale_coef=[1 0 1 0]; % coefficients in ess_mass_scale_fun
 %27-Mar-2001 15:15:17: file created using batmodel 
 % 7/30/01:tm added user defineable scaling functions for mass=f(ess_module_num,ess_cap_scale,ess_module_mass) 
 
+
+% Begin added by ADVISOR 2002 converter: 06-Apr-2012
+ess_cap_scale=1;
+
+ess_cb=[1.845e+04 1.846e+04 1.975e+04];
+
+ess_cc=[504.5 975 1249];
+
+ess_description='6.5 Ah Prismatic Panasonic NiMH battery';
+
+ess_mass_scale_coef=[1 0 1 0];
+
+
+ess_max_volts=9;
+
+ess_min_volts=6;
+
+ess_mod_airflow=0.01;
+
+ess_mod_cp=974;
+
+ess_module_mass=1;
+
+ess_module_num=1;
+
+ess_proprietary=0;
+
+ess_rc=[0.0091 0.008117 0.008052 0.008052 0.007789 0.007923 0.008041 0.007699 0.00817 0.008398 0.008452 0.008506 0.00806 0.00871 0.0089;0.0044 0.00428 0.00423 0.004165 0.004115 0.004114 0.004069 0.004005 0.004015 0.004005 0.004005 0.004006 0.00397 0.004129 0.0042;0.0052 0.003386 0.003292 0.00328 0.003288 0.003168 0.003235 0.003135 0.003177 0.003169 0.003132 0.0031 0.003108 0.003085 0.0032];
+
+ess_re=[0.022 0.01923 0.01908 0.01908 0.01845 0.01877 0.01905 0.01824 0.01936 0.01989 0.02002 0.02015 0.01909 0.02052 0.02118;0.0107 0.0102 0.01002 0.009866 0.009749 0.009746 0.00964 0.009488 0.009512 0.009435 0.009459 0.009439 0.009232 0.00975 0.01025;0.0128 0.008022 0.007799 0.007576 0.00779 0.007506 0.007664 0.007428 0.007527 0.007508 0.00742 0.007344 0.00728 0.007279 0.007579];
+
+ess_rt=[0.0216 0.01885 0.0187 0.0187 0.01809 0.0184 0.01868 0.01789 0.01898 0.01951 0.01963 0.01976 0.01872 0.02012 0.0208;0.0105 0.01 0.009826 0.009674 0.009559 0.009557 0.009453 0.009304 0.009327 0.00925 0.009273 0.009253 0.009052 0.009491 0.00971;0.0124 0.007866 0.007647 0.007429 0.007638 0.007359 0.007515 0.007283 0.007381 0.007362 0.007276 0.007201 0.007138 0.007138 0.007438];
+
+ess_set_tmp=40;
+
+ess_soc=[0 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 1];
+
+ess_th_calc=1;
+
+ess_th_res_off=6.627;
+
+ess_th_res_on=1.162;
+
+ess_tmp=[1 26 40];
+
+ess_validation=2;
+
+ess_version=2002;
+
+ess_voc=[7.33 7.72 7.765 7.811 7.842 7.874 7.89 7.907 7.918 7.928 7.934 7.939 7.97 8 8.62;7.27 7.656 7.712 7.768 7.806 7.843 7.865 7.886 7.898 7.91 7.919 7.928 7.952 7.975 8.56;7.25 7.68 7.725 7.77 7.802 7.834 7.857 7.88 7.891 7.902 7.911 7.92 7.935 7.95 8.45];
+
+ess_mass_scale_fun=inline('(x(1)*ess_module_num+x(2))*(x(3)*ess_cap_scale+x(4))*(ess_module_mass)','x','ess_module_num','ess_cap_scale','ess_module_mass');
+% End added by ADVISOR 2002 converter: 06-Apr-2012
