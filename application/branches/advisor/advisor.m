@@ -43,7 +43,7 @@ if nargin == 0  % LAUNCH GUI
     evalin('base','global vinf')
     
     %set units to 'us' if not defined
-    if ~exist('vinf.units')
+    if ~exist('vinf.units', 'var')
         vinf.units='us';
     end
     
