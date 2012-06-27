@@ -115,8 +115,9 @@ if exist('varargin', 'var')
             else
                 addpath(lower(varargin{i}),'-frozen')
             end
-        catch
+        catch err
             disp(['Directory ', varargin{i}, ' does not exist.'])    
+            disp(err);
         end
     end
 end
