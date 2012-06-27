@@ -3,11 +3,11 @@ function varargout = edit_profiles(varargin)
 %    FIG = EDIT_PROFILES launch Edit_Profiles GUI.
 %    EDIT_PROFILES('callback_name', ...) invoke the named callback.
 
-% Last Modified by GUIDE v2.0 17-Apr-2002 15:42:40
+% Last Modified by GUIDE v2.5 06-Apr-2012 14:04:06
 
 if nargin == 0  % LAUNCH GUI
 
-    fig = openfig('Edit_Profiles','new'); %'reuse' wasn't working when SOC figure was up 
+    fig = openfig(mfilename,'new'); %'reuse' wasn't working when SOC figure was up 
 	%fig = openfig(mfilename,'reuse');
 	%set(fig,'Color',get(0,'defaultUicontrolBackgroundColor'));
 
@@ -36,7 +36,7 @@ if nargin == 0  % LAUNCH GUI
     set(gcf,'resize','off')
     set(gcf,'visible','on')
     
-    Edit_Profiles('update_list')
+    edit_profiles('update_list')
     
 elseif ischar(varargin{1}) % INVOKE NAMED SUBFUNCTION OR CALLBACK
 
@@ -45,8 +45,8 @@ elseif ischar(varargin{1}) % INVOKE NAMED SUBFUNCTION OR CALLBACK
 			[varargout{1:nargout}] = feval(varargin{:}); % FEVAL switchyard
 		else
 			feval(varargin{:}); % FEVAL switchyard
-		end
-	catch
+        end
+    catch
 		disp(lasterr);
 	end
 
@@ -218,4 +218,4 @@ rehash toolbox
 % --------------------------------------------------------------------
 function varargout = Help_Pushbutton_Callback(h, eventdata, handles, varargin)
 edit_profiles('Done_pushbutton_Callback')
-web(['file:\\\' which('custom_menus.html')],'-browser');
+web(which('custom_menus.html'),'-browser');
