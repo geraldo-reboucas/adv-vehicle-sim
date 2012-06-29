@@ -85,13 +85,14 @@ case 'add'
    
    if strcmp(listname,'input_file_names')
       old_dir=pwd;
-      new_dir=strrep(which('advisor.m'),'advisor.m','saved_vehicles\');
-      cd(new_dir)
+      advisor_root_dir = fileparts(which('advisor.m'));
+      saved_vehicles_dir = fullfile(advisor_root_dir, 'saved_vehicles');
+      cd(saved_vehicles_dir);
       [f,p]=uigetfile('*_in.m','select file to add to list');
       cd(old_dir)
    else
       [f,p]=uigetfile('*.m','select file to add to list');
-	end
+   end
       
    if f==0; return; end
    
