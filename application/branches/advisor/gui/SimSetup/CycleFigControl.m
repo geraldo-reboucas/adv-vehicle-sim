@@ -372,8 +372,9 @@ else
            
            %change the directory to the drive_cycle directory
            tmp_dir = pwd; %store the current working directory to return to later
-           save_dir = strrep(which('advisor.m'),'advisor.m','data\drive_cycle');
-           cd(save_dir)         
+           advisor_top_dir = fileparts(which('advisor.m'));
+           save_dir = fullfile(advisor_top_dir,'data', 'drive_cycle');
+           cd(save_dir)
            
            %get the filename and path where user wants to save the trip
            [filename, pathname] = uiputfile('trip_*.m');	%user input for name to save trip (similar to cycle file)
@@ -435,7 +436,7 @@ else
            fclose(fid);
            
            cycle_name=strrep(filename,'.m','');
-           list=optionList('add','cycles',cycle_name);
+           list=optionlist('add','cycles',cycle_name);
            
            %make the file name the new string for the list
            
@@ -449,16 +450,8 @@ else
            
            close(gcf)
            
-           string=get(h,'callback');
-           %handle differently if callback contains guidata  (from auto generating figure creation code)
-           if ~isempty(strfind(string,'guidata'))
-               indices=findstr(string,',');
-               %replace first , with ) and remove the rest of the string, this will work in most cases unless
-               %callback really needs the handle of the current object or guidata
-               string=string(1:indices(1));
-               string=strrep(string , ',' , ')' );
-           end
-           eval(string);
+           callback=get(h,'callback');
+           callback(gcf,0);
            
         else %multi-cycle run ok
            vinf.multi_cycles.name = {};
