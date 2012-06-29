@@ -216,7 +216,7 @@ case 'delete'
    string=get(findobj('tag',Tag4OptionListFigControl),'callback');
    %handle differently if callback contains guidata  (from auto generating figure creation code)
    if ~isempty(strfind(string,'guidata'))
-       indices=findstr(string,',');
+       indices=strfind(string,',');
        %replace first , with ) and remove the rest of the string, this will work in most cases unless
        %callback really needs the handle of the current object or guidata
        string=string(1:indices(1));
