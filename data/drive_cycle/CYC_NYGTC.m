@@ -36,7 +36,7 @@ disp(['Data loaded: CYC_NYGTC- ',cyc_description])
 % We use the *.mat file to conserve space and load the data quicker.
 % If you save your data to a *.mat file, use this command to load: 'load CYC_SKELETON.mat'
 
-load cyc_nygtc2.mat; % load the cyc_mph variable -- note CYC_NYGTC2.mat is from WVU and NYGTC.mat is traced--use 2
+load CYC_NYGTC2.mat; % load the cyc_mph variable -- note CYC_NYGTC2.mat is from WVU and NYGTC.mat is traced--use 2
 
 if cyc_mph(1,1)~=0 % add a time equal to zero term if not present
     cyc_mph=[0 cyc_mph(1,2);cyc_mph];
