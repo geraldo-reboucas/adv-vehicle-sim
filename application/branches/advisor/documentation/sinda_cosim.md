@@ -37,7 +37,7 @@ References
 
 * * * * *
 
-[Return to Documentation](advisor_doc.htm)
+[Return to Documentation](advisor_doc.html)
 
 * * * * *
 

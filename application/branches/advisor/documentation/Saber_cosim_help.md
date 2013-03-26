@@ -1326,7 +1326,7 @@ Table
 
 After defining the vehicle inputs, “continue” to the Simulation Setup
 Figure.<span style="mso-spacerun: yes">  </span>On that screen, the
-[auxiliary loads](aux_loads_help.htm), drive cycle, and other simulation
+[auxiliary loads](aux_loads_help.html), drive cycle, and other simulation
 parameters can be modified.<span style="mso-spacerun: yes">  </span>For
 running test procedures, we recommend first selecting the drive cycle
 radio button.<span style="mso-spacerun: yes">  </span>This allows the
@@ -1476,8 +1476,8 @@ variable time step in the co-simulation.
 * * * * *
 
 </div>
-[Back to Chapter 3](advisor_ch3.htm)\
- [ADVISOR Documentation Contents](advisor_doc.htm)
+[Back to Chapter 3](advisor_ch3.html)\
+ [ADVISOR Documentation Contents](advisor_doc.html)
 
 Last Revised: [26-August-2002]: ab
 

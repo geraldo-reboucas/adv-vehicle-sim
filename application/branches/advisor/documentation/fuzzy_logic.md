@@ -203,7 +203,7 @@ piecewise linear).
 * * * * *
 
 \
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 Last Revised: 08/08/01:AR

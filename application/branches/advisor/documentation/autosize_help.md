@@ -51,7 +51,7 @@ maximum effort acceleration criteria, and maximum vehicle speed. By
 clicking on the Grade Options or Accel Options buttons the use will be
 able to view the current settings and also modify the settings as
 desired. Please see the help sections on the [grade
-test](grade_test_help.htm) or the [accel test](accel_test_help.htm) for
+test](grade_test_help.html) or the [accel test](accel_test_help.html) for
 more information on the available options.
 
 Design Variables</i> \

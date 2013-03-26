@@ -96,11 +96,11 @@ gearbox submodel are mentioned above in **bold** font.
 Variables used in subsystem</b></u>
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Gearbox) \
+> Variables](advisor_appendices.html#Input%20Gearbox) \
 >  [See Appendix A.3: Output
-> Variables](advisor_appendices.htm#Output%20Gearbox)
+> Variables](advisor_appendices.html#Output%20Gearbox)
 
 * * * * *
 
 </p>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)

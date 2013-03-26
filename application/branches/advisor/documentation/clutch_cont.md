@@ -41,11 +41,11 @@ the clutch is disengaged regardless of the above conditions.
 vc\_clutch\_bool    vc\_idle\_spd    vc\_launch\_spd
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Vehicle%20Control)
+> Variables](advisor_appendices.html#Input%20Vehicle%20Control)
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

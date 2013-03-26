@@ -215,9 +215,9 @@ using other platforms (such as UNIX) we would love to hear about it, but
 in general we do not support other platforms at this time.
 
 <u>[Additional features for users with
-VisualDOC](cs_opt_help.htm#Optimization%20Method%20Selection)</u> \
+VisualDOC](cs_opt_help.html#Optimization%20Method%20Selection)</u> \
 <u>[Additional features for users with
-GCTool](fuel_converter_fuel_cell.htm#GCTool)</u>
+GCTool](fuel_converter_fuel_cell.html#GCTool)</u>
 
 <a name="1.5"></a>1.5. How to get additional help
 -------------------------------------------------
@@ -242,8 +242,8 @@ covered here, please contact NREL directly at 
 * * * * *
 
 <center>
-[Back to ADVISOR Documentation Contents](advisor_doc.htm) \
-[Forward to Chapter 2](advisor_ch2.htm)
+[Back to ADVISOR Documentation Contents](advisor_doc.html) \
+[Forward to Chapter 2](advisor_ch2.html)
 
 </center>
 Last Revised: 4/30/02:KW

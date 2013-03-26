@@ -1328,7 +1328,7 @@ end
 % --------------------------------------------------------------------
 function varargout = help_pushbutton_Callback(h, eventdata, handles, varargin)
 try
-    web(['file:///', which('advisor_ch2.htm'), '#2.1.2'], '-browser');
+    web([which('advisor_ch2.html'), '#2.1.2'], '-browser');
 catch
     disp(['[',mfilename,':help_pushbutton_Callback] Error! '])
     disp(lasterr)

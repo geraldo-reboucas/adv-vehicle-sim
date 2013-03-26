@@ -82,7 +82,7 @@ Control Strategy. \
 * * * * *
 
 \
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 Last Revised: 02/08/01:VHJ

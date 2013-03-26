@@ -22,7 +22,7 @@ follows:
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Control%20Strategy)
+> Variables](advisor_appendices.html#Input%20Control%20Strategy)
 
 **<u>Implementation</u>**
 
@@ -48,6 +48,6 @@ the block, and the required engine torque and speed are the outputs.
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

@@ -361,10 +361,10 @@ speed limits that might be active. \
 * * * * *
 
 <center>
-[Beginning of Chapter 3](advisor_ch3.htm) \
-[Back to Chapter 2](advisor_ch2.htm) \
-[Forward to Appendices](advisor_appendices.htm) \
-[ADVISOR Documentation Contents](advisor_doc.htm)
+[Beginning of Chapter 3](advisor_ch3.html) \
+[Back to Chapter 2](advisor_ch2.html) \
+[Forward to Appendices](advisor_appendices.html) \
+[ADVISOR Documentation Contents](advisor_doc.html)
 
 </center>
 Last Revised: 7/20/00:AB

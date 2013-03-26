@@ -57,11 +57,11 @@ gb\_gear5\_dnshift\_spd    gb\_gear5\_dnshift\_load   
 gb\_gear5\_upshift\_spd    gb\_gear5\_upshift\_load
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Gearbox)
+> Variables](advisor_appendices.html#Input%20Gearbox)
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

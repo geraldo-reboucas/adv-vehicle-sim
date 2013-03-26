@@ -751,7 +751,7 @@ gui_edit_var('modify','wh_rear_active_bool','1')
 
 % --------------------------------------------------------------------
 function varargout = four_wheel_drive_help_Callback(h, eventdata, handles, varargin)
-web(['file:///' which('traction_control.htm')],'-browser');
+web(which('traction_control.html'), '-browser');
 
 % 3/20/00 ss: added case 'units'
 % 7/11/00 ss: added the functionality for the new popupmenu for selecting vehicles.

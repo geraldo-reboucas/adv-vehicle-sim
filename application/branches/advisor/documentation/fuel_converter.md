@@ -5,7 +5,7 @@
 ### Fuel Converter
 
 [Updates to Fuel Converter Cold-to-Hot Correction Factors, January
-2001](Engine%20Cold-Hot%20Comparison.htm)*[](fc.gif)*
+2001](Engine%20Cold-Hot%20Comparison.html)*[](fc.gif)*
 
 *[Fuel Converter block diagram](fc.gif)* \
 *[Fuel Use and EO emissions block diagram](fc_tmp.gif)*
@@ -36,11 +36,11 @@ emissions for cold starts.
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Fuel%20Converter) \
+> Variables](advisor_appendices.html#Input%20Fuel%20Converter) \
 > [See Appendix A.3: Output
-> Variables](advisor_appendices.htm#Output_Fuel_Converter)
+> Variables](advisor_appendices.html#Output_Fuel_Converter)
 
-**<u>[Fuel Converter Scaling](bore_stroke_scaling.htm)</u>**
+**<u>[Fuel Converter Scaling](bore_stroke_scaling.html)</u>**
 
 <p>
 **<u>Implementation: Thermal Model</u>** \
@@ -118,7 +118,7 @@ Radiative heat from the exterior to the hood is given by:
 the temperatures are in Kelvin. \
 <u>Qx2h,v</u> \
 For an explanation of the chosen heat transfer coefficient, see [Qair
-under the motor thermal model description](motor_controller.htm#Qair). 
+under the motor thermal model description](motor_controller.html#Qair). 
 The heat removed from the exterior to the hood through natural and
 forced convection is given by
 *Q~x2h,v~=h~air~\*A\*(T~x~-T~h~)=h~air~\*fc\_ext\_sarea\*(T~x~-T~h~)* \
@@ -136,7 +136,7 @@ surface area was assumed to be 50% of the exterior surface area.
 Again, the surface area available for convection to ambient was assumed
 to be 50% of the exterior surface area.  For an explanation of the
 chosen heat transfer coefficient, see [Qair under the motor thermal
-model description](motor_controller.htm#Qair).  The heat removed from
+model description](motor_controller.html#Qair).  The heat removed from
 the exterior to the ambient air through natural and forced convection is
 given by
 *Q~x2a,v~=h~air~\*A\*(T~x~-T~amb~)=h~air~\*(.5\*fc\_ext\_sarea)\*(T~x~-T~amb~)*
@@ -148,7 +148,7 @@ Radiative heat from the hood to the ambient surroundings is given by:
 \
 <u>Qh2a,v</u> \
 For an explanation of the chosen heat transfer coefficient, see [Qair
-under the motor thermal model description](motor_controller.htm#Qair). 
+under the motor thermal model description](motor_controller.html#Qair). 
 The heat removed from the hood to the ambient air through natural and
 forced convection is given by
 *Q~h2a,v~=h~air~\*A\*(T~h~-T~amb~)=h~air~\*fc\_hood\_sarea\*(T~h~-T~amb~)*
@@ -246,7 +246,7 @@ Saline, MI, January 1996.
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 Last Revised: 01/31/01: VHJ

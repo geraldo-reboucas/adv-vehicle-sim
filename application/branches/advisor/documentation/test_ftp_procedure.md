@@ -45,10 +45,10 @@ test vs. a 4 bag test. \
 * * * * *
 
 <center>
-[Return to Chapter 3](../documentation/advisor_ch3.htm#3.3)
+[Return to Chapter 3](../documentation/advisor_ch3.html#3.3)
 
 </center>
-[](../documentation/advisor_ch3.htm#3.3)
+[](../documentation/advisor_ch3.html#3.3)
 
 <p>
 last revised: 8/19/01(tm)

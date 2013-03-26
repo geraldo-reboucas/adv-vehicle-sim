@@ -36,11 +36,11 @@ Help</span>**
 The auxiliary load figure provides the following functions:
 
 -   Load File
--   [Custom Load Creation and Modification](aux_loads_help2.htm) through
-    the [Manage List](aux_loads_help4.htm) Figure
+-   [Custom Load Creation and Modification](aux_loads_help2.html) through
+    the [Manage List](aux_loads_help4.html) Figure
 -   Vehicle Type Selection
 -   Load Choice Selection
--   [Auxiliary Load On-Off Control](aux_loads_help3.htm)
+-   [Auxiliary Load On-Off Control](aux_loads_help3.html)
 
 These options provide a means of modeling the magnitude and time
 dependent nature of auxiliary loads. \
@@ -55,7 +55,7 @@ selections.<span style="mso-spacerun: yes">  </span>The Advisor alone
 option limits the load selection to 14-volt loads
 only.<span style="mso-spacerun: yes">  </span>All the loads can be
 selected using the dual voltage [Saber
-co-simulation](Saber_cosim_help.htm).<span style="mso-spacerun: yes"> 
+co-simulation](Saber_cosim_help.html).<span style="mso-spacerun: yes"> 
 </span>\
    \
   
@@ -98,8 +98,8 @@ the percentage of time the load is on. \
 * * * * *
 
 </div>
-[Back to Chapter 2](advisor_ch2.htm#2.1.2) \
- [ADVISOR Documentation Contents](advisor_doc.htm)
+[Back to Chapter 2](advisor_ch2.html#2.1.2) \
+ [ADVISOR Documentation Contents](advisor_doc.html)
 
 Last Revised: [29-April-2002]: ab
 

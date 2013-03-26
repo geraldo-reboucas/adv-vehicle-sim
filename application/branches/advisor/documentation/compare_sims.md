@@ -85,6 +85,6 @@ adjusted in increments of 0.5. \
 * * * * *
 
 <center>
-[Return to Chapter 3](advisor_ch3.htm#3.3)
+[Return to Chapter 3](advisor_ch3.html#3.3)
 
 </center>

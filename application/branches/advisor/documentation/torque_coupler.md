@@ -31,11 +31,11 @@ a factor tc\_mc\_to\_fc\_ratio.
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.3: Output
-> Variables](advisor_appendices.htm#Output%20Torque%20Coupler)
+> Variables](advisor_appendices.html#Output%20Torque%20Coupler)
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

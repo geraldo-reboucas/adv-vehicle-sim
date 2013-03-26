@@ -34,11 +34,11 @@ engine will spin at no less than **vc\_idle\_spd** if it is on.
 vc\_idle\_bool    vc\_idle\_spd    vc\_key\_on    vc\_launch\_spd
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Vehicle%20Control)
+> Variables](advisor_appendices.html#Input%20Vehicle%20Control)
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

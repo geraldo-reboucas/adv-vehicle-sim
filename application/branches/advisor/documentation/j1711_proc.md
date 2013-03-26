@@ -136,7 +136,7 @@ thus, a Utility Factor that approaches 1.0.
 * * * * *
 
 <center>
-[Return to Chapter 3](advisor_ch3.htm#3.3)
+[Return to Chapter 3](advisor_ch3.html#3.3)
 
 </center>
 Last Revised: 7/21/00:AB

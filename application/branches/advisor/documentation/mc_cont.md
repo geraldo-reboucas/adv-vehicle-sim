@@ -28,11 +28,11 @@ Boolean logic enforces the required off conditions.
 mc\_max\_crrnt
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Motor/Controller)
+> Variables](advisor_appendices.html#Input%20Motor/Controller)
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

@@ -24,13 +24,13 @@ production but does not feedback to the torque provider.
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Generator/Controller) \
+> Variables](advisor_appendices.html#Input%20Generator/Controller) \
 > [See Appendix A.3: Output
-> Variables](advisor_appendices.htm#Output%20Generator/Controller)
+> Variables](advisor_appendices.html#Output%20Generator/Controller)
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

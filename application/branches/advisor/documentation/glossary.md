@@ -318,7 +318,7 @@
 > and a motor.  Is is named parallel because both the motor and the
 > engine can apply torque to move the vehicle.  The motor can act in
 > reverse as a generator for braking and to charge the batteries.  The
-> default control strategy is an [electric assist](Parallel.htm).  The
+> default control strategy is an [electric assist](Parallel.html).  The
 > default gearbox is a 5 speed.  The hybrid accessories are a constant
 > electrical power load.</font>
 >
@@ -342,7 +342,7 @@
 > if the vehicle is moving and the clutch is engage both the engine and
 > motor shafts must be rotating. The motor can act in reverse as a
 > generator for braking and to charge the batteries. The default control
-> strategy is an electric assist \<Parallel.htm\>. The default gearbox
+> strategy is an electric assist \<Parallel.html\>. The default gearbox
 > is a 5 speed. The hybrid accessories are a constant electrical power
 > load.
 >
@@ -460,7 +460,7 @@
 > mechanical energy directly into electrical energy via the generator. 
 > All torque used to move the vehicle comes from the motor.  The default
 > gearbox is a one speed.  The default control strategy is a [series
-> power follower](Series.htm).  The hybrid accessories are a constant
+> power follower](Series.html).  The hybrid accessories are a constant
 > electrical power load.</font>
 >
 > <center>
@@ -623,8 +623,8 @@
 * * * * *
 
 <center>
-[Back to Appendices](advisor_appendices.htm) \
-[ADVISOR Documentation Contents](advisor_doc.htm)
+[Back to Appendices](advisor_appendices.html) \
+[ADVISOR Documentation Contents](advisor_doc.html)
 
 </center>
 <p>

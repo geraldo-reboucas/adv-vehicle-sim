@@ -148,7 +148,7 @@ be done as follows:\
 plotDist(cyc, E);\
 
 [return to advisor documentation\
-](advisor_doc.htm)
+](advisor_doc.html)
 
 * * * * *
 

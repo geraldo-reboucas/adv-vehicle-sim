@@ -156,7 +156,7 @@ case 'cancel'
    end
    
 case 'help'
-   web(['file:\\\' which('grade_test_help.htm')],'-browser');
+   web(which('grade_test_help.html'), '-browser');
    
 case 'initialize'
    for i=1:length(checkbox_tags)

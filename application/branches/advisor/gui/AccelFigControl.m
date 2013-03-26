@@ -274,7 +274,7 @@ case 'initialize'
    end
    
 case 'help'
-   web(['file:\\\' which('accel_test_help.htm')],'-browser');
+   web(which('accel_test_help.html'), '-browser');
    
 case 'defaults'
    

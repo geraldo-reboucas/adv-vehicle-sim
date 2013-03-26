@@ -141,7 +141,7 @@ supported version.
 * * * * *
 
 <center>
-[Return to ADVISOR Documentation Start Page](advisor_doc.htm) \
+[Return to ADVISOR Documentation Start Page](advisor_doc.html) \
 
 * * * * *
 

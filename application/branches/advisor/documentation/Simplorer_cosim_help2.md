@@ -506,7 +506,7 @@ New</ins></span>](whats_new.html)<span class="msoIns"><ins cite="mailto:abrooker
 
 </ins></span>[<span class="msoIns"><ins cite="mailto:abrooker" datetime="2002-04-29T11:34">ADVISOR
 Documentation
-Contents</ins></span>](advisor_doc.htm)<span class="msoIns"><ins cite="mailto:abrooker" datetime="2002-04-29T11:34"><o:p></o:p></ins></span>
+Contents</ins></span>](advisor_doc.html)<span class="msoIns"><ins cite="mailto:abrooker" datetime="2002-04-29T11:34"><o:p></o:p></ins></span>
 
 <span class="msoIns"><ins cite="mailto:abrooker" datetime="2002-04-29T11:34">Last
 Revised: [29-April-2002]: ab <o:p></o:p></ins></span>

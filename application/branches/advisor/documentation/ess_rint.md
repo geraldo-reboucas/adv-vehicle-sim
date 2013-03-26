@@ -11,7 +11,7 @@ The Energy Storage System (ESS) block represents the battery pack that
 stores energy on board the modeled vehicle.  This block accepts a power
 request, usually from the power bus, and returns available/actual power
 output from the battery, the battery voltage and current, and the
-battery [State of Charge (SOC)](glossary.htm#SOC).  By convention,
+battery [State of Charge (SOC)](glossary.html#SOC).  By convention,
 positive power is discharge.
 
 **<u>Description of modeling approach</u>** \
@@ -19,12 +19,12 @@ The ESS block models the battery pack as a charge reservoir and an
 equivalent circuit whose parameters are a function of the remaining
 charge in the reservoir.  The equivalent circuit accounts for the
 circuit parameters of the battery pack as if it were a perfect [open
-circuit voltage](glossary.htm#O) source in series with an [internal
-resistance](glossary.htm#I).   The amount of charge that the ESS can
+circuit voltage](glossary.html#O) source in series with an [internal
+resistance](glossary.html#I).   The amount of charge that the ESS can
 hold is taken as constant, and the battery is subject to a minimum
 voltage limit.  The amount of charge that is required to replenish the
 battery after discharge is affected by [coulombic
-efficiency](glossary.htm#Coulombic%20efficiency).  The charging of the
+efficiency](glossary.html#Coulombic%20efficiency).  The charging of the
 battery is limited by a maximum battery voltage.  While the battery is
 treated as a perfect electrical voltage source with a known resistance,
 the components to which the battery would be connected, such as a motor
@@ -33,22 +33,22 @@ by the battery is limited to the maximum that the equivalent circuit can
 deliver or the maximum that the motor controller can accept, given its
 minimum voltage requirement.
 
-Other relevant glossary terms include: [Capacity](glossary.htm#C),
-[Rated Capacity](glossary.htm#R), [C/N rate,](glossary.htm#CNrate) [N
-hour rate](glossary.htm#N), and [Peukert’s
-equation](glossary.htm#Peukert's%20Equation).
+Other relevant glossary terms include: [Capacity](glossary.html#C),
+[Rated Capacity](glossary.html#R), [C/N rate,](glossary.html#CNrate) [N
+hour rate](glossary.html#N), and [Peukert’s
+equation](glossary.html#Peukert's%20Equation).
 
 A simple single-node thermal model of the battery is implemented with
 parallel flow air cooling.  More detail can be found in the [battery
-thermal model explanation](ess_therm.htm).
+thermal model explanation](ess_therm.html).
 
 <p>
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Energy%20Storage%20System) \
+> Variables](advisor_appendices.html#Input%20Energy%20Storage%20System) \
 > [See Appendix A.3: Output
-> Variables](advisor_appendices.htm#Output%20Energy%20Storage%20System)
+> Variables](advisor_appendices.html#Output%20Energy%20Storage%20System)
 
 **<u>Implementation</u>**
 
@@ -66,8 +66,8 @@ Coulombic (in)efficiency.  A step-by-step explanation follows.
 
 </center>
 1.  The battery is modeled as an equivalent circuit comprising a perfect
-    open circuit voltage source ([Voc](glossary.htm#O)) in series with
-    an effective internal resistance ([Rint](glossary.htm#I)).  Voc and
+    open circuit voltage source ([Voc](glossary.html#O)) in series with
+    an effective internal resistance ([Rint](glossary.html#I)).  Voc and
     Rint are computed as piecewise linear functions of SOC. There are
     two such functions for computing Rint, one for discharge power and
     another for charge power.
@@ -183,7 +183,7 @@ temperature and surface (case) temperature as a function of time while
 the vehicle is driven and during soak periods. Currently there is only
 one cooling option: parallel-flow air cooling (each module has the same
 air flow and inlet air temperature, which are specified by the user). 
-See the [battery thermal model explanation](ess_therm.htm) for more
+See the [battery thermal model explanation](ess_therm.html) for more
 details.
 
 <center>
@@ -194,7 +194,7 @@ details.
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 <p>

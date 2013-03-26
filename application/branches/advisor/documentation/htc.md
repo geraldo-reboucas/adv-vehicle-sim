@@ -7,7 +7,7 @@
 ### Hydraulic Torque Converter
 
 [Creation and Validation of a New Automatic Transmission Model in
-ADVISOR, August 2000](NewAutoTX.htm)
+ADVISOR, August 2000](NewAutoTX.html)
 
 [*Hydraulic Torque Converter \<htc\>*](htc_fig1.gif)
 
@@ -27,7 +27,7 @@ gearbox.
 **<u>**
 
 Description of modeling approach</b></u> \
- [See the new description here](NewAutoTX.htm#ModelDescription).
+ [See the new description here](NewAutoTX.html#ModelDescription).
 
 **<u>**
 
@@ -37,13 +37,13 @@ the relationship between SR and K is defined by the vectors **htc\_sr**
 and **htc\_k**.  The analogous vector for TR is **htc\_tr**.
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20HTC) \
+> Variables](advisor_appendices.html#Input%20HTC) \
 >  [See Appendix A.3: Output
-> Variables](advisor_appendices.htm#Output%20HTC)
+> Variables](advisor_appendices.html#Output%20HTC)
 
 * * * * *
 
 </p>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 Last Revised: 8/10/00: vhj

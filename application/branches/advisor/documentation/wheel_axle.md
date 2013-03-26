@@ -28,13 +28,13 @@ friction brakes, and rear friction brakes.
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Wheel/Axle) \
+> Variables](advisor_appendices.html#Input%20Wheel/Axle) \
 > [See Appendix A.3: Output
-> Variables](advisor_appendices.htm#Output%20Wheel/Axle)
+> Variables](advisor_appendices.html#Output%20Wheel/Axle)
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

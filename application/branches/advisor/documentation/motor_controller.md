@@ -17,7 +17,7 @@ and controller, rotor inertia, and the motor’s torque speed-dependent
 torque capability. Power losses are handled as a 2-D lookup table
 indexed by rotor speed and output torque. The motor’s maximum torque is
 enforced using a lookup table indexed by rotor speed. [Motor
-control](mc_cont.htm) blocks outside the ‘motor/controller’ ensure that
+control](mc_cont.html) blocks outside the ‘motor/controller’ ensure that
 the controller’s maximum current is not exceeded and that the motor
 shuts down when it is not needed. Available torque is computed from
 available power by assuming that the ratio of rotor torque to input
@@ -30,9 +30,9 @@ calculations is as computed in the ‘request’ branch.
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Motor/Controller) \
+> Variables](advisor_appendices.html#Input%20Motor/Controller) \
 > [See Appendix A.3: Output
-> Variables](advisor_appendices.htm#Output%20Motor/Controller)
+> Variables](advisor_appendices.html#Output%20Motor/Controller)
 
 **<u>Implementation: Thermal Model</u>** \
 A simple thermal model of the motor calculates the temperature of the
@@ -112,7 +112,7 @@ Figure 2 shows the block diagram implementation.
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 Last Revised: 7/21/00:AB

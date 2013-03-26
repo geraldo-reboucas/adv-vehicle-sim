@@ -24,7 +24,7 @@ an ultracapacitor is 0V, discharge limiting can also be accomplished by
 the powertrain control system based on the “cs\_lo\_soc” value.  A
 simple single-node thermal model of the ultracapacitor is implemented
 with parallel flow air cooling.  More detail can be found in the
-[battery/ultracapacitor thermal model explanation](ess_therm.htm).
+[battery/ultracapacitor thermal model explanation](ess_therm.html).
 
 <p>
 The capacitor C is very large and is the means through which the
@@ -42,7 +42,7 @@ ultracapacitor stores charge.
   **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Energy%20Storage%20System%20UC)
+> Variables](advisor_appendices.html#Input%20Energy%20Storage%20System%20UC)
 
 **<u>Implementation</u>** \
 The UltraCap model is implemented in Matlab/Simulink blocks.  The model
@@ -152,7 +152,7 @@ discharge**
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 <p>

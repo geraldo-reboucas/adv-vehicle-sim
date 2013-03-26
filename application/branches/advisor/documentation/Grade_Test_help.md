@@ -320,7 +320,7 @@ both the grade and speed as input arguments.
 
 * * * * *
 
-[Back to Chapter 3](advisor_ch3.htm#3.3)
+[Back to Chapter 3](advisor_ch3.html#3.3)
 
 </p>
 Last Revised: 2/9/01:tm\

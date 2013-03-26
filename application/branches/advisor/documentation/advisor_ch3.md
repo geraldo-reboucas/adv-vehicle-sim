@@ -170,15 +170,15 @@ ADVISOR has six different vehicle types and two specific vehicle
 choices, as listed below.  Each of these has a different drivetrain. 
 There is also an option to use a custom drivetrain.
 
-1.  [Conventional](glossary.htm#C)
-2.  [Series](glossary.htm#S)
-3.  [Parallel](glossary.htm#P)
-4.  [Parallel\_sa](glossary.htm#Parallel_sa)
-5.  [Fuel Cell](glossary.htm#F)
-6.  [Electric Vehicle (EV)](glossary.htm#E)
-7.  [Prius\_jpn](glossary.htm#Prius%20Drive%20Train)
-8.  [Insight](glossary.htm#Insight)
-9.  [Custom](glossary.htm#Custom)
+1.  [Conventional](glossary.html#C)
+2.  [Series](glossary.html#S)
+3.  [Parallel](glossary.html#P)
+4.  [Parallel\_sa](glossary.html#Parallel_sa)
+5.  [Fuel Cell](glossary.html#F)
+6.  [Electric Vehicle (EV)](glossary.html#E)
+7.  [Prius\_jpn](glossary.html#Prius%20Drive%20Train)
+8.  [Insight](glossary.html#Insight)
+9.  [Custom](glossary.html#Custom)
 
 ![](vehbd.gif)
 
@@ -214,56 +214,56 @@ documented below. \
 
 ### <a name="3.2.1"></a>3.2.1 Fuel Converter and Exhaust Aftertreatment
 
-[Fuel Converter](fuel_converter.htm) \
- [Fuel Converter-Fuel Cell](fuel_converter_fuel_cell.htm) \
- [Engine control – conventional vehicle](engine_cont.htm) \
- [Engine control – parallel electric assist](Parallel.htm) \
- [Exhaust System](exhaust.htm)
+[Fuel Converter](fuel_converter.html) \
+ [Fuel Converter-Fuel Cell](fuel_converter_fuel_cell.html) \
+ [Engine control – conventional vehicle](engine_cont.html) \
+ [Engine control – parallel electric assist](Parallel.html) \
+ [Exhaust System](exhaust.html)
 
 ### <a name="3.2.2"></a>3.2.2 Electric Components
 
-[Generator/controller](generator_controller.htm) \
- [Energy storage system](energy_storage.htm) \
- [Motor/controller](motor_controller.htm) \
- [Motor control logic](mc_cont.htm)
+[Generator/controller](generator_controller.html) \
+ [Energy storage system](energy_storage.html) \
+ [Motor/controller](motor_controller.html) \
+ [Motor control logic](mc_cont.html)
 
 ### <a name="3.2.3"></a>3.2.3 Transmission
 
-[Torque coupler](torque_coupler.htm) \
- [Clutch](clutch.htm) \
- [Clutch control](clutch_cont.htm) \
- [Gearbox](gearbox.htm) \
- [Gearbox control](gb_cont.htm) \
- [Automatic Transmission](autotx.htm) \
- [Hydraulic Torque Converter](htc.htm) \
- [Continuously Variable Transmission](cvt.htm) \
- [Final Drive](final_drive.htm)
+[Torque coupler](torque_coupler.html) \
+ [Clutch](clutch.html) \
+ [Clutch control](clutch_cont.html) \
+ [Gearbox](gearbox.html) \
+ [Gearbox control](gb_cont.html) \
+ [Automatic Transmission](autotx.html) \
+ [Hydraulic Torque Converter](htc.html) \
+ [Continuously Variable Transmission](cvt.html) \
+ [Final Drive](final_drive.html)
 
 ### <a name="3.2.4"></a>3.2.4 Vehicle, Wheel & Brakes
 
-[Wheel/axle](wheel_axle.htm) \
- [Vehicle](vehicle.htm) \
- [Traction control](traction_control.htm) \
- [Braking](braking.htm)
+[Wheel/axle](wheel_axle.html) \
+ [Vehicle](vehicle.html) \
+ [Traction control](traction_control.html) \
+ [Braking](braking.html)
 
 ### <a name="3.2.5"></a>3.2.5 Hybrid Control Strategies
 
-[Hybrid control strategy – series thermostat](Series-therm.htm) \
- [Hybrid control strategy – series power follower](Series.htm) \
- [Hybrid control strategy – parallel electric assist](Parallel.htm) \
- [Adaptive Control Strategy (parallel)](Adaptive.htm) \
- [Fuzzy Logic Control Strategy (parallel)](fuzzy_logic.htm) \
+[Hybrid control strategy – series thermostat](Series-therm.html) \
+ [Hybrid control strategy – series power follower](Series.html) \
+ [Hybrid control strategy – parallel electric assist](Parallel.html) \
+ [Adaptive Control Strategy (parallel)](Adaptive.html) \
+ [Fuzzy Logic Control Strategy (parallel)](fuzzy_logic.html) \
  [The Honda Insight Control Strategy
-(parallel)](honda_insight.htm#control)
+(parallel)](honda_insight.html#control)
 
 ### <a name="_Ref7921631"></a><a name="3.2.6"></a>3.2.6 Auxiliary Load Models
 
 [Accessory Load Models (ver. 2002)](accessory_models2002.html) \
  [Sinda/Fluint Co-simulation](sinda_cosim.html)  
 
-### 3.2.7 <a name="Saber_Components"></a>[Saber Co-simulation](Saber_cosim_help.htm)
+### 3.2.7 <a name="Saber_Components"></a>[Saber Co-simulation](Saber_cosim_help.html)
 
-### 3.2.8 <a name="Simplorer_Components"></a>[Simplorer Co-simulation](Simplorer_cosim_help2.htm)
+### 3.2.8 <a name="Simplorer_Components"></a>[Simplorer Co-simulation](Simplorer_cosim_help2.html)
 
 <!--[if !supportEmptyParas]--> <!--[endif]--><o:p></o:p>
 
@@ -274,28 +274,28 @@ documented below. \
 
 To learn how ADVISOR handles the state of charge of the energy storage
 system in context with predicting fuel economy, emissions, etc. visit
-the [glossary](glossary.htm#S) under the terms SOC, SOC Linear Correct,
+the [glossary](glossary.html#S) under the terms SOC, SOC Linear Correct,
 and SOC Zero Delta Correct.
 
-### <a name="3.3.2"></a>3.3.2 [Autosize](autosize_help.htm)
+### <a name="3.3.2"></a>3.3.2 [Autosize](autosize_help.html)
 
-### <a name="3.3.3"></a>3.3.3 [Acceleration Test](accel_Test_help.htm)
+### <a name="3.3.3"></a>3.3.3 [Acceleration Test](accel_Test_help.html)
 
-### <a name="3.3.4"></a>3.3.4 [Grade Test](Grade_Test_help.htm)
+### <a name="3.3.4"></a>3.3.4 [Grade Test](Grade_Test_help.html)
 
-### <a name="3.3.5"></a>3.3.5 [Tech Targets](tech_targets_help.htm)
+### <a name="3.3.5"></a>3.3.5 [Tech Targets](tech_targets_help.html)
 
-### <a name="3.3.6"></a>3.3.6 [J1711 Test Procedure](j1711_proc.htm)
+### <a name="3.3.6"></a>3.3.6 [J1711 Test Procedure](j1711_proc.html)
 
-### <a name="3.3.7"></a>3.3.7 [Real World Test Procedure](RW_procedure.htm)
+### <a name="3.3.7"></a>3.3.7 [Real World Test Procedure](RW_procedure.html)
 
-### <a name="3.3.8"></a>3.3.8 [City Highway Test Procedure](City_Hwy_procedure.htm)
+### <a name="3.3.8"></a>3.3.8 [City Highway Test Procedure](City_Hwy_procedure.html)
 
-### <a name="3.3.9"></a>3.3.9 [Comparing Simulations](compare_sims.htm)
+### <a name="3.3.9"></a>3.3.9 [Comparing Simulations](compare_sims.html)
 
-### <a name="3.3.10"></a>3.3.10 [Optimization](optimization_scripts.htm)
+### <a name="3.3.10"></a>3.3.10 [Optimization](optimization_scripts.html)
 
-### <a name="3.3.11"></a>3.3.11 [Comparing Simulation Results with Test Data](compare_testdata.htm)
+### <a name="3.3.11"></a>3.3.11 [Comparing Simulation Results with Test Data](compare_testdata.html)
 
  
 
@@ -318,9 +318,9 @@ and SOC Zero Delta Correct.
 * * * * *
 
 </div>
-[Back to Chapter 2](advisor_ch2.htm) \
- [Forward to Appendices](advisor_appendices.htm) \
- [ADVISOR Documentation Contents](advisor_doc.htm)
+[Back to Chapter 2](advisor_ch2.html) \
+ [Forward to Appendices](advisor_appendices.html) \
+ [ADVISOR Documentation Contents](advisor_doc.html)
 
 Last Revised: 9/9/03: SS
 

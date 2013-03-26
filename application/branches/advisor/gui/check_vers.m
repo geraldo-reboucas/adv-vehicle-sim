@@ -37,10 +37,10 @@ if old_ver_num<current_ver
       flag=1;
   elseif strcmp(buttonname,'HELP')
       try
-          eval(['web file:///',which('advisor_ch2.htm'),'#2.2 -browser']); % mpo 8-Aug-2001: the -browser flag starts up the user's web-browser
-                                                                           % which is somewhat easier to use than the matlab browser IMHO.
+          web([which('advisor_ch2.html'), '#2.2'], '-browser'); % mpo 8-Aug-2001: the -browser flag starts up the user's web-browser
+                                                                % which is somewhat easier to use than the matlab browser IMHO.
       catch
-         disp('Help documentation not installed or not in path-- advisor_ch2.htm not found');
+         disp('Help documentation not installed or not in path-- advisor_ch2.html not found');
       end
       flag=0;
   else

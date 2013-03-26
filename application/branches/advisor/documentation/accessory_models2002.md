@@ -48,7 +48,7 @@ adjust\_config\_bds.m (located in \<ADVISOR main directory\>\\gui). The
 adjust\_config\_bds.m file is called by the GUI after the user sets up
 the vehicle definition. The adjust\_config\_bds.m file switches in the
 appropriate configurable subsystem model based upon [version and
-type](version_type_help.htm), and\\or variables sent to the workspace.
+type](version_type_help.html), and\\or variables sent to the workspace.
 
 ### <a name="config_subsystemHOWTO">Adding your own configurable subsystems</a>
 
@@ -81,7 +81,7 @@ new version/type.
 
 <center>
 <p>
-[Return to ADVISOR Documentation](advisor_doc.htm)
+[Return to ADVISOR Documentation](advisor_doc.html)
 
 </center>
 

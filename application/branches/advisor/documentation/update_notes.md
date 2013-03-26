@@ -74,7 +74,7 @@ In update\_file.m as it is used from the GUI, when a user adds a file to
 a menu, update\_file.m knows exactly what type of file it is by virtue
 of where it is being added in the menu structure. If a user has a
 fuel\_cell input file and adds it to fuel\_converter\>fc\>fc (see
-[version and type help](version_type_help.htm)), then update\_file knows
+[version and type help](version_type_help.html)), then update\_file knows
 the file should be updated using a fuel cell initialization file
 prototype.
 
@@ -195,7 +195,7 @@ tranmission efficiency. Here are some common options:
 * * * * *
 
 <center>
-[Return to ADVISOR Documentation](advisor_doc.htm) \
+[Return to ADVISOR Documentation](advisor_doc.html) \
 
 * * * * *
 
