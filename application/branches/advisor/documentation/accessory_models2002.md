@@ -1,12 +1,10 @@
 % Accessory Load Models (ADVISOR ver 2002)
 % 
-% 
+% March 26, 2013
 
-Dedicated Auxiliary Load Models using Configurable Subsystems
-=============================================================
+# Dedicated Auxiliary Load Models using Configurable Subsystems
 
-Implementation
---------------
+## Implementation
 
 Advanced users of ADVISOR will notice two new blocks in the ADVISOR
 vehicle powertrain block diagrams: Mechanical and Electrical Accessory
