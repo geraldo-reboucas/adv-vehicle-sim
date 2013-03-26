@@ -91,11 +91,6 @@ set(h,'ButtonDownFcn','advisor(''play_movie'')');
  
 advisor('play_movie')
 
-
-
-
-
-
 % 7/21/00 ss: updated call to advisor_ver
 % 7/13/01 ss: revamped almost entirely to use the startup screen graphic
 % 7/19/01 ss: added email and web address
