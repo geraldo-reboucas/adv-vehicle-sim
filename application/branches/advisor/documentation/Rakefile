@@ -3,6 +3,12 @@ require 'set'
 require 'pp'
 
 HTML_EXTENSIONS = Set.new(['.htm', '.html'])
+PDF_OPTIONS = " --latex-engine=xelatex " +
+    "--variable=mainfont:\"Palatino Linotype\" " +
+    "--variable=sansfont:Arial " +
+    "--variable=monofont:\"Courier New\" " +
+    "--variable=fontsize:11pt " +
+    "--variable=geometry:margin=1.0in"
 
 def html?(fname)
   ext = File.extname(fname)
@@ -25,28 +31,14 @@ def list_files(dir)
   }
 end
 
-def html(fname, prefix=nil, template=nil)
-  options = "-s -S"
-  options += if template.nil? then "" else " --template=#{template}" end
-  sh "pandoc #{options} #{prefix}#{fname}.md -o #{prefix}#{fname}.html"
-end
-
-def pdf(fname, prefix=nil, template=nil)
-  options = "-s -S " +
-    "--latex-engine=xelatex " +
-    "--variable=mainfont:\"Palatino Linotype\" " +
-    "--variable=sansfont:Arial " +
-    "--variable=monofont:\"Courier New\" " +
-    "--variable=fontsize:11pt " +
-    "--variable=geometry:margin=1.0in"
-  options += if template.nil? then "" else " --template=#{template}" end
-  sh "pandoc #{options} #{prefix}#{fname}.md -o #{prefix}#{fname}.pdf"
-end
-
-def doc(fname, prefix=nil, template=nil)
-  options = "-s -S"
-  options += if template.nil? then "" else " --reference-docx=#{template}" end
-  sh "pandoc #{options} #{prefix}#{fname}.md -o #{prefix}#{fname}.docx"
+# output must be one of {.html, .pdf, .docx}
+def pandoc(fname, output, more_options=nil, template=nil)
+  puts "\nProcessing: #{File.basename(fname)}"
+  new_fname = fname.gsub(File.extname(fname), output)
+  template_tag = {".html"=>"template", ".pdf"=>"template", ".docx"=>"reference-docx"}
+  options = "--smart --standalone" + if more_options.nil? then "" else more_options end
+  options += if template.nil? then "" else " --#{template_tag[output]}=#{template}" end
+  sh "pandoc #{options} \"#{fname}\" -o \"#{new_fname}\""
 end
 
 def html_to_markdown(fname)
@@ -79,3 +71,19 @@ task :md do
   }
 end
 
+desc "Backup HTML files"
+task :backup_html do
+  dir = '.'
+  list_files(dir).select {|p| html?(p)}.map {|p| File.expand_path(p, dir)}.each {|fname|
+    new_fname = fname + '.bak'
+    sh "cp \"#{fname}\" \"#{new_fname}\""
+  }
+end
+
+desc "Generate HTML Files"
+task :gen_html do
+  dir = "."
+  list_files(dir).select {|p| File.extname(p) == ".md"}.map {|p| File.expand_path(p, dir)}.each {|fname|
+    pandoc(fname, ".html")
+  }
+end
