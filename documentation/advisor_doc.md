@@ -1,29 +1,27 @@
 % ADVISOR Documentation
 % 
-% 
+% March 26, 2013
 
-<div class="Section1">
-ADVISOR Documentation
-=====================
+# ADVISOR Documentation
 
 Aaron Brooker, Kristina Haraldsson, Terry Hendricks, Valerie Johnson,
-Kenneth Kelly, Bill Kramer, 
+Kenneth Kelly, Bill Kramer, Tony Markel, Michael O’Keefe, Sam Sprik,
+Keith Wipke, Matthew Zolot \
 
-Tony Markel, Michael O’Keefe, Sam Sprik, Keith Wipke, Matthew Zolot \
-  Contributors:  Desikan Bharathan, Steve Burch, Matthew Cuddy, Dave
+Contributors:  Desikan Bharathan, Steve Burch, Matthew Cuddy, Dave
 Rausen \
   
+![](nrellogo.gif)
+<img src="ADVISOR_logo.gif" width="250"/>
+![](DOE%20color.gif)
 
-![](nrellogo.gif)![](ADVISOR_logo.gif)![](DOE%20color.gif)\
- **<span style="font-size:13.5pt">ADVANCED VEHICLE SIMULATOR</span>** \
-  
+# ADVANCED VEHICLE SIMULATOR
 
 National Renewable Energy Laboratory
 
 Last Modified: October 10, 2003 [version 2003]
 
-Contents
---------
+## Contents
 
 [What’s New in ADVISOR](whats_new.html)
 
@@ -112,7 +110,6 @@ B. ADVISOR’s data files \
  E. Glossary
 
 For online help with ADVISOR please visit
-[www.ctts.nrel.gov/analysis](http://www.ctts.nrel.gov/analysis). \
- Last Revised: 10-Oct-2003: ss
+[the ADVISOR Community Group](https://groups.google.com/group/adv-vehicle-sim). \
 
-</div>
+Last Revised: 10-Oct-2003: ss
