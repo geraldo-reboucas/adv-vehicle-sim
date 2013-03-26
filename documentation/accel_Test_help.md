@@ -1,22 +1,19 @@
 % Help on Acceleration Test
 % 
-% 
+% March 26, 2013
 
-<!DOCTYPE html public "-//w3c//dtd html 4.0 transitional//en">
+# Help on Acceleration Test
 
-Help on Acceleration Test
--------------------------
-
-###  Overview
+##  Overview
 
 The acceleration test routine in ADVISOR will determine the acceleration
 performance of the current vehicle. The test routine can be accessed
 both from the GUI and the Matlab command window.
 
-### From the GUI…
+## From the GUI…
 
 An acceleration test can be performed via the Simulation Setup window. 
-By clicking <b>*Accel Options</b>* the Acceleration Test Advanced
+By clicking *Accel Options* the Acceleration Test Advanced
 Options window appears. Note that the Constraint and Tolerance items are
 only visible and accessible when the Accel Options button is pushed from
 the Autosize Setup window.
@@ -42,16 +39,16 @@ distance in a set amount of time, time in a set amount of distance, and
 max acceleration rate, and a top speed. While performing an autosize
 these conditions can be used as constraints.
 
-From the Simulation Setup screen selecting the <b>*Acceleration
-Test</b>* checkbox runs an acceleration test during a drive cycle.  To
-run an acceleration test without running a drive cycle, select <b>*Test
-Procedure</b>* and then <b>*TEST\_ACCEL</b>* from the pulldown menu. If
+From the Simulation Setup screen selecting the *Acceleration
+Test* checkbox runs an acceleration test during a drive cycle.  To
+run an acceleration test without running a drive cycle, select *Test
+Procedure* and then *TEST\_ACCEL* from the pulldown menu. If
 run as a test procedure the Results screen will provide access to the
 time dependent variable information.
 
 Results are reported in the Results window.
 
-### From the Matlab command window…
+## From the Matlab command window…
 
 An acceleration test can also be performed from the command window. The
 acceleration test routine is a function and requires the following
@@ -214,7 +211,7 @@ disable\_systems
 </table>
  
 
-### How it works
+## How it works
 
 A step function speed of 200 mph is requested of the vehicle. The
 vehicle will try request as much power and energy as is available while
@@ -224,7 +221,6 @@ vehicle speed trace and saved to the workspace and/or the GUI.
 
 * * * * *
 
-</p>
 \
  [Back to Chapter 3](advisor_ch3.html#3.3)
 
