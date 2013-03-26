@@ -114,7 +114,7 @@ by overriding the current values. No scaling takes place. \
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm#3.3)
+[Back to Chapter 3](advisor_ch3.html#3.3)
 
 </center>
  

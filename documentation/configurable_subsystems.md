@@ -18,7 +18,7 @@ Configurable Subsystem Blocks in ADVISOR
 4.  [A Listing of Configurable
     Subsystems](#A%20Listing%20of%20Configurable%20Subsystems)
 5.  [Other References](#Other%20References)
-6.  [Return to Main Documentation](advisor_doc.htm)
+6.  [Return to Main Documentation](advisor_doc.html)
 
 * * * * *
 
@@ -128,7 +128,7 @@ which configurable subsystems they would like to use before a run. This
 is done automatically through an m-file called adjust\_config\_bds.m.
 
 The m-file adjust\_config\_bds.m uses [version and
-type](version_type_help.htm) and other initialization variables as a
+type](version_type_help.html) and other initialization variables as a
 means of determining which configurable subsystem models should be used.
 Thus, when the user finishes setting up their vehicle and hits the run
 button, the drivetrain block diagram is opened (without making the
@@ -261,7 +261,7 @@ Documentation specifics on the Accessory Library
 
 * * * * *
 
-[Return to Main Documentation](advisor_doc.htm)
+[Return to Main Documentation](advisor_doc.html)
 
 * * * * *
 

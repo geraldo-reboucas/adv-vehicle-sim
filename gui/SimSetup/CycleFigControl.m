@@ -481,9 +481,9 @@ else
  
     case 'help'
         if strcmp(vinf.trip.run,'on')
-            web(['file:\\\' which('advisor_ch2.htm'),'#trip_bld'],'-browser');
+            web([which('advisor_ch2.html'), '#trip_bld'], '-browser');
         else
-            web(['file:\\\' which('advisor_ch2.htm'),'#mult_cyc'],'-browser');
+            web([which('advisor_ch2.html'), '#mult_cyc'], '-browser');
         end
         
     case 'load'

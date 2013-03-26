@@ -110,7 +110,7 @@ else
         end
         
     case 'Help'
-        web(['file:\\\',which('aux_loads_help2.htm')]);
+        web(which('aux_loads_help2.html'), '-browser');
         
     case 'Cancel'
         close(gcf);

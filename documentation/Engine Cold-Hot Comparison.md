@@ -1385,7 +1385,7 @@ procedure)</font></font>
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 Last Revised: 02/01/01: VHJ

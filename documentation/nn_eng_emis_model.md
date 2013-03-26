@@ -92,7 +92,7 @@ S-function implemented as a configurable subsystem in the
 fuel\_converter drivetrain block (located in \<ADVISOR main
 directory\>/models/library/lib\_fuel\_converter.mdl). At the input
 screen, the user should select nn\_ic in the fuel\_converter
-[version](version_type_help.htm) pull-down menu. In order to preserve
+[version](version_type_help.html) pull-down menu. In order to preserve
 all existing functionality in ADVISOR, a dummy engine map is created at
 the input screen. The maximum torque curve from the initial engine map
 is used to ensure the vehicle stays within performance constraints.

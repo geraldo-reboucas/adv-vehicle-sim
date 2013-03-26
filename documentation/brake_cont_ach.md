@@ -57,11 +57,11 @@ All braking forces are negative by convention.
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Appendix%20A.2%20Input)
+> Variables](advisor_appendices.html#Appendix%20A.2%20Input)
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

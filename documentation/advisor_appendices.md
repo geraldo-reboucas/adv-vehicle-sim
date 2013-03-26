@@ -18010,15 +18010,15 @@ something like *lookfor color* at the command line.
 or ‘sensor’ information, and should not be used to transmit torque,
 speed, or power from one drivetrain component to another.
 
-<a name="Appendix E"></a>E. [Glossary](glossary.htm)
+<a name="Appendix E"></a>E. [Glossary](glossary.html)
 ----------------------------------------------------
 
 * * * * *
 
 <center>
 <p>
-[Back to Chapter 3](advisor_ch3.htm) \
-[ADVISOR Documentation Contents](advisor_doc.htm)
+[Back to Chapter 3](advisor_ch3.html) \
+[ADVISOR Documentation Contents](advisor_doc.html)
 
 </center>
 <p>

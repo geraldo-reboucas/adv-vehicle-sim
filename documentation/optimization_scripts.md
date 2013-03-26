@@ -61,7 +61,7 @@ optimizer \
 convergence criteria met
 
 Each of the first four operations are achieved using the unique options
-as input to the [adv\_no\_gui](advisor_ch2.htm#2.3) function as defined
+as input to the [adv\_no\_gui](advisor_ch2.html#2.3) function as defined
 in the ADVISOR documentation.
 
 ### Optimization tools
@@ -531,7 +531,7 @@ results can be reviewed using the iSIGHT Solution Monitor.
 * * * * *
 
 </p>
-[ADVISOR Documentation](advisor_doc.htm)
+[ADVISOR Documentation](advisor_doc.html)
 
 * * * * *
 

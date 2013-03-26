@@ -406,8 +406,8 @@ low rolling resistance
 * * * * *
 
 <center>
-[Back to ADVISOR Documentation Contents](advisor_doc.htm) \
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to ADVISOR Documentation Contents](advisor_doc.html) \
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 \

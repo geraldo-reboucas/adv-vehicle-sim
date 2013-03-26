@@ -21,8 +21,8 @@ the fc\_fuel\_cell\_model flag variable.  The five models available
 include a power vs. efficiency model, a polarization curve model, an
 external model called GCTool and two new fuel cell system models called
 the VT and the KTH models. The two latter are described in
-(<fuel_converter_fuel_cell_VT_model.htm>) and
-(<fuel_converter_fuel_cell_KTH_model.htm>). Below is the description of
+(<fuel_converter_fuel_cell_VT_model.html>) and
+(<fuel_converter_fuel_cell_KTH_model.html>). Below is the description of
 the power vs. efficiency model, the polarization curve model, and the 
 GCTool software.
 
@@ -144,9 +144,9 @@ methods will vary depending on the input file used by GCTool. \
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Fuel%20Converter) \
+> Variables](advisor_appendices.html#Input%20Fuel%20Converter) \
 > [See Appendix A.3: Output
-> Variables](advisor_appendices.htm#Output%20Fuel%20Converter)
+> Variables](advisor_appendices.html#Output%20Fuel%20Converter)
 
 **<u>References</u>** \
 The temperature corrections for the emissions releases are based on a
@@ -157,6 +157,6 @@ Saline, MI, January 1996. \
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

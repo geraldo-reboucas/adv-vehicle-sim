@@ -4,7 +4,7 @@
 
 ### **ADVISOR Battery Thermal Model**
 
-[Back to ADVISOR ESS Model](energy_storage.htm)
+[Back to ADVISOR ESS Model](energy_storage.html)
 
 <p>
 **<u>Summary</u>** \

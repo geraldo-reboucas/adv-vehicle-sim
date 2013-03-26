@@ -45,7 +45,7 @@ Below is the GUI for Bore and Stroke Scaling.
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 Created: 04/29/02: SS

@@ -43,9 +43,9 @@ the required deceleration.)  This indicates an opportunity for
 regenerative braking.
 
 The data in the figure above are passed from the [vehicle
-\<veh\>](vehicle.htm) block to the [wheel and axle
-\<wh\>](wheel_axle.htm) block which in turn exchanges data with the
-[braking control](brake_cont_req.htm) block.  This block uses required
+\<veh\>](vehicle.html) block to the [wheel and axle
+\<wh\>](wheel_axle.html) block which in turn exchanges data with the
+[braking control](brake_cont_req.html) block.  This block uses required
 speed and required force to determine how much braking will be done by
 the front-axle friction brakes, the rear-axle friction brakes, and the
 driveline.  The braking done by the driveline is the regenerative
@@ -67,7 +67,7 @@ axle losses and by the friction brakes.  (The variables
 wh\_fa\_fric\_brake\_frac, wh\_fa\_fric\_brake\_mph,
 wh\_fa\_dl\_brake\_frac, and wh\_fa\_dl\_brake\_mph control how much
 friction and driveline/regen braking is commanded as a function of
-speed.  Follow this [link](advisor_appendices.htm#Input%20Wheel/Axle)
+speed.  Follow this [link](advisor_appendices.html#Input%20Wheel/Axle)
 for more info on these variables.)  About 3 kW is lost in the
 transmission and motor, accounting for the difference between the red
 and black curves at 2 s.  Another 5 kW or so is lost in the energy
@@ -109,7 +109,7 @@ We rerun the analysis using 5 x CYC\_UDDS, and find the new range to be
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 Last Revised: 7/20/00:AB

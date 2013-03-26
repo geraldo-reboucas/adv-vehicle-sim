@@ -19,7 +19,7 @@ maximum that the equivalent circuit can deliver or the maximum that the
 motor controller can accept, given its minimum voltage requirement.  A
 simple single-node thermal model of the battery is implemented with
 parallel flow air cooling.  More detail can be found in the [battery
-thermal model explanation](ess_therm.htm).  The governing state
+thermal model explanation](ess_therm.html).  The governing state
 equations of the model are shown in Equation 2, and implemented in the
 S-function RC.m.
 
@@ -45,7 +45,7 @@ reactions.
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Energy%20Storage%20System%20RC)
+> Variables](advisor_appendices.html#Input%20Energy%20Storage%20System%20RC)
 
 **<u>Implementation</u>** \
 The model was implemented in Matlab via an S-function that was called
@@ -69,7 +69,7 @@ Basic physics and select experimental values were used to determine
 initial values used in the data processing and optimization (e.g. over
 the HPPC profile) to determine the five unknown parameters (cb, cc, re,
 rc, rt) for a given temperature or SOC.  See
-[Batmodel](../extras/batmodel/documentation/batmodel_doc.htm) for more
+[Batmodel](../extras/batmodel/documentation/batmodel_doc.html) for more
 detail.
 
 <p>
@@ -131,7 +131,7 @@ determine an initial guess for Cc:
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 <p>

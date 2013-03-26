@@ -15,35 +15,35 @@ Version 2002 [April 30, 2002 Release]
     documentation](configurable_subsystems.html)]
 -   Delta-SOC correction based on ratio of change in stored battery
     energy to total fuel energy used[[click for
-    documentation](glossary.htm#SOC_energy_correction)] 
+    documentation](glossary.html#SOC_energy_correction)] 
 -   Ultracapacitor model with Maxwell data [[click for
-    documentation](ess_uc.htm)]
+    documentation](ess_uc.html)]
 -   Rolling resistance model provided by Michelin [[click for
-    documentation](J2452_RR.htm)]
+    documentation](J2452_RR.html)]
 -   Fuzzy logic from Ohio State University (updated to include
     simultaneous emissions and fuel use control) [[click for
-    documentation](fuzzyemis.htm)]
+    documentation](fuzzyemis.html)]
 -   Co-simulation link with Saber for a more detailed electrical
-    analysis option [[click for documentation](Saber_cosim_help.htm)]
+    analysis option [[click for documentation](Saber_cosim_help.html)]
 -   Direct link with Ansoft SIMPLORER^®^ for electrical system
-    co-simulation [[click for documentation](Simplorer_cosim_help.htm)]
+    co-simulation [[click for documentation](Simplorer_cosim_help.html)]
 -   Files added to allow Sinda/Fluint co-simulation with ADVISOR for
     transient air conditioning system analysis [[click for
     documentation](sinda_cosim.html)]
 -   Executable for running ADVISOR analyses from outside of MATLAB
-    [[click for documentation](advisor_ch2.htm#2.3.1)]
+    [[click for documentation](advisor_ch2.html#2.3.1)]
 -   New command line tool for doing engine map modifications, plotting,
     and studies [[click for documentation](eng_map.html)]
 -   Speed-dependent auxiliary loads and other configurable auxiliary
     load models implemented using configurable subsystems [[click for
     documentation](accessory_models2002.html)]
 -   New functionality added to adv\_no\_gui.m to allow autosizing
-    [[click for documentation](advisor_ch2.htm#2.3)]
+    [[click for documentation](advisor_ch2.html#2.3)]
 -   A batch auto-update function to assist users in transitioning from
     previous versions of ADVISOR to ADVISOR 2002 [[click for
     documentation](update_notes.html)]
 -   Engine scaling by bore and stroke is now available [[click for
-    documentation](bore_stroke_scaling.htm)]
+    documentation](bore_stroke_scaling.html)]
 -   Heavy vehicle tire information added to the wheel/axle model in
     ADVISOR [[click for documentation](hvy_veh_tires.html)]
 -   Heavy vehicle engine emission models using Neural Networks are
@@ -692,28 +692,28 @@ Version 3.2 [release 20 August 2001]
     documentation](gearbox_loss_model_3_2.html)]
 -   Trace miss analysis calculation from the “Results” screen when
     vehicle fails to meet drive trace [[click for
-    documentation](advisor_ch2.htm#trace_miss_analysis)]
+    documentation](advisor_ch2.html#trace_miss_analysis)]
 -   Templates for linking optimization tools to MATLAB and ADVISOR
-    [[click for documentation](optimization_scripts.htm)]
+    [[click for documentation](optimization_scripts.html)]
 -   User definable mass and battery resistance scaling relationships
-    [[click for documentation](scaling_relationships.htm)]
+    [[click for documentation](scaling_relationships.html)]
 -   Vehicle-speed dependant shift control [[click for
     documentation](spd_dep_shifting.html)]
 -   New time dependent auxiliary load specification [[click for
-    documentation](aux_loads_help.htm)]
+    documentation](aux_loads_help.html)]
 -   Auto-update feature improved–more documentation now available [[see
     here for details](update_notes.html)]
 -   A fuzzy logic strategy for parallel hybrid electric vehicles is now
-    available to the user.[[click for documentation](fuzzy_logic.htm)]
+    available to the user.[[click for documentation](fuzzy_logic.html)]
 -   PNGV Pulse Power Plot for energy storage systems. [[click for
-    documentation](pulse_pwr_plot_help.htm)]
+    documentation](pulse_pwr_plot_help.html)]
 -   New RC battery model and datafiles based on testing at NREL. [[click
-    for documentation](ess_rc.htm)]
+    for documentation](ess_rc.html)]
 -   New emissions control device models based on testing at ORNL.
-    [[click for documentation](emis_ornl.htm)]
+    [[click for documentation](emis_ornl.html)]
 -   A new Honda Insight parallel hybrid electric vehicle control
     strategy is modeled using test data and data from published
-    sources.[[click for documentation](honda_insight.htm)]
+    sources.[[click for documentation](honda_insight.html)]
 -   Vehicle Solar Load Estimator (VSOLE) subprogram provided to
     calculate solar load in vehicle based on glazings selected.  This is
     no longer available through ADVISOR.  Please visit
@@ -1112,7 +1112,7 @@ Electric Ford Focus vehicle model submitted by Brian Andonian
 
 * * * * *
 
-[Return to ADVISOR Documentation](advisor_doc.htm)
+[Return to ADVISOR Documentation](advisor_doc.html)
 
 * * * * *
 

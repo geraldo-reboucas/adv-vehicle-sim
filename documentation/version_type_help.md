@@ -171,7 +171,7 @@ understanding what each of these choices represent.
 > </td>
 > <td>
 > Resistance Capacitance Model. Click
-> [here](../documentation/ess_rc.htm) for details.
+> [here](../documentation/ess_rc.html) for details.
 > </td>
 > </tr>
 > <tr>

@@ -53,7 +53,7 @@ Figure 2
 * * * * *
 
 </p>
-[Back to Auxiliary Loads Help](aux_loads_help.htm) \
- [ADVISOR Documentation Contents](advisor_doc.htm)
+[Back to Auxiliary Loads Help](aux_loads_help.html) \
+ [ADVISOR Documentation Contents](advisor_doc.html)
 
 Last Revised: [10-August-2001]: ab

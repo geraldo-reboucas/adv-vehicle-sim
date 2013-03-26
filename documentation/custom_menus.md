@@ -13,7 +13,7 @@ Customizing the ADVISOR Menus
 
 * * * * *
 
-[Return to Main ADVISOR Documentation](advisor_doc.htm)
+[Return to Main ADVISOR Documentation](advisor_doc.html)
 
 * * * * *
 

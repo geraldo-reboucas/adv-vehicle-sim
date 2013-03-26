@@ -186,7 +186,7 @@ using this functionality.  This new cycle is then saved in the normal
 cycle  format and can be run as such.
 
 <a name="Auxiliary Loads"></a><u>[Auxiliary
-Loads](aux_loads_help.htm)</u> \
+Loads](aux_loads_help.html)</u> \
  Selecting this button brings up a graphical interface to select
 different auiliary loads and their on/off times as related to the drive
 cycle.
@@ -653,7 +653,7 @@ passed to the grade test function. 
 input.grade.param={’speed’,’duration’}
 
 For a list of available parameters see help on the [grade
-test](grade_test_help.htm).
+test](grade_test_help.html).
 
 </td>
 </tr>
@@ -698,7 +698,7 @@ parameters to be passed to the acceleration test function.
 input.accel.param={’ess\_init\_soc’,’spds’}
 
 For a list of available parameters see help on the [accel
-test](accel_test_help.htm).
+test](accel_test_help.html).
 
 </td>
 </tr>
@@ -1664,9 +1664,9 @@ advisor\_script.c.  \
 * * * * *
 
 <center>
-[Back to Chapter 1](advisor_ch1.htm) \
- [Forward to Chapter 3](advisor_ch3.htm) \
- [ADVISOR Documentation Contents](advisor_doc.htm)
+[Back to Chapter 1](advisor_ch1.html) \
+ [Forward to Chapter 3](advisor_ch3.html) \
+ [ADVISOR Documentation Contents](advisor_doc.html)
 
 </center>
 Last Revised: [04-Aug-2003]: mpo

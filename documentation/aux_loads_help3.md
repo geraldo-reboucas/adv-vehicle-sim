@@ -35,7 +35,7 @@ would be from 200-250 and 500-550. If the cycle was then changed to a
 * * * * *
 
 </p>
-[Back to Auxiliary Loads Help](aux_loads_help.htm)\
- [ADVISOR Documentation Contents](advisor_doc.htm)
+[Back to Auxiliary Loads Help](aux_loads_help.html)\
+ [ADVISOR Documentation Contents](advisor_doc.html)
 
 Last Revised: [31-July-2001]: ab

@@ -38,7 +38,7 @@ schematics below, and they are described in the following table.
 
 </center>
 <p>
-[Parallel Control Strategy Tips](cs_tips.htm#parallel)
+[Parallel Control Strategy Tips](cs_tips.html#parallel)
 
 <center>
   --------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -121,7 +121,7 @@ diagram.
 * * * * *
 
 \
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 Last Revised: 7/20/00:AB

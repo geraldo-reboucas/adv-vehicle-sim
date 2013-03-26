@@ -5,10 +5,10 @@
 ### Vehicle Braking
 
 Details on the block diagram for [Brake control:
-achievable](brake_cont_ach.htm). \
+achievable](brake_cont_ach.html). \
 Details on the block diagram for [Brake control:
-req’d](brake_cont_req.htm). \
-More on [regenerative braking](regen.htm), including an example.
+req’d](brake_cont_req.html). \
+More on [regenerative braking](regen.html), including an example.
 
 **<u>Role of subsystem in vehicle</u>** \
 Braking in ADVISOR is distributed between driveline braking (regen) and
@@ -26,7 +26,7 @@ request. \
 * * * * *
 
 <center>
-[Back to Chapter 3](../ADVISOR3.0/documentation/advisor_ch3.htm)
+[Back to Chapter 3](../ADVISOR3.0/documentation/advisor_ch3.html)
 
 </center>
 Last Revised: 1/10/01:VHJ

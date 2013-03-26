@@ -257,7 +257,7 @@ command and looks at the Simulink Library Browser, you will note that
 the reorganized ADVISOR library models are all available from the
 Library Browser (click on the “+” sign to load the libraries"). \
 
-[Return to ADVISOR Documentation](advisor_doc.htm)\
+[Return to ADVISOR Documentation](advisor_doc.html)\
 
 last modified: 8/5/2003: mpo\
 

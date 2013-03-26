@@ -66,7 +66,7 @@ is the most negative value that the tractive force can take.
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Appendix%20A.2%20Input)
+> Variables](advisor_appendices.html#Appendix%20A.2%20Input)
 >
 > Beginning with the ADVISOR 2003 model there is now the availability to
 > run front, rear or both axles for traction.  The new variables in the
@@ -81,6 +81,6 @@ is the most negative value that the tractive force can take.
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

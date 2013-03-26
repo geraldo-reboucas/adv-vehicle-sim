@@ -35,7 +35,7 @@ annual mileage = 15000 miles/year
 * * * * *
 
 </p>
-[ADVISOR Documentation Outline](advisor_doc.htm)
+[ADVISOR Documentation Outline](advisor_doc.html)
 
  
 

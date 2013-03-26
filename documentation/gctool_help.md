@@ -49,7 +49,7 @@ file for use with ADVISOR please contact tony\_markel@nrel.gov. \
  
 
 <center>
-[](advisor_ch3.htm#3.3)
+[](advisor_ch3.html#3.3)
 
 </center>
  

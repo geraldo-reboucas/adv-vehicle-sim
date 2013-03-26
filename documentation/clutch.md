@@ -36,11 +36,11 @@ and ‘actual’ data paths.
 **<u>Variables used in subsystem</u>**
 
 > [See Appendix A.3: Output
-> Variables](advisor_appendices.htm#Output%20Clutch)
+> Variables](advisor_appendices.html#Output%20Clutch)
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

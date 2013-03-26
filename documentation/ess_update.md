@@ -31,7 +31,7 @@ vehicle.  Temperature modeling had the effect of increasing performance
 
 **<u>New to Old Model Comparison</u>** \
 The old model significantly under predicted the energy available from a
-given battery. The [Peukert](glossary.htm#Peukert's%20Equation)-limited
+given battery. The [Peukert](glossary.html#Peukert's%20Equation)-limited
 capacity was an artifact of the battery hitting the lower voltage limit
 during discharge. In the laboratory, when the battery hit its lower
 voltage limit for a high rate of discharge, there was still significant

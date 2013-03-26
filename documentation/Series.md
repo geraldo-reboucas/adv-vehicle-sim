@@ -111,7 +111,7 @@ control strategy keeps the FC torque and speed on this locus using a
 lookup table defined by cs\_pwr and cs\_spd.
 
 <p>
-[Control Strategy Tips](cs_tips.htm#Series) \
+[Control Strategy Tips](cs_tips.html#Series) \
  
 
 <center>
@@ -170,6 +170,6 @@ of this workaround.</font> \
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

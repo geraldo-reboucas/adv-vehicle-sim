@@ -27,7 +27,7 @@ Contents
 
 [What’s New in ADVISOR](whats_new.html)
 
-[1.0 Introduction](advisor_ch1.htm)
+[1.0 Introduction](advisor_ch1.html)
 
 1.1 To the Reader
 
@@ -39,7 +39,7 @@ Contents
  1.4 System requirements \
  1.5 How to get additional help
 
-[2.0 Using ADVISOR](advisor_ch2.htm)
+[2.0 Using ADVISOR](advisor_ch2.html)
 
 2.1 Using the GUI (demo)
 
@@ -51,7 +51,7 @@ Contents
  2.3 Running ADVISOR without the GUI\
  2.4 Helper Classes and Functions
 
-[3.0 How ADVISOR works](advisor_ch3.htm)
+[3.0 How ADVISOR works](advisor_ch3.html)
 
 3.1 ADVISOR file structure
 
@@ -98,7 +98,7 @@ Contents
  3.4.3 Details of motor and motor controller \
  3.4.4 Forward-facing calculation path
 
-[APPENDICES:](advisor_appendices.htm)
+[APPENDICES:](advisor_appendices.html)
 
 A. ADVISOR’s variables
 

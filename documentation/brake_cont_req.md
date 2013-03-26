@@ -13,7 +13,7 @@ required tractive force will be made up by the drivetrain to the best of
 its ability.  (If the driveline is limited in its braking ability, the
 front and rear brakes will make up this final deficit according to their
 ability.  See the documentation of the [achievable brake
-controller](brake_cont_ach.htm) for more info.)
+controller](brake_cont_ach.html) for more info.)
 
 **<u>Description of modeling approach</u>** \
 The required braking force is a function of vehicle speed and total
@@ -42,11 +42,11 @@ wh\_fa\_fric\_brake\_frac    wh\_fa\_dl\_brake\_frac \
 wh\_fa\_fric\_brake\_mph   wh\_fa\_dl\_brake\_mph
 
 > [See Appendix A.2: Input
-> Variables](advisor_appendices.htm#Input%20Wheel/Axle)
+> Variables](advisor_appendices.html#Input%20Wheel/Axle)
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>

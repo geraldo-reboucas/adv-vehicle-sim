@@ -406,6 +406,6 @@ Remaining issues to be addressed in the torque converter model include:
 * * * * *
 
 </p>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 Last Revised: 8/10/00: vhj

@@ -6,7 +6,7 @@
 
 *[Exhaust System Block Diagrams](ex.gif)*
 
-*[Diesel Oxydation Catalyst Model Information](emis_ornl.htm)*
+*[Diesel Oxydation Catalyst Model Information](emis_ornl.html)*
 
 **<u>Role of subsystem in vehicle</u>** \
 The exhaust system model simulates a fuel converter exhaust
@@ -232,7 +232,7 @@ vacuum-insulated catalytic converter. \
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 <font size="-1">Last revised: 8/20/01:tm</font>

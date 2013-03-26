@@ -41,6 +41,6 @@ the match between the data sets.
 * * * * *
 
 <center>
-[Return to Chapter 3](advisor_ch3.htm#3.3)
+[Return to Chapter 3](advisor_ch3.html#3.3)
 
 </center>

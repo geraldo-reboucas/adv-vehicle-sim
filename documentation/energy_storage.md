@@ -19,9 +19,9 @@ time.
 ADVISOR has four different battery models.
 
 1.  The most recently developed model (Spring, 2001) is the [RC
-    model](ess_rc.htm) (’resistive-capacitive’), which includes
+    model](ess_rc.html) (’resistive-capacitive’), which includes
     transient effects in the battery.
-2.  The previous model is the [Rint Model](ess_rint.htm) (’internal
+2.  The previous model is the [Rint Model](ess_rint.html) (’internal
     resistance’), which characterizes the battery with a voltage source
     and internal resistance.The Rint battery model is related to work
     which was originally performed by Idaho National Engineering
@@ -35,8 +35,8 @@ ADVISOR has four different battery models.
     model](ess_alt_models.html#Neural%20Network) of a lead acid battery
     developed at Colorado University for NREL.
 
-[RC Model](ess_rc.htm) \
-[Rint Model](ess_rint.htm) \
+[RC Model](ess_rc.html) \
+[Rint Model](ess_rint.html) \
 [Fundamental Lead Acid Model](ess_alt_models.html#Fundamental) \
 [Neural Network Model](ess_alt_models.html#Neural%20Network)
 
@@ -60,18 +60,18 @@ behavior without compromising actual device behavior.  Additionally, due
 to the relatively straightforward capacitance model, the
 ultracapacitor’s state of charge is very simple to determine.
 
-The [UltraCap model](ess_uc.htm) resides with the RC model drop down
+The [UltraCap model](ess_uc.html) resides with the RC model drop down
 selections within ADVISOR’s gui in the “energy storage” block under
 version “rc” and then under type “cap” (rc-\>cap).
 
-[UltraCap Model](ess_uc.htm)
+[UltraCap Model](ess_uc.html)
 
  
 
 * * * * *
 
 <center>
-[Back to Chapter 3](advisor_ch3.htm)
+[Back to Chapter 3](advisor_ch3.html)
 
 </center>
 <p>

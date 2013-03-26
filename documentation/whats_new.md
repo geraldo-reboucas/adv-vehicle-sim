@@ -10,18 +10,18 @@ Version 2003 
 -------------
 
 -   [Conventional drivetrain is now modeled for 4wd (2wd to 4wd with a\
-     change in a boolean)](traction_control.htm)
+     change in a boolean)](traction_control.html)
 -   [Simplified drive cycle analysis tool](cycleAudit.html)
--   [New fuel cell system models](fuel_converter_fuel_cell.htm)
+-   [New fuel cell system models](fuel_converter_fuel_cell.html)
 -   Saber co-simulation enhancements
--       [Saber co-simulation series configuration](Saber_cosim_help.htm)
+-       [Saber co-simulation series configuration](Saber_cosim_help.html)
 -       [Saber co-simulation parallel
-    configuration](Saber_cosim_help.htm)
+    configuration](Saber_cosim_help.html)
 -       [Saber co-simulation battery model that allows variations
-    between cells.](Saber_cosim_help.htm)
--   [Adaptive control strategy for fuel cell vehicles](Adaptive.htm)
+    between cells.](Saber_cosim_help.html)
+-   [Adaptive control strategy for fuel cell vehicles](Adaptive.html)
 -   [Dynamic comparison of multiple simulation
-    results](compare_sims.htm)
+    results](compare_sims.html)
 -   More vehicle data files available from the vehicle component pull
     down menu
 -   Design of Experiment (DOE) capability accessible from the options
@@ -83,7 +83,7 @@ documentation](version_archive.html)]
 * * * * *
 
 </div>
-[Return to ADVISOR Documentation](advisor_doc.htm)
+[Return to ADVISOR Documentation](advisor_doc.html)
 
 <div class="MsoNormal" align="center" style="text-align: center;">
 

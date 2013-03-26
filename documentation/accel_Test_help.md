@@ -226,6 +226,6 @@ vehicle speed trace and saved to the workspace and/or the GUI.
 
 </p>
 \
- [Back to Chapter 3](advisor_ch3.htm#3.3)
+ [Back to Chapter 3](advisor_ch3.html#3.3)
 
 Last Revised: 2/0/01:tm

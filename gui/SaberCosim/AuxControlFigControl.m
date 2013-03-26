@@ -195,7 +195,7 @@ if nargin > 0
         end
         
     case 'Help'
-    web(['file:\\\',which('aux_loads_help3.htm')]);
+    web(which('aux_loads_help3.html'), '-browser');
         
     case 'Cancel'
         close(gcf);

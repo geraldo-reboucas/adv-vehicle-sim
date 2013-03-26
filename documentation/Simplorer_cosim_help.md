@@ -168,7 +168,7 @@ to the Simplorer co-simulation to <support@simplorer.com>.
 
 <!--[if !supportEmptyParas]--> <!--[endif]--><o:p></o:p>
 
-See [Simplorer link usage help](Simplorer_cosim_help2.htm) for
+See [Simplorer link usage help](Simplorer_cosim_help2.html) for
 instructions on running the demonstration link.
 
 <!--[if !supportEmptyParas]--> <!--[endif]--><o:p></o:p>
@@ -180,8 +180,8 @@ instructions on running the demonstration link.
 </div>
 [Back to What’s New](whats_new.html)
 
-[Simplorer Link Usage Help](Simplorer_cosim_help2.htm)\
- [ADVISOR Documentation Contents](advisor_doc.htm)
+[Simplorer Link Usage Help](Simplorer_cosim_help2.html)\
+ [ADVISOR Documentation Contents](advisor_doc.html)
 
 Last Revised: [29-April-2002]: ab
 
