@@ -1,42 +1,43 @@
 % Parallel Control Strategy
 % 
-% 
+% March 26, 2013
 
-### **<font size="+1">Parallel Electric Assist Control Strategy</font>**
+# Parallel Electric Assist Control Strategy
 
-**<u>Role of subsystem in vehicle</u>** \
+## Role of subsystem in vehicle
+
 The parallel electric assist control strategy uses the motor for
 additional power when needed by the vehicle and maintains charge in the
 batteries.
 
-**<u>Description of modeling approach</u>** \
-<font color="#000000">The parallel assist strategy can use the electric
-motor in a variety of ways:</font>
+## Description of modeling approach
 
-1.  <font color="#000000">The motor can be used for all driving torque
-    below a certain minimum vehicle speed.</font>
-2.  <font color="#000000">The motor is used for torque assist if the
+The parallel assist strategy can use the electric
+motor in a variety of ways:
+
+1.  The motor can be used for all driving torque
+    below a certain minimum vehicle speed.
+2.  The motor is used for torque assist if the
     required torque is greater than the maximum producable by the engine
-    at the engine’s operating speed.</font>
-3.  <font color="#000000">The motor charges the batteries by
-    regenerative braking.</font>
-4.  <font color="#000000">When the engine would run inefficiently at the
+    at the engine’s operating speed.
+3.  The motor charges the batteries by
+    regenerative braking.
+4.  When the engine would run inefficiently at the
     required engine torque at a given speed, the engine will shut off
-    and the motor will produce the required torque.</font>
-5.  <font color="#000000">When the battery SOC is low, the engine will
+    and the motor will produce the required torque.
+5.  When the battery SOC is low, the engine will
     provide excess torque which will be used by the motor to charge the
-    battery.</font>
+    battery.
 
-**<u>Variables used in subsystem</u>** \
+## Variables used in subsystem
+
 There are six variables that determine the limits of the control
 strategy.  Their influence on the engine operation are shown in the
 schematics below, and they are described in the following table.
 
-<center>
-![](okay-SOC.JPG) \
+![](okay-SOC.jpg) \
 ![](low-SOC.JPG)
 
-</center>
 <p>
 [Parallel Control Strategy Tips](cs_tips.html#parallel)
 
