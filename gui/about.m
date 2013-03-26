@@ -85,8 +85,7 @@ set(gcf,'position',[left bottom im_width im_height]);%
 %set the figure back on after everything is drawn
 set(gcf,'visible','on');
 
-adv_dir=strrep(which('advisor'),'\advisor.m','');
-imagedata = imread([adv_dir '\gui_graphics\Splash_Screen_car.jpg']);
+imagedata = imread(get_adv_path('gui_graphics','Splash_Screen_car.jpg'));
 h=image(imagedata);
 set(h,'ButtonDownFcn','advisor(''play_movie'')');
  
