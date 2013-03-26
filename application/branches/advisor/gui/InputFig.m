@@ -8,7 +8,8 @@ function varargout = InputFig(varargin)
 if nargin == 0  % LAUNCH GUI
     
     fig = openfig(mfilename,'reuse');
-        %set(fig,'Color',get(0,'defaultUicontrolBackgroundColor'));
+    
+    %set(fig,'Color',get(0,'defaultUicontrolBackgroundColor'));
     
     % Generate a structure of handles to pass to callbacks, and store it. 
     handles = guihandles(fig);
