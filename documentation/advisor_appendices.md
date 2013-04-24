@@ -16388,7 +16388,7 @@ all
 
 </td>
 <td valign="CENTER" width="50%">
-0= engine off, 1= engine on
+1= engine off, 0= engine on
 
 </td>
 </tr>
