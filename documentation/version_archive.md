@@ -2,14 +2,38 @@
 % 
 % 
 
-Archive
-=======
+# Change Log
 
-What’s New in ADVISOR (Archive)
-===============================
+## ADVISOR-2003-00-r0110 (posted 2013-04-24)
 
-Version 2002 [April 30, 2002 Release]
--------------------------------------
+This release of ADVISOR contains the following fixes and enhancements:
+
+* Updated README.txt file for current release and help information
+* Changed documentation base format from HTML to Markdown
+* Multiple documentation fixes for errors
+* Fixed loading of driving cycles AQMD RTC2 cycle, NYGTC
+* Added missing files from NREL: jpeg files and simulink new-style
+  block diagrams
+* Switch documentation to markdown format
+* Added "get_adv_path" function to simplify m-file code working with
+  cross-platform relative path
+
+## ADVISOR-2003-00-r0080 (posted 2012-06-29)
+
+This is a bug-fix release of the ADVISOR software 2003. With this release,
+the ADVISOR software is now able to run on the Mac OS X platform. It
+should also run on Linux (if you have Matlab/Simulink installed) but this
+has not been tested. Any ability to test on Linux will be appreciated.
+This release also begins to fix some of the warnings and errors due to
+changes in the MATLAB and Simulink API.
+
+## ADVISOR-2003-00-r0000 (posted 2012-01-03)
+
+This is the original release provided to Big Ladder by NREL for
+distribution as open-source software. This distribution of ADVISOR will
+form the base case for any regression testing.
+
+## Version 2002 [April 30, 2002 Release]
 
 -   Configurable subsystems now used in Simulink models [[click for
     documentation](configurable_subsystems.html)]
