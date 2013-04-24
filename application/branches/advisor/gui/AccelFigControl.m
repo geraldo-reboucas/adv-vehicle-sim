@@ -259,7 +259,7 @@ case 'initialize'
       set(findobj('tag',['time_in_dist_tol_editbox']),'visible','off')
       set(findobj('tag',['max_accel_tol_editbox']),'visible','off')
       set(findobj('tag',['max_spd_tol_editbox']),'visible','off')
-      
+
       set(findobj('tag',['accel_time1_con_label']),'visible','off')
       set(findobj('tag',['accel_time2_con_label']),'visible','off')
       set(findobj('tag',['accel_time3_con_label']),'visible','off')
@@ -267,19 +267,19 @@ case 'initialize'
       set(findobj('tag',['time_in_dist_con_label']),'visible','off')
       set(findobj('tag',['max_accel_con_label']),'visible','off')
       set(findobj('tag',['max_spd_con_label']),'visible','off')
-      
+
       set(findobj('tag',['cond_label']),'visible','off')
       set(findobj('tag',['units_label']),'visible','off')
       set(findobj('tag',['constraints_label']),'visible','off')
    end
-   
+
 case 'help'
-   web(which('accel_test_help.html'), '-browser');
-   
+   load_in_browser('accel_test_help.html');
+
 case 'defaults'
-   
+
    button='PNGV';
-   
+
    % clear the param field if it exists
    if isfield(vinf,'accel_test')
       vinf.accel_test=rmfield(vinf.accel_test,'param');

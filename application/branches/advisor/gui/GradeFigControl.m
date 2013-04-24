@@ -156,7 +156,7 @@ case 'cancel'
    end
    
 case 'help'
-   web(which('grade_test_help.html'), '-browser');
+   load_in_browser('grade_test_help.html');
    
 case 'initialize'
    for i=1:length(checkbox_tags)

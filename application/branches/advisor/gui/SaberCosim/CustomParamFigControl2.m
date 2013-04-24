@@ -98,7 +98,7 @@ case {'Back','Done'}
     end    
     
 case 'Help'
-    web(which('aux_loads_help2.html'), '-browser');
+    load_in_browser('aux_loads_help2.html');
     
 case 'Cancel'
     close(gcf);

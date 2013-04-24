@@ -166,7 +166,7 @@ case 'acc_ver'
                 compatible_choice=0;
                 if strcmp(buttonPressed,'Help')
                     try
-                        web(['file:///',which('sinda_cosim.html')],'-browser')
+                        load_in_browser('sinda_cosim.html');
                     catch
                         disp('Error encountered while trying to launch user''s browser to help documentation')
                         disp(['[compatibility.m] ', lasterr])

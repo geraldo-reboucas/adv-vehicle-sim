@@ -210,7 +210,7 @@ SimSetupFig;
 
 % --------------------------------------------------------------------
 function varargout = Help_Callback(h, eventdata, handles, varargin)
-web([which('advisor_ch2.html'),'#2.1.3'], '-browser');
+load_in_browser('advisor_ch2.html', '#2.1.3');
 
 % --------------------------------------------------------------------
 function varargout = Replay_Callback(h, eventdata, handles, varargin)
@@ -249,11 +249,11 @@ results_var_select(gui_current_str('result_variable_components'))
 
 % --------------------------------------------------------------------
 function varargout = Standards_Callback(h, eventdata, handles, varargin)
-web(which('emission_standards.html'), '-browser');
+load_in_browser('emission_standards.html');
 
 % --------------------------------------------------------------------
 function varargout = variables_html_Callback(h, eventdata, handles, varargin)
-web(which('advisor_appendices.html'), '-browser');
+load_in_browser('advisor_appendices.html');
 
 % --------------------------------------------------------------------
 function varargout = Select_Results_Callback(h, eventdata, handles, varargin)
