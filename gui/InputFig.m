@@ -3,7 +3,7 @@ function varargout = InputFig(varargin)
 %    FIG = InputFig launch InputFig GUI.
 %    InputFig('callback_name', ...) invoke the named callback.
 
-% Last Modified by GUIDE v2.5 04-May-2012 12:29:55
+% Last Modified by GUIDE v2.5 24-Apr-2013 15:04:09
 
 if nargin == 0  % LAUNCH GUI
     
@@ -752,7 +752,21 @@ gui_edit_var('modify','wh_rear_active_bool','1')
 
 % --------------------------------------------------------------------
 function varargout = four_wheel_drive_help_Callback(h, eventdata, handles, varargin)
-web(which('traction_control.html'), '-browser');
+load_in_browser('traction_control.html');
+
+% --- Executes on button press in main_help_button.
+function main_help_button_Callback(hObject, eventdata, handles)
+% hObject    handle to main_help_button (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+load_in_browser('advisor_ch2.html', '#2.1.1');
+
+% --- Executes on button press in Pushbutton4.
+function version_type_help_button_Callback(hObject, eventdata, handles)
+% hObject    handle to Pushbutton4 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+load_in_browser('version_type_help.html');
 
 % 3/20/00 ss: added case 'units'
 % 7/11/00 ss: added the functionality for the new popupmenu for selecting vehicles.
