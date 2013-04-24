@@ -205,4 +205,4 @@ close(gcbf)
 
 % --------------------------------------------------------------------
 function varargout = help_pushbutton_Callback(h, eventdata, handles, varargin)
-web(which('bore_stroke_scaling.html'), '-browser');
+load_in_browser('bore_stroke_scaling.html');

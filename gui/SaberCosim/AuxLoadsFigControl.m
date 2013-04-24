@@ -535,7 +535,7 @@ if nargin>0
         close(gcf);
         
     case 'Help'
-        web(which('aux_loads_help.html'), '-browser');
+        load_in_browser('aux_loads_help.html');
         
     case {'Back','Continue'}
         

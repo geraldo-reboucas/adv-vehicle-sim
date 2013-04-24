@@ -181,7 +181,7 @@ case {'Done','Back'}
     AuxLoadsFigControl('VehType',findobj('tag',[LoadName,'.VehType']));
    
 case 'Help'
-    web(['file:\\\',which('aux_loads_help4.htm')]);
+    load_in_browser('aux_loads_help4.htm');
     
 case 'Cancel'
     close(gcf);

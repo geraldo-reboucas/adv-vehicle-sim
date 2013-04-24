@@ -51,8 +51,8 @@ wh_slip=[0.0 0.025 0.050 0.075 0.10 0.125];  % (--)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TIRE DATA		
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% for a listing of heavy vehicle tire data, type "web(['file:///',which('hvy_veh_tires.html')],'-browser')"...
-% ...on the command line.
+% for a listing of heavy vehicle tire data, type
+% "load_in_browser('hvy_veh_tires.html')" on the command line.
 wh_radius=0.501;    % (m), rolling radius of the drive tires, 275/80R22.5 (low RR) assumed
 
 % rotational inertia of all wheels, tires, and axles

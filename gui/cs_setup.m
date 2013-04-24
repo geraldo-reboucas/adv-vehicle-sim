@@ -16,7 +16,7 @@ case 'load'
    
    button=questdlg('This functionality has been greatly enhanced by using the adv_no_gui scripts combined with optimization tools.  Please refer to documentation (file:\\C:\ADVISOR\documentation\optimization_scripts.html) for more information.  Would you like to continue?','Control Strategy Optimization Updates','Yes','No','Help','No');
    if strcmp(button,'Help')
-       web(which('optimization_scripts.html'), '-browser');
+       load_in_browser('optimization_scripts.html');
        return
    elseif ~strcmp(button,'Yes')
        return
@@ -472,7 +472,7 @@ case 'load'
    
    %help button
    h1 = uicontrol('Parent',h0, ...
-      'CallBack','web(which(''cs_opt_help.html''), ''-browser'');',...
+      'CallBack','load_in_browser(''cs_opt_help.html'');',...
       'Position',[4*(par_width-4*button_width)/5+3*button_width 10 button_width button_height], ...
       'String','HELP', ...
       'Tag','Pushbutton4');
@@ -832,7 +832,7 @@ case 'visdoc'
    if strcmp(locate,'')
       btn=questdlg('ADVISOR was unable to locate vdoc_matlab.exe on this machine.  Please refer to documentation on Control Strategy Optimization using VisualDOC for troubleshooting tips.','VisualDOC Warning','OK','HELP','OK');
       if strcmp(btn,'HELP')
-         web(which('cs_opt_help.html'), '-browser');
+         load_in_browser('cs_opt_help.html');
       end
       eval('cs_setup(''matlab'')')
    else

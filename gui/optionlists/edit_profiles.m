@@ -218,4 +218,4 @@ rehash toolbox
 % --------------------------------------------------------------------
 function varargout = Help_Pushbutton_Callback(h, eventdata, handles, varargin)
 edit_profiles('Done_pushbutton_Callback')
-web(which('custom_menus.html'),'-browser');
+load_in_browser('custom_menus.html');
