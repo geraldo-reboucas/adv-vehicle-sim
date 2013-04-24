@@ -17252,7 +17252,7 @@ drive cycle NOx emissions
 </tr>
 <tr>
 <td valign="CENTER" width="20%">
-galps
+gal
 
 </td>
 <td valign="CENTER" width="10%">
