@@ -6,6 +6,7 @@ advisor_release_date='April 24, 2013';
 year = '2003';
 release = '00';
 revision = 'r0116';
+advisor_version_num='2003';
 advisor_version=['ADVISOR ', year, '-', release, '-', revision];
 
 if nargin==0
@@ -25,4 +26,4 @@ case 'info'
 case 'number'
    a_version=advisor_version_num;
 end
-end
+end
