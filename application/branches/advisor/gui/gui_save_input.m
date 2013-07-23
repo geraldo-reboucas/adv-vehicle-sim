@@ -8,13 +8,13 @@ if exist('name')
     %p=strrep(which([name,'_in.m']),[name,'_in.m'],'');
 else
     old_dir=pwd;
-    new_dir=strrep(which('advisor.m'),'advisor.m','saved_vehicles\');
+    new_dir=get_adv_path('saved_vehicles');
     cd(new_dir)
-    
+
     [f,p] = uiputfile('*_in.m','ADVISOR Input File Save as *.m');
-    
+
     cd(old_dir)
-    
+
     if f==0 %user did not select a file name
         return
     end
@@ -49,15 +49,15 @@ if temp>5
         elseif strcmp(f(temp-2:temp),'_in')
             index=index-3;
         end
-        
+
         f=[f(1:index-1),'_in.m'];
-        
+
         %clear problem with extra '.' in the name
         if length(findstr(f,'.'))>1
             WARNDLG({['invalid filename:  ',f];'contains more than 1 '' . '''})
             return;
         end
-        
+
         errordlg(['input file name will be: ',f],' ');
         uiwait(gcf);
     end
@@ -70,16 +70,16 @@ else
     else
         f=[f,'_in.m'];
     end
-    
+
     %clear problem with extra '.' in the name
     if length(findstr(f,'.'))>1
         WARNDLG({['invalid filename:  ',f];'contains more than 1 '' . '''})
         return;
     end
-    
+
     errordlg(['input file name will be: ',f],' ');
     uiwait(gcf);
-    
+
 end
 
 %do not overwrite *defaults_in.m
@@ -135,11 +135,11 @@ for x=1:length(comp)
                 fprintf(fid,['vinf.',comp{x},'.type=''', eval(['vinf.',comp{x},'.type']),''';\n']);
             end
         end
-    end   
+    end
 end
 
 %add saber info up to 3 fields deep
-% if isfield(vinf,'saber_cosim') & isfield(vinf.saber_cosim,'run') 
+% if isfield(vinf,'saber_cosim') & isfield(vinf.saber_cosim,'run')
 %     saber_vars=struct2cell(vinf.saber_cosim);
 %     FirstFieldNames=fieldnames(vinf.saber_cosim);
 %     for i=1:length(saber_vars)
