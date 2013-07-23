@@ -15,6 +15,8 @@ if nargin==0
    disp(['# ',advisor_version, ' ', advisor_release_date]);
    disp('############################################ ');
    disp(' ');
+   a_version=advisor_version;
+   a_date=advisor_release_date;
 end   
 
 if nargin>0
@@ -25,5 +27,6 @@ case 'info'
    a_date=advisor_release_date;
 case 'number'
    a_version=advisor_version_num;
+   a_date=advisor_release_date;
 end
-end
+end
