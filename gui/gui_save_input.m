@@ -91,7 +91,7 @@ if ~isempty(findstr(f,'defaults_in'))&~isempty(temp)
 end
 
 % special case:  If using DIRECT, modify workspace with DIRECT optimal settings
-if nargin>=1
+if nargin>1
     directVarInd=strmatch('updateWSWithDirect',varargin{1:2:end});
     if ~isempty(directVarInd)
         optResults=varargin{directVarInd+1};
