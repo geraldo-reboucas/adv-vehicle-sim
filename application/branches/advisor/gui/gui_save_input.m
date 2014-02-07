@@ -4,7 +4,7 @@ global vinf
 
 if exist('name')
     f=[name,'_in.m'];
-    p=[cd,'\'];
+    p=[cd, filesep];
     %p=strrep(which([name,'_in.m']),[name,'_in.m'],'');
 else
     old_dir=pwd;
