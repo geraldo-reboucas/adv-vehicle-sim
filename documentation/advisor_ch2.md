@@ -748,7 +748,7 @@ cycle.name - name of the drive cycle (e.g. ‘CYC\_HWFET’,’CYC\_US06’,…)
 
 cycle.soc - run soc correction? (’on’ or ‘off’)
 
-cycle.socmenu - type of soc correction (’linear’ or ‘zerodelta’)
+cycle.socmenu - type of soc correction ('linear' or 'zero delta')
 
 cycle.soc\_tol\_method - constraint on energy balance (’soctol’ or
 ‘ess2fuel’)
