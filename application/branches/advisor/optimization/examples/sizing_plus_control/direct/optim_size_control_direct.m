@@ -66,7 +66,7 @@ input.save.filename='optim_veh_direct';
 [a,b]=adv_no_gui('save_vehicle',input);
 
 % plot the optimization results
-plotoptimresults(direct_opt_results.GLOBAL.f_min_hist, plot_info)
+PlotOptimResults(direct_opt_results.GLOBAL.f_min_hist, plot_info)
 
 % end timer
 toc
