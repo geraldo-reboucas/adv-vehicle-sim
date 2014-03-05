@@ -224,7 +224,7 @@
 </td>
 <td valign="top" width="56%">
 <p> This contains a string that specifies a previously saved vehicle. This is the simplest way to get started using the adv_no_gui functionality.</p>
-<p>input.init.saved_veh_file=’Parallel_DEFAULTS_in’</p>
+<p>input.init.saved_veh_file=’PARALLEL_defaults_in’</p>
 </td>
 </tr>
 <tr>
@@ -239,8 +239,10 @@
 </td>
 <td valign="top" width="56%">
 <p>Contains two fields comp and name. Each field contains a cell array with the name of the component and the corresponding data file. For example,</p>
-<p>input.init.comp_files.comp={’fuel_converter’,’energy_storage’,’transmission’}</p>
-<p>input.init.comp_files.name={’FC_SI41_emis’,’ESS_PB25’,’TX_5SPD’}.</p>
+<p>input.init.comp_files.comp={’fuel_converter’,’energy_storage’,’transmission’};</p>
+<p>input.init.comp_files.name={’FC_SI41_emis’,’ESS_PB25’,’TX_5SPD’};</p>
+<p>input.init.comp_files.ver={'ic','rint','man'};</p>
+<p>input.init.comp_files.type={'si','pb','man'};</p>
 <p>This functionality is especially useful for performing discrete studies in which the vehicle configuration is fixed but it is of interest to evaluate the impact of different component technologies.</p>
 </td>
 </tr>
