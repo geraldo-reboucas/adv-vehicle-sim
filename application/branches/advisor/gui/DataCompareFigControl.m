@@ -77,7 +77,7 @@ case 'openmatfile'
    
     old_dir=pwd;
     %change to desired directory
-    cd(strrep(which('advisor.m'),'advisor.m', 'extras\Sample compare data'))
+    cd(get_adv_path('extras', 'Sample compare data'));
     
     [f,p]=uigetfile('*.mat');                                                                                                   
     
