@@ -92,8 +92,11 @@ if nargin==0
         'Position',[228 56 147 215], ...
         'Style','listbox', ...
         'Tag','sims');
-    try, set(h1,'string',vinf.comparesims.files),
-    catch, vinf.comparesims.files='';set(h1,'string',vinf.comparesims.files);
+    try
+        set(h1,'string',vinf.comparesims.files);
+    catch
+        vinf.comparesims.files='';
+        set(h1,'string',vinf.comparesims.files);
     end
     
     %Help, Back, Run buttons
@@ -119,17 +122,17 @@ if nargin==0
         'BackgroundColor',lblue,...
         'String','Dynamic');
     
-    if isfield(vinf.comparesims,'dynamic') & vinf.comparesims.dynamic==1;
+    if isfield(vinf.comparesims,'dynamic') && vinf.comparesims.dynamic==1;
         set(findobj('tag','DynamicCompare'),'value',1);
     else
         set(findobj('tag','DynamicCompare'),'value',0);
         vinf.comparesims.dynamic=0;
     end
     
-    try,
+    try
         p=vinf.comparesims.filepath;
     catch
-        p=[pwd '\'];
+        p=[pwd, filesep];
     end
     set(findobj('Tag','pathname'),'String',p);
     compare_sims_setup('display file names',p);
@@ -149,7 +152,7 @@ if nargin>0
         p=get(findobj('tag','pathname'),'string');
         compare_sims_setup('display file names',p);
     case 'browse'
-        [f p]=uigetfile('*.mat','Pick Path Name');
+        [f, p]=uigetfile('*.mat','Pick Path Name');
         %if no file is selected(ie. figure is cancelled) then exit(or return)
         %out of this function
         if f==0
@@ -164,13 +167,16 @@ if nargin>0
         d=dir(info);
         j=1;
         for i=1:max(size(d))
-            if ~(strcmp(d(i).name, '.') | strcmp(d(i).name, '..'))& ~d(i).isdir & strcmp(d(i).name(end-3:end), '.mat')
+            if ~(strcmp(d(i).name, '.') || strcmp(d(i).name, '..'))&& ~d(i).isdir && strcmp(d(i).name(end-3:end), '.mat')
                 filenames{j}=d(i).name;
                 j=j+1;
             end
         end
-        try,set(findobj('Tag','avail files'), 'string', filenames);
-        catch,set(findobj('Tag','avail files'), 'string', 'No mat files in directory'); end
+        try
+            set(findobj('Tag','avail files'), 'string', filenames);
+        catch
+            set(findobj('Tag','avail files'), 'string', 'No mat files in directory');
+        end
         
     case 'add'
         %get info from avail files side
@@ -215,7 +221,7 @@ if nargin>0
             filenames=filenames(1:filenum-1);
             set(h1,'value',filenum-1);
             %if first filename, and more than just one filename then shift filenames by 1   
-        elseif length(filenames)~=1 & filenum==1
+        elseif length(filenames)~=1 && filenum==1
             filenames=filenames(2:length(filenames));
             %for all other cases
         else
@@ -327,7 +333,7 @@ if nargin>0
         
         %Time variable to be plotted vs. time for all chosen simulations
         t_vars=gui_get_vars('time');
-        if isempty(t_vars) | strcmp(t_vars,'none')
+        if isempty(t_vars) || strcmp(t_vars,'none')
             vinf.comparesims.filepath=path;
             vinf.comparesims.files=matname;
             compare_sims_setup;
