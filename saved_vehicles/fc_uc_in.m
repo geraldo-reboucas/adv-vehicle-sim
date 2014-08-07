@@ -4,7 +4,7 @@ global vinf
 
 vinf.name='fc_uc_in';
 vinf.drivetrain.name='fuel_cell';
-vinf.fuel_converter.name='FC_ANL50_H2';
+vinf.fuel_converter.name='FC_ANL50H2';
 vinf.fuel_converter.ver='fcell';
 vinf.fuel_converter.type='net';
 vinf.motor_controller.name='MC_AC83';
