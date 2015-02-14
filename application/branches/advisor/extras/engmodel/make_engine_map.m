@@ -127,7 +127,7 @@ for i=1:length(vars)
    end
    
    %Error checking
-   eval(['Y=interp2(fc_map_spd,fc_map_trq,'adv_vars{i},',spd,trq);'])
+   eval(['Y=interp2(fc_map_spd,fc_map_trq,',adv_vars{i},',spd,trq);'])
    indices=find(~isnan(Y));
    Y=Y(indices);
    eval(['y=',vars{i},';'])
@@ -180,7 +180,7 @@ if einf.plot
       clabel(c)
       xlabel('Speed (rpm)')
       ylabel('Torque (Nm)')
-      Title(strrep([strrep(einf.filename,'.mat',''), ' ',adv_vars{i} ' g/s'],'_','\_'))
+      title(strrep([strrep(einf.filename,'.mat',''), ' ',adv_vars{i} ' g/s'],'_','\_'))
       
       %plot max trq curve
       hold on
@@ -210,7 +210,7 @@ if einf.plot
    clabel(c)
    xlabel('Speed (rpm)')
    ylabel('Torque (Nm)')
-   Title(strrep([strrep(einf.filename,'.mat',''),'  fuel use g/kWh'],'_','\_'))
+   title(strrep([strrep(einf.filename,'.mat',''),'  fuel use g/kWh'],'_','\_'))
    
    %plot max trq curve
    hold on
@@ -229,7 +229,7 @@ if einf.plot
    clabel(c)
    xlabel('Speed (rpm)')
    ylabel('Torque (Nm)')
-   Title(strrep([strrep(einf.filename,'.mat',''),'  eff_map'],'_','\_'))
+   title(strrep([strrep(einf.filename,'.mat',''),'  eff_map'],'_','\_'))
   %plot up fuel use plot
     
    %plot max trq curve
