@@ -95,14 +95,14 @@ end
 % checking and adding paths as necessary.
 path_added=0;
 for i=1:length(dir2add)
-    temp=findstr(dir2add{i}, p);
+    temp=strfind(dir2add{i}, p); %findstr(dir2add{i}, p);
     if isempty(temp)
         addpath(dir2add{i}, '-frozen');
         path_added=1;
     end
 end
 
-temp=findstr(adv_dir,p);
+temp=strfind(adv_dir,p); %findstr(adv_dir,p);
 
 if isempty(temp)
     addpath(adv_dir,'-frozen') % add the main directory if it isn't already in there
