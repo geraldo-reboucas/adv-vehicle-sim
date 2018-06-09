@@ -71,10 +71,8 @@ if ~strcmp(drivetrain,'ev')
 end
 if strcmp(drivetrain,'ev')
     mpg=0;
-    dE_dt=ess_pwr_out_a+ess_pwr_loss_a; %total power obtained from batteries
-    E_J=trapz(t,dE_dt.*(dE_dt>0)); %total energy used from batteries
-    if ~exist('ess_coulombic_eff'), ess_coulombic_eff=1; end %added for alternative battery models where coul. eff not defined
-    E_J=E_J/mean(mean(ess_coulombic_eff)); %accounts for coulombic losses--mpo 26-april-2002: the extra 'mean' is used for cases where ess_coulombic_eff might be 2-d
+    dE_dt=ess_pwr_out_a+ess_pwr_loss_a; %total power obtained from batteries 
+    E_J=trapz(t, dE_dt); %total energy used from batteries
     mpgge=dist/E_J*42600*749/.264172; %42600=lhv of fuel(J/g), 749=density of fuel(g/l), .264172gal/l
 end
 %************
