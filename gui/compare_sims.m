@@ -241,7 +241,7 @@ if nargin==0
    end
    ylabel(strrep(var,'_','\_'))
    set(gca,'tag',tag);
-   legend(strvcat(strrep(matname,'_','\_')),-1)
+   legend(strvcat(strrep(matname,'_','\_')),'Location', 'BestOutside')
    
    %Axis 2
    axes2 = axes('Parent',h0, ...
